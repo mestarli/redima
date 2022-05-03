@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed = 8.5f;
     [SerializeField] private float speedRun = 15.5f;
     private float initialSpeed;
-    private Rigidbody _rigidbody;
+    private CharacterController _characterController;
     
     [SerializeField] private bool isGrounded;
     [SerializeField] private bool isJumping;
@@ -21,13 +22,13 @@ public class PlayerMovement : MonoBehaviour
     //For check if its toching ground
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
-    private Vector2 inputRot;
+    private Vector3 inputPlayerMovement;
     
     void Awake()
     {
         _animator = GetComponent<Animator>();
         initialSpeed = speed;
-        _rigidbody = GetComponent<Rigidbody>();
+        _characterController = GetComponent<CharacterController>();
     }
     
     // Start is called before the first frame update
@@ -57,21 +58,15 @@ public class PlayerMovement : MonoBehaviour
     
     private void Movement()
     {
-        float xMove = Input.GetAxisRaw("Horizontal"); 
-        float zMove = Input.GetAxisRaw("Vertical");
-       // _animator.SetFloat("Walking", Mathf.Abs(xMove));
-       // _animator.SetFloat("Walking", Mathf.Abs(zMove));
-        
-        //Movement of player
-        //_rigidbody.velocity = transform.forward * speed *  zMove // Forward, Backward movement of player
-        //                      + transform.right * speed * xMove   // Left, Right Movement of player;
+        inputPlayerMovement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+  
         Run();
     }
     private void Jump()
     {
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded){
             
-            _rigidbody.AddForce(jumHeight * Vector3.up, ForceMode.VelocityChange);
+            //_rigidbody.AddForce(jumHeight * Vector3.up, ForceMode.VelocityChange);
             //_animator.SetTrigger("IsJumping");
         }
 
