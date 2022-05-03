@@ -63,8 +63,8 @@ public class PlayerMovement : MonoBehaviour
        // _animator.SetFloat("Walking", Mathf.Abs(zMove));
         
         //Movement of player
-        _rigidbody.velocity = transform.forward * speed *  zMove // Forward, Backward movement of player
-                              + transform.right * speed * xMove   // Left, Right Movement of player;
+        //_rigidbody.velocity = transform.forward * speed *  zMove // Forward, Backward movement of player
+        //                      + transform.right * speed * xMove   // Left, Right Movement of player;
         Run();
     }
     private void Jump()
