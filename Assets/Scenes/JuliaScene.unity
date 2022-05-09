@@ -1673,6 +1673,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotsNum: 24
+  itemsInventory: []
 --- !u!4 &1442639368
 Transform:
   m_ObjectHideFlags: 0

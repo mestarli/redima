@@ -15,9 +15,13 @@ public class Inventory : MonoBehaviour
     
     public int SlotsNum => slotsNum;
 
-    private void Start()
+    void Awake()
     {
         instance = this;
+    }
+    private void Start()
+    {
+        
         itemsInventory = new ItemInventory[slotsNum];
     }
 }
