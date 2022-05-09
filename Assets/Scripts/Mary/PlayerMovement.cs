@@ -25,6 +25,10 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     private Vector3 inputPlayerMovement;
     
+    
+    // For gliding palomo
+    [SerializeField] private float isGliding;
+    
     void Awake()
     {
         _animator = GetComponent<Animator>();
@@ -88,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded){
             
             //_animator.SetTrigger("IsJumping");
+            inputPlayerMovement.y += Mathf.Sqrt(jumHeight * -3.0f *  gravity);
         }
 
     }
