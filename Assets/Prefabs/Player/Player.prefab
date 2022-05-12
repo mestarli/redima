@@ -135,11 +135,12 @@ MonoBehaviour:
   speedRun: 2.5
   isGrounded: 0
   isJumping: 0
-  jumHeight: 3.5
+  jumHeight: 0.5
   groundCheck: {fileID: 7061936796028772357}
   groundLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
+  isGliding: 0
 --- !u!95 &7061936796288068502
 Animator:
   serializedVersion: 3
