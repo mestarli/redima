@@ -8,12 +8,14 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     // Variables
+    [Header("Items")] 
+    [SerializeField] private ItemInventory[] itemsInventory;
+    [SerializeField] private Player player;
     [SerializeField] private int slotsNum;
-    public static Inventory instance;
 
-    [Header("Items")] [SerializeField] private ItemInventory[] itemsInventory;
+    public Player Player => player;
+    public static Inventory instance; 
     public ItemInventory[] ItemsInventory => itemsInventory;
-    
     public int SlotsNum => slotsNum;
 
     void Awake()

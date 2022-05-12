@@ -30,4 +30,19 @@ public class ItemInventory : ScriptableObject
         ItemInventory newInstance = Instantiate(this);
         return newInstance;
     }
+
+    public virtual bool UseItem()
+    {
+        return true;
+    }
+
+    public virtual bool EquipItem()
+    {
+        return true;
+    }
+
+    public virtual bool DeleteItem()
+    {
+        return true;
+    }
 }

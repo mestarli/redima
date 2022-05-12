@@ -23,7 +23,7 @@ public class InventorySlot : MonoBehaviour
     [SerializeField] private TextMeshProUGUI quantityTMP;
     public int Index { get; set; }
 
-    private void Start()
+    private void Awake()
     {
         itemIcon.gameObject.SetActive(false);
         backgroundQuantity.gameObject.SetActive(false);
