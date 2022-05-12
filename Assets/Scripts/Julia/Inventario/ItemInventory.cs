@@ -3,9 +3,10 @@ using UnityEngine;
 
 public enum ItemTypes
 {
-    Ingredients,
-    Potions,
-    Mushrooms
+    Ingredients, 
+    Seeds,
+    Consumables,
+    Tools
 }
 
 public class ItemInventory : ScriptableObject
@@ -22,5 +23,11 @@ public class ItemInventory : ScriptableObject
     public bool isCumulative;
     public int maxCumulative;
 
-    [HideInInspector] public int quantity;
+    public int quantity;
+
+    public ItemInventory copyItem()
+    {
+        ItemInventory newInstance = Instantiate(this);
+        return newInstance;
+    }
 }
