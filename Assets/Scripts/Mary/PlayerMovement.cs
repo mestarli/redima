@@ -19,6 +19,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 playerVelocity;
 
     private Animator _animator;
+    private Transform _modelTransform;
     
     //For check if its toching ground
     [SerializeField] private Transform groundCheck;
@@ -34,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
         _animator = GetComponent<Animator>();
         initialSpeed = speed;
         _characterController = GetComponent<CharacterController>();
+        _modelTransform = GetComponent<Transform>();
     }
     
     // Start is called before the first frame update
@@ -47,36 +49,33 @@ public class PlayerMovement : MonoBehaviour
     {
         // comprobamos que esta tocando suelo, si no es así, es que está saltando
         isGrounded  = Physics.CheckSphere(groundCheck.position,0.15f,groundLayer);
-        Jump();
-    }
-    
-    void FixedUpdate()
-    {
-        // Llamamos funcionalidades para moverse, correr, saltar...
-        
-        //_animator.SetBool("IsRunning", false);
-       
         Movement();
-
-
     }
-    
+   
     private void Movement()
     {
-        isGrounded =  _characterController.isGrounded;
-        if (isGrounded && playerVelocity.y < 0)
-        {
-            playerVelocity.y = 0f;
-        }
 
+      
+        
+        
         inputPlayerMovement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         _characterController.Move(  inputPlayerMovement * Time.deltaTime * speed);
 
+        if (inputPlayerMovement.x !=0)
+        {
+            Quaternion newRotation = Quaternion.LookRotation(new Vector3(0,0,inputPlayerMovement.x));
+            _modelTransform.rotation = newRotation;
+        }
+        
         if (inputPlayerMovement != Vector3.zero)
         {
             gameObject.transform.forward = inputPlayerMovement;
         }
-
+        if (isGrounded && playerVelocity.y < 0)
+        {
+            playerVelocity.y = 0f;
+            inputPlayerMovement.y = 0f;
+        }
         // Changes the height position of the player..
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
@@ -87,16 +86,7 @@ public class PlayerMovement : MonoBehaviour
         _characterController.Move(playerVelocity * Time.deltaTime);
         Run();
     }
-    private void Jump()
-    {
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded){
-            
-            //_animator.SetTrigger("IsJumping");
-            inputPlayerMovement.y += Mathf.Sqrt(jumHeight * -3.0f *  gravity);
-        }
 
-    }
-    
     /// <summary>
     /// Método para correr
     /// </summary>
