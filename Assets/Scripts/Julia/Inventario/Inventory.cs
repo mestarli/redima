@@ -12,6 +12,7 @@ public class Inventory : MonoBehaviour
     public static Inventory instance;
 
     [Header("Items")] [SerializeField] private ItemInventory[] itemsInventory;
+    public ItemInventory[] ItemsInventory => itemsInventory;
     
     public int SlotsNum => slotsNum;
 
@@ -51,6 +52,9 @@ public class Inventory : MonoBehaviour
                             itemsInventory[index[i]].quantity = itemToAdd.maxCumulative;
                             AddItem(itemToAdd, difference);
                         }
+                        
+                        UIInventory.instanceUI.DrawItemInInventory(itemToAdd, itemsInventory[index[i]].quantity, index[i]);
+                        return;
                     }
                 }
             }
@@ -100,6 +104,7 @@ public class Inventory : MonoBehaviour
             {
                 itemsInventory[i] = item.copyItem();
                 itemsInventory[i].quantity = quantity;
+                UIInventory.instanceUI.DrawItemInInventory(item, quantity, i);
                 return; 
             }
         }
