@@ -6,28 +6,36 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public float hambre;
-    private float maxHambre;
+    private float maxHambre = 100;
+    public bool puedeAlimentarse;
     
     public float estamina;
     private float maxEstamina;
+    public bool puedeRecuperarEstamina;
 
     private float diferencia;
     private void Awake()
     {
         estamina = maxEstamina;
-        hambre = maxHambre;
+        //hambre = maxHambre;
     }
 
-    // Start is called before the first frame update
-    void Start()
+    private void Update()
     {
-        
+        PuedeAlimentarse();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void PuedeAlimentarse()
     {
+        if (hambre < maxHambre)
+        {
+            puedeAlimentarse = true;
+        }
         
+        else
+        {
+            puedeAlimentarse = false;
+        }
     }
 
     public void alimentarse(float cantidad)
@@ -37,13 +45,15 @@ public class Player : MonoBehaviour
         {
             if (cantidad < diferencia)
             {
-                hambre += hambre + cantidad;
+                hambre = hambre + cantidad;
             }
+        
             else
             {
-                hambre += hambre + diferencia; 
+                hambre = hambre + diferencia; 
             }
         }
+        
         else
         {
             return;
@@ -57,11 +67,11 @@ public class Player : MonoBehaviour
         {
             if (cantidad < diferencia)
             {
-                estamina += estamina + cantidad;
+                estamina = estamina + cantidad;
             }
             else
             {
-                estamina += estamina + diferencia; 
+                estamina = estamina + diferencia; 
             }
         }
         else

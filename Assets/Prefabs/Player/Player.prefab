@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 7061936796288068501}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -172,6 +172,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bcad30bd9337f7047b051d0db8fc637d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hambre: 0
+  puedeAlimentarse: 0
+  estamina: 0
+  puedeRecuperarEstamina: 0
 --- !u!143 &7061936796288068501
 CharacterController:
   m_ObjectHideFlags: 0

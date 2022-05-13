@@ -81,7 +81,7 @@ public class UIInventory : MonoBehaviour
             slot.ActivateSlotUI(false);
         }
     }
-
+    
     private void UpdateDescriptionInventory(int index)
     {
         if (Inventory.instance.ItemsInventory[index] != null)
@@ -97,7 +97,17 @@ public class UIInventory : MonoBehaviour
             inventoryDescriptionPanel.SetActive(false);
         }
     }
+
+    public void UseItem()
+    {
+        if (SelectedSlot != null)
+        {
+            SelectedSlot.UseItemSlot();
+        }
+    }
     
+    #region Events
+
     private void SlotInteractionResponse(InteractionTypes type, int index)
     {
         if (type == InteractionTypes.Click)
@@ -116,4 +126,6 @@ public class UIInventory : MonoBehaviour
         InventorySlot.SlotInteractionEvent -= SlotInteractionResponse;
 
     }
+
+    #endregion
 }

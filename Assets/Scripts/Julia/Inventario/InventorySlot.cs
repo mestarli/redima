@@ -23,12 +23,6 @@ public class InventorySlot : MonoBehaviour
     [SerializeField] private TextMeshProUGUI quantityTMP;
     public int Index { get; set; }
 
-    private void Awake()
-    {
-        itemIcon.gameObject.SetActive(false);
-        backgroundQuantity.gameObject.SetActive(false);
-    }
-
     public void UpdateSlotUI(ItemInventory item, int quantity)
     {
         itemIcon.sprite = item.icon;
@@ -44,5 +38,13 @@ public class InventorySlot : MonoBehaviour
     public void ClickSlot()
     {
         SlotInteractionEvent?.Invoke(InteractionTypes.Click, Index);
+    }
+
+    public void UseItemSlot()
+    {
+        if (Inventory.instance.ItemsInventory[Index] != null)
+        {
+            SlotInteractionEvent?.Invoke(InteractionTypes.Use, Index);
+        }
     }
 }

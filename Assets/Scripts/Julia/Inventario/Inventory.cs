@@ -111,4 +111,65 @@ public class Inventory : MonoBehaviour
             }
         }
     }
+
+    private void EliminateUsedItem(int index)
+    {
+        itemsInventory[index].quantity--;
+
+        if (itemsInventory[index].quantity <= 0)
+        {
+            itemsInventory[index].quantity = 0;
+            itemsInventory[index] = null;
+            UIInventory.instanceUI.DrawItemInInventory(null, 0, index);
+        }
+
+        else
+        {
+            UIInventory.instanceUI.DrawItemInInventory(itemsInventory[index], itemsInventory[index].quantity, index);
+        }
+    }
+    
+    private void UseItem(int index)
+    {
+        if (itemsInventory[index] == null)
+        {
+            return;
+        }
+
+        if (itemsInventory[index].UseItem())
+        {
+            EliminateUsedItem(index);
+        }
+    }
+    
+    #region Events
+
+    private void SlotInteractionResponse(InteractionTypes type, int index)
+    {
+        switch (type)
+        {
+            case InteractionTypes.Use:
+                UseItem(index);
+                break;
+            
+            case InteractionTypes.Equip:
+                break;
+            
+            case InteractionTypes.Delete:
+                break;
+        }
+    }
+    
+    private void OnEnable()
+    {
+        InventorySlot.SlotInteractionEvent += SlotInteractionResponse;
+    }
+
+    private void OnDisable()
+    {
+        InventorySlot.SlotInteractionEvent -= SlotInteractionResponse;
+
+    }
+
+    #endregion
 }
