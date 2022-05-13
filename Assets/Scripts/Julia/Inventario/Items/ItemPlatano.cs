@@ -17,5 +17,4 @@ public class ItemPlatano : ItemInventory
 
         return false;
     }
-    
 }

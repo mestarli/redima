@@ -21,7 +21,14 @@ public class InventorySlot : MonoBehaviour
     [SerializeField] private Image itemIcon;
     [SerializeField] private GameObject backgroundQuantity;
     [SerializeField] private TextMeshProUGUI quantityTMP;
+
+    private Button slotButton;
     public int Index { get; set; }
+
+    private void Awake()
+    {
+        slotButton = GetComponent<Button>();
+    }
 
     public void UpdateSlotUI(ItemInventory item, int quantity)
     {
@@ -35,6 +42,11 @@ public class InventorySlot : MonoBehaviour
         backgroundQuantity.gameObject.SetActive(state);
     }
 
+    public void SelectSlot()
+    {
+        slotButton.Select();
+    }
+    
     public void ClickSlot()
     {
         SlotInteractionEvent?.Invoke(InteractionTypes.Click, Index);

@@ -103,6 +103,7 @@ public class UIInventory : MonoBehaviour
         if (SelectedSlot != null)
         {
             SelectedSlot.UseItemSlot();
+            SelectedSlot.SelectSlot();
         }
     }
     

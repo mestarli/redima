@@ -10,19 +10,20 @@ public class Player : MonoBehaviour
     public bool puedeAlimentarse;
     
     public float estamina;
-    private float maxEstamina;
+    private float maxEstamina = 150;
     public bool puedeRecuperarEstamina;
 
     private float diferencia;
     private void Awake()
     {
-        estamina = maxEstamina;
+        //estamina = maxEstamina;
         //hambre = maxHambre;
     }
 
     private void Update()
     {
         PuedeAlimentarse();
+        PuedeRecuperarEstamina();
     }
 
     private void PuedeAlimentarse()
@@ -35,6 +36,19 @@ public class Player : MonoBehaviour
         else
         {
             puedeAlimentarse = false;
+        }
+    }
+
+    private void PuedeRecuperarEstamina()
+    {
+        if (estamina < maxEstamina)
+        {
+            puedeRecuperarEstamina = true;
+        }
+        
+        else
+        {
+            puedeRecuperarEstamina = false;
         }
     }
 
