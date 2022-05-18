@@ -25,6 +25,9 @@ public class Land : MonoBehaviour
         
         // Ponemos el estado de la tierra a soil por defecto
         SwitchLandStatus(LandStatus.Soil);
+        
+        // Deselccionar la tierra por defecto
+        Select(false);
     }
 
     public void SwitchLandStatus(LandStatus statusToSwitch)
@@ -60,5 +63,12 @@ public class Land : MonoBehaviour
     public void Select(bool toggle)
     {
         select.SetActive(toggle);
+    }
+
+    // Cuando el player pulse la tecla de interaccion y esté un trozo de tierra seleccionado
+    public void Interact()
+    {
+        // Interactuar
+        SwitchLandStatus(LandStatus.Farmland);
     }
 }

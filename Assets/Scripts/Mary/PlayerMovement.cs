@@ -30,12 +30,17 @@ public class PlayerMovement : MonoBehaviour
     // For gliding palomo
     [SerializeField] private float isGliding;
     
+    // Componentes para interactuar
+    private PlayerInteraction _playerInteraction;
+    
     void Awake()
     {
         _animator = GetComponent<Animator>();
         initialSpeed = speed;
         _characterController = GetComponent<CharacterController>();
         _modelTransform = GetComponent<Transform>();
+
+        _playerInteraction = GetComponentInChildren<PlayerInteraction>();
     }
     
     // Start is called before the first frame update
@@ -50,6 +55,9 @@ public class PlayerMovement : MonoBehaviour
         // comprobamos que esta tocando suelo, si no es así, es que está saltando
         isGrounded  = Physics.CheckSphere(groundCheck.position,0.15f,groundLayer);
         Movement();
+        
+        // Llamamos al metodo Interact para interactuar con los cultivos
+        Interact();
     }
    
     private void Movement()
@@ -102,6 +110,18 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             speed = initialSpeed;
+        }
+    }
+
+    ///<summary>
+    /// Método para interactuar con los cultivos mediante una tecla
+    /// </summary>
+    public void Interact()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            // Interactua
+            _playerInteraction.Interact();
         }
     }
 }
