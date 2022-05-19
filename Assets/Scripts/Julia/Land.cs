@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Land : MonoBehaviour
 {
+    
     // Variables
     public enum LandStatus
     {
@@ -14,14 +15,14 @@ public class Land : MonoBehaviour
     
     public Material soilMat, farmlandMat, wateredMat;
 
-    private new Renderer renderer;
+    private MeshRenderer renderer;
 
     public GameObject select;
     
     void Start()
     {
         // Accedemos al componente Renderer del objeto
-        renderer.GetComponent<Renderer>();
+        gameObject.GetComponent<MeshRenderer>().material = soilMat;
         
         // Ponemos el estado de la tierra a soil por defecto
         SwitchLandStatus(LandStatus.Soil);
@@ -56,7 +57,7 @@ public class Land : MonoBehaviour
         }
         
         // Accedemos al renderer para aplicar los cambios del switch
-        renderer.material = materialToSwitch;
+        gameObject.GetComponent<MeshRenderer>().material = materialToSwitch;
     }
 
     // Metodo para saber que trozo de tierra para plantar estamos seleccionando
