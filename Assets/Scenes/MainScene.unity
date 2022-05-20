@@ -614,6 +614,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7061936796288068500, guid: b26eead7cf2fdfd4782f2518a7d7e2c6, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 1478512523}
+    - target: {fileID: 7061936796288068500, guid: b26eead7cf2fdfd4782f2518a7d7e2c6, type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7061936796288068500, guid: b26eead7cf2fdfd4782f2518a7d7e2c6, type: 3}
+      propertyPath: speedRun
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7061936796288068500, guid: b26eead7cf2fdfd4782f2518a7d7e2c6, type: 3}
       propertyPath: jumHeight
       value: 0.25
       objectReference: {fileID: 0}

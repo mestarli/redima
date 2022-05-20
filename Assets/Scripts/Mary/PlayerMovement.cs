@@ -30,8 +30,14 @@ public class PlayerMovement : MonoBehaviour
     // For gliding palomo
     [SerializeField] private float isGliding;
     
+    [SerializeField] private Transform cam;
+    
     // Componentes para interactuar
     private PlayerInteraction _playerInteraction;
+    
+    public float turnSmoothTime = 0.1f;
+    float turnSmoothVelocity;
+    public float groundDistance = 0.4f;
     
     void Awake()
     {
@@ -62,36 +68,36 @@ public class PlayerMovement : MonoBehaviour
    
     private void Movement()
     {
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
 
-      
-        
-        
-        inputPlayerMovement = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        _characterController.Move(  inputPlayerMovement * Time.deltaTime * speed);
+        Vector3 direction = new Vector3(horizontal, 0, vertical).normalized;
 
-        if (inputPlayerMovement.x !=0)
+        if (direction.magnitude >= 0.1f)
         {
-            Quaternion newRotation = Quaternion.LookRotation(new Vector3(0,0,inputPlayerMovement.x));
-            _modelTransform.rotation = newRotation;
+            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+
+            transform.rotation = Quaternion.Euler(0, angle, 0);
+
+            Vector3 moveDir = Quaternion.Euler(0, targetAngle, 0) * Vector3.forward;
+            _characterController.Move(moveDir.normalized * speed * Time.deltaTime);
         }
-        
-        if (inputPlayerMovement != Vector3.zero)
-        {
-            gameObject.transform.forward = inputPlayerMovement;
-        }
+
+        //Detección de suelo
+        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundLayer);
+        //Gravedad
+        playerVelocity.y += gravity  * Time.deltaTime;
         if (isGrounded && playerVelocity.y < 0)
         {
-            playerVelocity.y = 0f;
-            inputPlayerMovement.y = 0f;
+            playerVelocity.y = -1.86f;
         }
-        // Changes the height position of the player..
+        _characterController.Move(playerVelocity * Time.deltaTime);
+        //Salto
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            playerVelocity.y += Mathf.Sqrt(jumHeight * -3.0f * gravity);
+            playerVelocity.y = Mathf.Sqrt(3 * -2 * gravity);
         }
-
-        playerVelocity.y += gravity * Time.deltaTime;
-        _characterController.Move(playerVelocity * Time.deltaTime);
         Run();
     }
 
