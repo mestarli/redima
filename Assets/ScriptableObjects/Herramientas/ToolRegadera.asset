@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6456aa8c61f4c32836a9562b92fee2b, type: 3}
+  m_Name: ToolRegadera
+  m_EditorClassIdentifier: 
+  ID: Regadera
+  name: Regadera
+  icon: {fileID: 21300000, guid: ed05ceb4700993a48b2c6d1fbb665d29, type: 3}
+  description: Sirve para regar los cultivos.
+  type: 3
+  canBeConsumed: 0
+  canBeEquipped: 1
+  isCumulative: 0
+  maxCumulative: 1
+  quantity: 0

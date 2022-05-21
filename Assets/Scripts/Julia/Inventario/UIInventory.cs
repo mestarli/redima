@@ -14,18 +14,20 @@ public class UIInventory : MonoBehaviour
     [SerializeField] private TextMeshProUGUI itemName;
     [SerializeField] private TextMeshProUGUI itemDescription;
 
-    public static UIInventory instanceUI;
+    public static UIInventory instanceInventoryUI;
     
     [SerializeField] private InventorySlot slotPrefab;
     [SerializeField] private Transform inventoryContent;
     
     private List<InventorySlot> availableSlots = new List<InventorySlot>();
 
+    public List<InventorySlot> AvailableSlots => availableSlots;
+
     public InventorySlot SelectedSlot { get; private set; }
 
     private void Awake()
     {
-        instanceUI = this;
+        instanceInventoryUI = this;
         inventoryDescriptionPanel.gameObject.SetActive(false);
     }
 
@@ -103,6 +105,15 @@ public class UIInventory : MonoBehaviour
         if (SelectedSlot != null)
         {
             SelectedSlot.UseItemSlot();
+            SelectedSlot.SelectSlot();
+        }
+    }
+
+    public void EquipItem()
+    {
+        if (SelectedSlot != null)
+        {
+            SelectedSlot.EquipItemSlot();
             SelectedSlot.SelectSlot();
         }
     }

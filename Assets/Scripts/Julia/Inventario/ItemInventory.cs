@@ -20,6 +20,7 @@ public class ItemInventory : ScriptableObject
     [Header("Information")] 
     public ItemTypes type;
     public bool canBeConsumed;
+    public bool canBeEquipped;
     public bool isCumulative;
     public int maxCumulative;
 

@@ -59,4 +59,12 @@ public class InventorySlot : MonoBehaviour
             SlotInteractionEvent?.Invoke(InteractionTypes.Use, Index);
         }
     }
+
+    public void EquipItemSlot()
+    {
+        if (Inventory.instance.ItemsInventory[Index] != null)
+        {
+            SlotInteractionEvent?.Invoke(InteractionTypes.Equip, Index);
+        }
+    }
 }

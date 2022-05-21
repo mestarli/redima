@@ -11,7 +11,10 @@ public class UI_Manager : MonoBehaviour
     
     [Header("PANELS")]
     [SerializeField] private GameObject inventoryPanel;
+    [SerializeField] private GameObject timeInfoPanel;
 
+    [Header("Status Panel")]
+    [SerializeField] private Image equippedItemSlot;
     private void Awake()
     {
         inventoryPanel.SetActive(false);

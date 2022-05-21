@@ -38,7 +38,7 @@ public class Inventory : MonoBehaviour
 
         List<int> index = VerifyStock(itemToAdd.ID);
 
-        if (itemToAdd.isCumulative)
+        if (itemToAdd.isCumulative && itemToAdd.canBeConsumed)
         {
             if (index.Count > 0)
             {
@@ -55,7 +55,31 @@ public class Inventory : MonoBehaviour
                             AddItem(itemToAdd, difference);
                         }
                         
-                        UIInventory.instanceUI.DrawItemInInventory(itemToAdd, itemsInventory[index[i]].quantity, index[i]);
+                        UIInventory.instanceInventoryUI.DrawItemInInventory(itemToAdd, itemsInventory[index[i]].quantity, index[i]);
+                        return;
+                    }
+                }
+            }
+        }
+
+        if (!itemToAdd.isCumulative && itemToAdd.canBeEquipped)
+        {
+            if (index.Count > 0)
+            {
+                for (int i = 0; i < index.Count; i++)
+                {
+                    if (itemsInventory[index[i]].quantity < itemToAdd.maxCumulative)
+                    {
+                        itemsInventory[index[i]].quantity += quantity;
+
+                        if (itemsInventory[index[i]].quantity > itemToAdd.maxCumulative)
+                        {
+                            int equipDifference = itemsInventory[index[i]].quantity - itemToAdd.maxCumulative;
+                            itemsInventory[index[i]].quantity = itemToAdd.maxCumulative;
+                            AddItem(itemToAdd, equipDifference);
+                        }
+                        
+                        UIInventory.instanceInventoryUI.DrawItemInInventory(itemToAdd, itemsInventory[index[i]].quantity, index[i]);
                         return;
                     }
                 }
@@ -106,7 +130,7 @@ public class Inventory : MonoBehaviour
             {
                 itemsInventory[i] = item.copyItem();
                 itemsInventory[i].quantity = quantity;
-                UIInventory.instanceUI.DrawItemInInventory(item, quantity, i);
+                UIInventory.instanceInventoryUI.DrawItemInInventory(item, quantity, i);
                 return; 
             }
         }
@@ -120,25 +144,55 @@ public class Inventory : MonoBehaviour
         {
             itemsInventory[index].quantity = 0;
             itemsInventory[index] = null;
-            UIInventory.instanceUI.DrawItemInInventory(null, 0, index);
+            UIInventory.instanceInventoryUI.DrawItemInInventory(null, 0, index);
         }
 
         else
         {
-            UIInventory.instanceUI.DrawItemInInventory(itemsInventory[index], itemsInventory[index].quantity, index);
+            UIInventory.instanceInventoryUI.DrawItemInInventory(itemsInventory[index], itemsInventory[index].quantity, index);
+        }
+    }
+
+    private void EquippedUsedItem(int index)
+    {
+        itemsInventory[index].quantity--;
+      
+        if (itemsInventory[index].quantity <= 0)
+        {
+            itemsInventory[index].quantity = 0;
+            itemsInventory[index] = null;
+            //UIInventory.instanceUI.DrawItemInInventory(null, 0, index);
+        }
+
+        else
+        {
+            //UIInventory.instanceUI.DrawItemInInventory(itemsInventory[index], itemsInventory[index].quantity, index);
         }
     }
     
     private void UseItem(int index)
     {
-        if (itemsInventory[index] == null)
+        if (itemsInventory[index] == null && !itemsInventory[index].canBeConsumed)
         {
             return;
         }
 
-        if (itemsInventory[index].UseItem())
+        if (itemsInventory[index].UseItem() && itemsInventory[index].canBeConsumed)
         {
             EliminateUsedItem(index);
+        }
+    }
+
+    private void EquipItem(int index)
+    {
+        if (itemsInventory[index] == null && !itemsInventory[index].canBeEquipped)
+        {
+            return;
+        }
+
+        if (itemsInventory[index].EquipItem() && itemsInventory[index].canBeEquipped)
+        {
+            EquippedUsedItem(index);
         }
     }
     
@@ -153,6 +207,7 @@ public class Inventory : MonoBehaviour
                 break;
             
             case InteractionTypes.Equip:
+                EquipItem(index);
                 break;
             
             case InteractionTypes.Delete:
