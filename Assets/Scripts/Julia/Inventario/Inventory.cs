@@ -161,12 +161,12 @@ public class Inventory : MonoBehaviour
         {
             itemsInventory[index].quantity = 0;
             itemsInventory[index] = null;
-            //UIInventory.instanceUI.DrawItemInInventory(null, 0, index);
+            UIInventory.instanceInventoryUI.DrawItemInInventory(null, 0, index);
         }
 
         else
         {
-            //UIInventory.instanceUI.DrawItemInInventory(itemsInventory[index], itemsInventory[index].quantity, index);
+            UI_Manager.instanceUI.DrawItemInEquippedSlot(itemsInventory[index], itemsInventory[index].quantity, index);
         }
     }
     
