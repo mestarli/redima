@@ -557,10 +557,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7061936796028772357, guid: b26eead7cf2fdfd4782f2518a7d7e2c6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.0063
-      objectReference: {fileID: 0}
     - target: {fileID: 7061936796288068499, guid: b26eead7cf2fdfd4782f2518a7d7e2c6, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -604,14 +600,6 @@ PrefabInstance:
     - target: {fileID: 7061936796288068499, guid: b26eead7cf2fdfd4782f2518a7d7e2c6, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7061936796288068500, guid: b26eead7cf2fdfd4782f2518a7d7e2c6, type: 3}
-      propertyPath: jumHeight
-      value: 0.45
-      objectReference: {fileID: 0}
-    - target: {fileID: 7061936796288068500, guid: b26eead7cf2fdfd4782f2518a7d7e2c6, type: 3}
-      propertyPath: turnSmoothTime
-      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 7061936796288068511, guid: b26eead7cf2fdfd4782f2518a7d7e2c6, type: 3}
       propertyPath: m_Name
