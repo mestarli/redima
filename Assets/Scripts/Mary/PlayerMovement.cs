@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private float life = 100f;
-    [SerializeField] private float maxLife = 100f;
     [SerializeField] private float gravity = -9.81f;
     [SerializeField] private float speed = 1.5f;
     [SerializeField] private float speedRun = 2.5f;
@@ -14,7 +12,6 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController _characterController;
     
     [SerializeField] private bool isGrounded;
-    [SerializeField] private bool isJumping;
     [SerializeField] private float jumHeight = 3.5f;
     private Vector3 playerVelocity;
 
@@ -45,7 +42,6 @@ public class PlayerMovement : MonoBehaviour
         initialSpeed = speed;
         _characterController = GetComponent<CharacterController>();
         _modelTransform = GetComponent<Transform>();
-
         _playerInteraction = GetComponentInChildren<PlayerInteraction>();
     }
     
@@ -88,15 +84,17 @@ public class PlayerMovement : MonoBehaviour
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundLayer);
         //Gravedad
         playerVelocity.y += gravity  * Time.deltaTime;
+        
         if (isGrounded && playerVelocity.y < 0)
         {
             playerVelocity.y = -1.86f;
         }
         _characterController.Move(playerVelocity * Time.deltaTime);
+        
         //Salto
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
-            playerVelocity.y = Mathf.Sqrt(3 * -2 * gravity);
+            playerVelocity.y = Mathf.Sqrt(jumHeight * -2 * gravity);
         }
         Run();
     }
