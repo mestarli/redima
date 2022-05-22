@@ -1,20 +1,17 @@
+using TMPro;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
-public enum InteractionTypes
+public enum HandInteractionTypes
 {
     Click,
-    Use,
-    Equip,
-    Delete
+    Unequip
 }
 
-public class InventorySlot : MonoBehaviour
-{
-    // Variables
-    public static Action<InteractionTypes, int> SlotInteractionEvent;
+public class HandSlot : MonoBehaviour
+{  // Variables
+    public static Action<HandInteractionTypes, int> HandSlotInteractionEvent;
     
     [SerializeField] private Image itemIcon;
     [SerializeField] private GameObject backgroundQuantity;
@@ -47,22 +44,11 @@ public class InventorySlot : MonoBehaviour
     
     public void ClickSlot()
     {
-        SlotInteractionEvent?.Invoke(InteractionTypes.Click, Index);
+        HandSlotInteractionEvent?.Invoke(HandInteractionTypes.Click, Index);
     }
 
-    public void UseItemSlot()
+    public void UnequipSlot()
     {
-        if (Inventory.instance.ItemsInventory[Index] != null)
-        {
-            SlotInteractionEvent?.Invoke(InteractionTypes.Use, Index);
-        }
-    }
-
-    public void EquipItemSlot()
-    {
-        if (Inventory.instance.ItemsInventory[Index] != null)
-        {
-            SlotInteractionEvent?.Invoke(InteractionTypes.Equip, Index);
-        }
+        HandSlotInteractionEvent?.Invoke(HandInteractionTypes.Unequip, Index);
     }
 }

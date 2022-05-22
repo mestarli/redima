@@ -22,28 +22,18 @@ public class UI_Manager : MonoBehaviour
         inventoryPanel.SetActive(false);
     }
     
-    public void UpdateSlotUI(ItemInventory item, int quantity)
-    {
-        equippedItemSlot.sprite = item.icon;
-    }
-
-    public void ActivateSlotUI(bool state)
-    {
-        equippedItemSlot.gameObject.SetActive(state);
-    }
-    
     public void DrawItemInEquippedSlot(ItemInventory itemToAdd, int quantity, int itemIndex)
     {
-
+        //HandSlot slot = 
         if (itemToAdd != null)
         {
-            ActivateSlotUI(true);
-            UpdateSlotUI(itemToAdd, quantity);
+            //ActivateSlotUI(true);
+            //UpdateSlotUI(itemToAdd, quantity);
         }
 
         else
         {
-            ActivateSlotUI(false);
+            //ActivateSlotUI(false);
         }
     }
 
