@@ -15,25 +15,44 @@ public class UI_Manager : MonoBehaviour
     [SerializeField] private GameObject timeInfoPanel;
 
     [Header("Status Panel")]
-    [SerializeField] private Image equippedItemSlot;
+    private List<HandSlot> availableSlot = new List<HandSlot>();
+    [SerializeField] private HandSlot slotPrefab;
+    [SerializeField] private Transform inventoryContent;
+    [SerializeField] private int slotsNum;
 
     private void Awake()
     {
         inventoryPanel.SetActive(false);
     }
+
+    private void Start()
+    {
+        InitializeEquippedSlot();
+    }
+
+    private void InitializeEquippedSlot()
+    {
+        for (int i = 0; i < slotsNum; i++)
+        {
+            HandSlot newSlot = Instantiate(slotPrefab, inventoryContent);
+            newSlot.Index = i;
+            availableSlot.Add(newSlot);
+        }
+    }
     
     public void DrawItemInEquippedSlot(ItemInventory itemToAdd, int quantity, int itemIndex)
     {
-        //HandSlot slot = 
+        HandSlot slot = availableSlot[itemIndex]; 
+      
         if (itemToAdd != null)
         {
-            //ActivateSlotUI(true);
-            //UpdateSlotUI(itemToAdd, quantity);
+            slot.ActivateSlotUI(true);
+            slot.UpdateSlotUI(itemToAdd, quantity);
         }
 
         else
         {
-            //ActivateSlotUI(false);
+            slot.ActivateSlotUI(false);
         }
     }
 
