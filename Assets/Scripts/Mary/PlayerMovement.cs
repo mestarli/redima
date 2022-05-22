@@ -84,8 +84,7 @@ public class PlayerMovement : MonoBehaviour
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundLayer);
         //Gravedad
         playerVelocity.y += gravity  * Time.deltaTime;
-
-        Debug.Log("Hola suelo" +isGrounded);
+        
         if (isGrounded && playerVelocity.y < 0)
         {
             playerVelocity.y = -1.86f;
