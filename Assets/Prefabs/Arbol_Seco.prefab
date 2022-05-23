@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 538995215160532853}
   - component: {fileID: 3518787813930193104}
   - component: {fileID: 1671338584748631066}
+  - component: {fileID: 7819665704966974447}
   m_Layer: 0
   m_Name: Arbol_Seco
   m_TagString: Untagged
@@ -82,3 +83,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7819665704966974447
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878542665446524367}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.068965994, y: 0.103447996, z: 0.082757995}
+  m_Center: {x: 0, y: 0.051723998, z: -1.4700844e-15}

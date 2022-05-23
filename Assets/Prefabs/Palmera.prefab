@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3136489844236041262}
   - component: {fileID: 2029108510200968075}
   - component: {fileID: 4308854375143491393}
+  - component: {fileID: 6659925742634951903}
   m_Layer: 0
   m_Name: Palmera
   m_TagString: Untagged
@@ -86,6 +87,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6659925742634951903
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2363506113338369684}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.034209996, y: 0.10263199, z: 0.018422}
+  m_Center: {x: 0, y: 0.051315997, z: 1.4584884e-15}
 --- !u!1001 &3432494770630313204
 PrefabInstance:
   m_ObjectHideFlags: 0

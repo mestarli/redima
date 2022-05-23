@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8524328695041703679}
   - component: {fileID: 4747819153911329114}
   - component: {fileID: 7351936263760299408}
+  - component: {fileID: 2375356058471829587}
   m_Layer: 0
   m_Name: Abeto
   m_TagString: Untagged
@@ -89,6 +90,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2375356058471829587
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9009362424986428485}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.023076, y: 0.10256399, z: 0.020511996}
+  m_Center: {x: 0, y: 0.051281996, z: 0}
 --- !u!1001 &825482157702238473
 PrefabInstance:
   m_ObjectHideFlags: 0

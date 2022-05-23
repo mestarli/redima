@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6641789199700229978}
   - component: {fileID: 7747241955979391231}
   - component: {fileID: 5505453503393793077}
+  - component: {fileID: 5919013532763304243}
   m_Layer: 0
   m_Name: Matojo
   m_TagString: Untagged
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6298196921032386016}
-  m_LocalRotation: {x: 0.00000008146034, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.007, y: -0.428, z: 10.602}
   m_LocalScale: {x: 1.5116218, y: 1.5116218, z: 1.2286916}
   m_Children: []
@@ -81,3 +82,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5919013532763304243
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6298196921032386016}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.09, y: 0.080000006, z: 0.11}
+  m_Center: {x: 0, y: 0.040000003, z: -5.684342e-16}
