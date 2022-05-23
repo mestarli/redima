@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 5916504631102422371}
   - component: {fileID: 7328621067384074950}
   - component: {fileID: 4778470120610579980}
-  m_Layer: 0
+  - component: {fileID: -3458473857496130880}
+  m_Layer: 3
   m_Name: PuenteMid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,3 +83,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &-3458473857496130880
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6435772724758472665}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6493608771838994032, guid: fd31cb2fb9f98e04e8bad9441d5d719c, type: 3}
