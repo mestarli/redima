@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
     
     void Awake()
     {
-        _animator = GetComponent<Animator>();
+        _animator = gameObject.transform.GetChild(0).GetComponent<Animator>();
         initialSpeed = speed;
         _characterController = GetComponent<CharacterController>();
         _modelTransform = GetComponent<Transform>();
@@ -68,7 +68,8 @@ public class PlayerMovement : MonoBehaviour
         float vertical = Input.GetAxisRaw("Vertical");
 
         Vector3 direction = new Vector3(horizontal, 0, vertical).normalized;
-
+        //_animator.SetBool("IsWalking",false);
+        _animator.SetBool("IsRunning",false);
         if (direction.magnitude >= 0.1f)
         {
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
@@ -78,6 +79,7 @@ public class PlayerMovement : MonoBehaviour
 
             Vector3 moveDir = Quaternion.Euler(0, targetAngle, 0) * Vector3.forward;
             _characterController.Move(moveDir.normalized * speed * Time.deltaTime);
+            //_animator.SetBool("IsWalking",true);
         }
 
         //Detección de suelo
@@ -109,6 +111,7 @@ public class PlayerMovement : MonoBehaviour
         {
             speed = speedRun;
             //_animator.SetBool("IsRunning", isShiftKeyDown);
+            _animator.SetBool("IsRunning",true);
            
         }
         else
