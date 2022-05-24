@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1478512522}
   - component: {fileID: 1478512521}
   - component: {fileID: 1478512524}
+  - component: {fileID: 703094041}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -26,8 +27,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1478512520}
-  m_LocalRotation: {x: -0.02672689, y: 0.009647897, z: -0.006315718, w: -0.9995763}
-  m_LocalPosition: {x: -0.061636448, y: 0.301, z: -0.60140514}
+  m_LocalRotation: {x: 0.02337391, y: 0.95379627, z: -0.07701544, w: 0.28947374}
+  m_LocalPosition: {x: -1.8942348, y: 0.5539999, z: 2.8332405}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7061936796288068499}
@@ -116,6 +117,40 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &703094041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1478512520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShowDebugText: 0
+  m_ShowCameraFrustum: 1
+  m_IgnoreTimeScale: 0
+  m_WorldUpOverride: {fileID: 0}
+  m_UpdateMethod: 2
+  m_BlendUpdateMethod: 1
+  m_DefaultBlend:
+    m_Style: 1
+    m_Time: 2
+    m_CustomCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  m_CustomBlends: {fileID: 0}
+  m_CameraCutEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_CameraActivatedEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7061936796028772356
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,10 +231,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravity: -9.81
-  speed: 1.5
-  speedRun: 2.5
+  speed: 1
+  speedRun: 2
   isGrounded: 0
   jumHeight: 0.45
+  _animator: {fileID: 0}
   groundCheck: {fileID: 7061936796028772357}
   groundLayer:
     serializedVersion: 2

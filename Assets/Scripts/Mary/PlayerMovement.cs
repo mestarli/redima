@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public static PlayerMovement Instance;
     [SerializeField] private float gravity = -9.81f;
     [SerializeField] private float speed = 1.5f;
     [SerializeField] private float speedRun = 2.5f;
@@ -15,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float jumHeight = 3.5f;
     private Vector3 playerVelocity;
 
-    private Animator _animator;
+    public Animator _animator;
     private Transform _modelTransform;
     
     //For check if its toching ground
@@ -38,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
     
     void Awake()
     {
+        Instance = this;
         _animator = gameObject.transform.GetChild(0).GetComponent<Animator>();
         initialSpeed = speed;
         _characterController = GetComponent<CharacterController>();
