@@ -10,7 +10,9 @@ public class TimeManager : MonoBehaviour
 
     [SerializeField] private GameTimestamp timestamp;
 
-    public float timeScale = 1.0f;
+    public float timeScale = 75f;
+
+    public Transform sunTransform;
     
     private void Awake()
     {
@@ -28,7 +30,7 @@ public class TimeManager : MonoBehaviour
     private void Start()
     {
         // Inicializamos el time stamp
-        timestamp = new GameTimestamp(0, GameTimestamp.Season.Spring, 1, 6, 0);
+        timestamp = new GameTimestamp(0, GameTimestamp.Season.Spring, 1, 10, 0);
         StartCoroutine(TimeUpdate());
     }
 
@@ -44,5 +46,16 @@ public class TimeManager : MonoBehaviour
     public void Tick()
     {
         timestamp.UpdateClock();
+
+        // Conversion del tiempo actual a minutos
+        int timeInMinutes = GameTimestamp.HoursToMinutes(timestamp.hour) + timestamp.minute;
+
+        // El sol se mueve 15 grados en 1 hora
+        // .25 grados en 1 minuto
+        // A las 00:00, el angulo de sol debera ser -90
+        float sunAngle = .25f * timeInMinutes - 90;
+        
+        // Aplicamos el angulo a la luz direccional
+        sunTransform.eulerAngles = new Vector3(sunAngle, 0, 0);
     }
 }
