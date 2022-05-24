@@ -93,4 +93,13 @@ public class Player : MonoBehaviour
             return;
         }
     }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        if (hit.gameObject.tag ==  "Water")
+        {
+            Debug.Log("Hola agua");
+            //PlayerMovement.Instance._animator.SetTrigger("IsDrawned");
+        }
+    }
 }
