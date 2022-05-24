@@ -5,7 +5,7 @@ using UnityEngine;
 public class DayNightCycle : MonoBehaviour
 {
     // Variables
-    [Range(0.0f, 0.1f)]
+    [Range(0.1f, 1f)]
     public float time;
 
     public float fullDayLength;
@@ -42,7 +42,7 @@ public class DayNightCycle : MonoBehaviour
         time += timeRate * Time.deltaTime;
         if (time >= 1.0f)
         {
-            time = 0.0f;
+            time = 0.1f;
         }
         
         // Rotación de la luz del sol y de la luna
