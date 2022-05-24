@@ -28,7 +28,7 @@ public class TimeManager : MonoBehaviour
     private void Start()
     {
         // Inicializamos el time stamp
-        timestamp = new GameTimestamp(0, GameTimestamp.Season.Spring, 1, 6, 0);
+        timestamp = new GameTimestamp(0, GameTimestamp.Season.Spring, 1, 10, 0);
         StartCoroutine(TimeUpdate());
     }
 
