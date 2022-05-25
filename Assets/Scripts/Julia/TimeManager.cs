@@ -5,18 +5,18 @@ using UnityEngine;
 
 public class TimeManager : MonoBehaviour
 {
-    //https://www.youtube.com/watch?v=jNbOXAGJbZ4
-    //19:09
-    
     // Variables
     public static TimeManager instance;
 
+    [Header("Internal Clock")]
     [SerializeField] private GameTimestamp timestamp;
+    public float timeScale = 1.0f;
 
-    public float timeScale = 75f;
-
+    [Header("Day & Night Cycle")]
     public Transform sunTransform;
-    
+
+    private List<ITimeTracker> listeners = new List<ITimeTracker>();
+
     private void Awake()
     {
         if (instance != null)
@@ -33,7 +33,7 @@ public class TimeManager : MonoBehaviour
     private void Start()
     {
         // Inicializamos el time stamp
-        timestamp = new GameTimestamp(0, GameTimestamp.Season.Spring, 1, 10, 0);
+        timestamp = new GameTimestamp(0, GameTimestamp.Season.Spring, 1, 6, 0);
         StartCoroutine(TimeUpdate());
     }
 
@@ -50,6 +50,19 @@ public class TimeManager : MonoBehaviour
     {
         timestamp.UpdateClock();
 
+        // Informar a los listeners del nuevo estado del tiempo
+        foreach (ITimeTracker listener in listeners)
+        {
+            listener.ClockUpdate(timestamp);
+        }
+        
+        UpdateSunMovement();
+    }
+    
+    // Método para que el sol se mueva en funcion del tiempo actual
+    // Ciclo de dia y noche
+    public void UpdateSunMovement()
+    {
         // Conversion del tiempo actual a minutos
         int timeInMinutes = GameTimestamp.HoursToMinutes(timestamp.hour) + timestamp.minute;
 
@@ -60,5 +73,17 @@ public class TimeManager : MonoBehaviour
         
         // Aplicamos el angulo a la luz direccional
         sunTransform.eulerAngles = new Vector3(sunAngle, 0, 0);
+    }
+
+    // Añadir un objeto a la lista de listeners
+    public void RegisterTracker(ITimeTracker listener)
+    {
+        listeners.Add(listener);
+    }
+
+    // Eliminar un objeto de la lista de listeners
+    public void UnregidterTracker(ITimeTracker listener)
+    {
+        listeners.Remove(listener);
     }
 }

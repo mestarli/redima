@@ -5,14 +5,13 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class UI_Manager : MonoBehaviour
+public class UI_Manager : MonoBehaviour, ITimeTracker
 {
     // Variables
     public static UI_Manager instanceUI;
 
     [Header("PANELS")]
     [SerializeField] private GameObject inventoryPanel;
-    [SerializeField] private GameObject timeInfoPanel;
 
     [Header("Status Panel")]
     private List<HandSlot> availableSlot = new List<HandSlot>();
@@ -20,6 +19,10 @@ public class UI_Manager : MonoBehaviour
     [SerializeField] private Transform inventoryContent;
     [SerializeField] private int slotsNum;
 
+    [Header("Time Info Panel")]
+    public Text timeText;
+    public Text dateText;
+    
     private void Awake()
     {
         inventoryPanel.SetActive(false);
@@ -28,6 +31,9 @@ public class UI_Manager : MonoBehaviour
     private void Start()
     {
         InitializeEquippedSlot();
+        
+        // Añadir el UI_Manager a la lista de objetos del TimeManager notificará cuando el time se actualice
+        TimeManager.instance.RegisterTracker(this);
     }
 
     private void InitializeEquippedSlot()
@@ -54,6 +60,23 @@ public class UI_Manager : MonoBehaviour
         {
             slot.ActivateSlotUI(false);
         }
+    }
+
+    // Callback para manejar la UI por tiempo
+    public void ClockUpdate(GameTimestamp timestamp)
+    {
+        // Recuperamos las horas y los minutos
+        int hours = timestamp.hour;
+        int minutes = timestamp.minute;
+
+        timeText.text = hours.ToString("00") + ":" + minutes.ToString("00");
+        
+        // Recuperamos los dias, la estacion y el dia de la semana
+        int day = timestamp.day;
+        string season = timestamp.season.ToString();
+        string dayOfTheWeek = timestamp.GetDayOfTheWeek().ToString();
+
+        dateText.text = season + " " + day + " " + "(" + dayOfTheWeek + ")";
     }
 
     #region Panels

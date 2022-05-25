@@ -2176,7 +2176,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: 0}
+  m_AnchoredPosition: {x: -8.7, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &716974395
@@ -2443,7 +2443,7 @@ MonoBehaviour:
     day: 0
     hour: 0
     minute: 0
-  timeScale: 75
+  timeScale: 1
   sunTransform: {fileID: 705507995}
 --- !u!4 &803487448
 Transform:
@@ -3111,7 +3111,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 15, y: 15}
-  m_SizeDelta: {x: 593.888, y: 120}
+  m_SizeDelta: {x: 628.1384, y: 120}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1047428390
 MonoBehaviour:
@@ -3210,7 +3210,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1071062494}
-  m_LocalRotation: {x: -0.0062928507, y: 0.9868471, z: -0.15659025, w: -0.039658166}
+  m_LocalRotation: {x: -0.006292848, y: 0.9868471, z: -0.15659025, w: -0.039658148}
   m_LocalPosition: {x: -6.3885093, y: -3.7909384, z: -1.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -3756,8 +3756,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 59.758102, y: 25.000002}
-  m_SizeDelta: {x: 311.8178, y: 50}
+  m_AnchoredPosition: {x: 51.394638, y: 25.000002}
+  m_SizeDelta: {x: 328.5447, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1497556366
 MonoBehaviour:
@@ -4128,11 +4128,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1478512523, guid: b26eead7cf2fdfd4782f2518a7d7e2c6, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.2747859
+      value: 0.27478594
       objectReference: {fileID: 0}
     - target: {fileID: 1478512523, guid: b26eead7cf2fdfd4782f2518a7d7e2c6, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.043602295
+      value: 0.0436023
       objectReference: {fileID: 0}
     - target: {fileID: 1478512523, guid: b26eead7cf2fdfd4782f2518a7d7e2c6, type: 3}
       propertyPath: m_LocalRotation.y
@@ -5322,7 +5322,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -30.2, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1761665278
@@ -5472,8 +5472,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 59.758102, y: -21.66789}
-  m_SizeDelta: {x: 311.8178, y: 56.6642}
+  m_AnchoredPosition: {x: 51.394638, y: -21.66789}
+  m_SizeDelta: {x: 328.5447, y: 56.6642}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1877456361
 MonoBehaviour:
@@ -5633,10 +5633,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryPanel: {fileID: 565666067}
-  timeInfoPanel: {fileID: 0}
   slotPrefab: {fileID: 3820980163780250089, guid: 57be2e8bc9681cc4f8df9e36d4e3b2f0, type: 3}
   inventoryContent: {fileID: 716974394}
   slotsNum: 1
+  timeText: {fileID: 1877456361}
+  dateText: {fileID: 1497556366}
 --- !u!1 &1914612647
 GameObject:
   m_ObjectHideFlags: 0
