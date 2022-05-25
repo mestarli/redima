@@ -46,6 +46,10 @@ public class Inventory : MonoBehaviour
 
         List<int> index = VerifyStock(itemToAdd.ID);
 
+        Debug.Log(itemToAdd.name);
+        Debug.Log(itemToAdd.quantity);
+        Debug.Log("Index COunt " + index.Count);
+
         if (itemToAdd.isCumulative && itemToAdd.canBeConsumed)
         {
             if (index.Count > 0)
@@ -132,6 +136,9 @@ public class Inventory : MonoBehaviour
 
     private void AddItemInADisponibleSlot(ItemInventory item, int quantity)
     {
+        
+        Debug.Log("Estamos pasando por aqui");
+        
         for (int i = 0; i < itemsInventory.Length; i++)
         {
             if (itemsInventory[i] == null)
@@ -216,7 +223,6 @@ public class Inventory : MonoBehaviour
         if (itemsInventory[index].EquipItem() && itemsInventory[index].canBeEquipped)
         {
             itemsInventory[index] = handSlot.ItemInventoryHand;
-            handSlot.Deactivate_Info_iteminventory();
             EquippedUsedItem(index);
         }
     }

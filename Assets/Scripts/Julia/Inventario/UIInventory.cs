@@ -71,6 +71,8 @@ public class UIInventory : MonoBehaviour
     public void DrawItemInInventory(ItemInventory itemToAdd, int quantity, int itemIndex)
     {
         InventorySlot slot = availableSlots[itemIndex];
+        
+        Debug.Log("eddeedsdsdd");
 
         if (itemToAdd != null)
         {

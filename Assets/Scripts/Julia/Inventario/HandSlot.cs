@@ -61,20 +61,12 @@ public class HandSlot : MonoBehaviour
         itemIcon.sprite = itemInventory_hand.icon;
         quantityTMP.text = itemInventory_hand.quantity.ToString();
     }
-
-    public void Deactivate_Info_iteminventory()
-    {
-        ActivateSlotUI(false);
-        Update_Info_item_inventory();
-    }
+    
     
     public void UnequipItemSlot()
     {
-        if (Inventory.instance.ItemsInventory[Index] != null)
-        {
-            HandSlotInteractionEvent?.Invoke(HandInteractionTypes.Unequip, Index);
-        }
-        
-        UI_Manager.instanceUI.EquipItem();
+        Inventory.instance.AddItem(itemInventory_hand, 1);
+        //itemInventory_hand = null; 
+        ActivateSlotUI(false);
     }
 }
