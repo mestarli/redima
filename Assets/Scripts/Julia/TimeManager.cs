@@ -75,6 +75,13 @@ public class TimeManager : MonoBehaviour
         sunTransform.eulerAngles = new Vector3(sunAngle, 0, 0);
     }
 
+    // Para obtener el GameTimestamp en otro script
+    public GameTimestamp GetGameTimestamp()
+    {
+        // Devuelve una instancia nueva
+        return new GameTimestamp(timestamp);
+    }
+    
     // Añadir un objeto a la lista de listeners
     public void RegisterTracker(ITimeTracker listener)
     {

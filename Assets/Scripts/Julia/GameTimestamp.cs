@@ -1,4 +1,5 @@
 using System;
+using UnityEngine;
 
 [Serializable]
 
@@ -32,6 +33,7 @@ public class GameTimestamp
     public int hour;
     public int minute;
 
+    // Declaramos nuestras variables para construir nuestra clase
     public GameTimestamp(int year, Season season, int day, int hour, int minute)
     {
         this.year = year;
@@ -39,6 +41,16 @@ public class GameTimestamp
         this.day = day;
         this.hour = hour;
         this.minute = minute;
+    }
+
+    // Creamos una nueva instancia de GameTimestamp de otra ya existente
+    public GameTimestamp(GameTimestamp timestamp)
+    {
+        this.year = timestamp.year;
+        this.season = timestamp.season;
+        this.day = timestamp.day;
+        this.hour = timestamp.hour;
+        this.minute = timestamp.minute;
     }
 
     public void UpdateClock()
@@ -119,5 +131,28 @@ public class GameTimestamp
     public static int YearsToDays(int years)
     {
         return years * 4 * 30;
+    }
+
+    /// <summary>
+    /// Calculo de la diferencia entre 2 timestamps
+    /// </summary>
+    /// <param name="timestamp1">El primer timestamp</param>
+    /// <param name="timestamp2">El segundo timestamp</param>
+    /// <param name="displayInHours">Si se calcula en términos de horas. De lo contrario, volverá en minutos</param>
+    /// <returns></returns>
+    public static int CompareTimestamps(GameTimestamp timestamp1, GameTimestamp timestamp2)
+    {
+        // Conversion de los timestamps a horas
+        int timestamp1Hours = DaysToHours(YearsToDays(timestamp1.year)) 
+            + DaysToHours(SeasonsToDays(timestamp1.season)) + DaysToHours(timestamp1.day) + timestamp1.hour;
+        
+        int timestamp2Hours = DaysToHours(YearsToDays(timestamp2.year)) 
+            + DaysToHours(SeasonsToDays(timestamp2.season)) + DaysToHours(timestamp2.day) + timestamp2.hour;
+
+        // Calculamos la diferencia entre los 2 timestamps
+        int difference = timestamp2Hours - timestamp1Hours;
+        
+        // Devolvemos la diferencia entre los 2 timestamps
+        return Mathf.Abs(difference);
     }
 }

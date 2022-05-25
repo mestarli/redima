@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Land : MonoBehaviour
+public class Land : MonoBehaviour, ITimeTracker
 {
+    //https://www.youtube.com/watch?v=uij6JL_8LWo
     
     // Variables
     public enum LandStatus
@@ -14,10 +15,11 @@ public class Land : MonoBehaviour
     public LandStatus landStatus;
     
     public Material soilMat, farmlandMat, wateredMat;
-
     private MeshRenderer renderer;
 
     public GameObject select;
+
+    private GameTimestamp timeWatered;
     
     void Start()
     {
@@ -29,6 +31,9 @@ public class Land : MonoBehaviour
         
         // Deselccionar la tierra por defecto
         Select(false);
+        
+        // Añadir este script a la lista de listeners del TimeManager
+        TimeManager.instance.RegisterTracker(this);
     }
 
     public void SwitchLandStatus(LandStatus statusToSwitch)
@@ -53,6 +58,9 @@ public class Land : MonoBehaviour
             case LandStatus.Watered:
                 // Mostrará el material Watered
                 materialToSwitch = wateredMat;
+                
+                // 
+                timeWatered = TimeManager.instance.GetGameTimestamp();
                 break;
         }
         
@@ -71,5 +79,22 @@ public class Land : MonoBehaviour
     {
         // Interactuar
         SwitchLandStatus(LandStatus.Watered);
+    }
+
+    public void ClockUpdate(GameTimestamp timestamp)
+    {
+        // Miramos si han pasado 24 horas desde que la tierra se ha regado
+        if (landStatus == LandStatus.Watered)
+        {
+            // Horas desde que hemos regado la tierra
+            int hoursElapsed = GameTimestamp.CompareTimestamps(timeWatered, timestamp);
+
+            Debug.Log(hoursElapsed);
+
+            if (hoursElapsed > 24)
+            {
+                SwitchLandStatus(LandStatus.Farmland);
+            }
+        }
     }
 }

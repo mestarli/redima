@@ -2443,7 +2443,7 @@ MonoBehaviour:
     day: 0
     hour: 0
     minute: 0
-  timeScale: 1
+  timeScale: 568
   sunTransform: {fileID: 705507995}
 --- !u!4 &803487448
 Transform:
