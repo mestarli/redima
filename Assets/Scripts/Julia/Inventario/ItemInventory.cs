@@ -23,6 +23,7 @@ public class ItemInventory : ScriptableObject
     public bool canBeEquipped;
     public bool isCumulative;
     public int maxCumulative;
+    public GameObject gameModel;
 
     public int quantity;
 
