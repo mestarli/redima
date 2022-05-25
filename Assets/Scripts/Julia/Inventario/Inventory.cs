@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.XR;
 
 public class Inventory : MonoBehaviour
 {
@@ -12,10 +13,17 @@ public class Inventory : MonoBehaviour
     [SerializeField] private ItemInventory[] itemsInventory;
     [SerializeField] private Player player;
     [SerializeField] private int slotsNum;
+    [SerializeField] private HandSlot handSlot;
 
     public Player Player => player;
     public static Inventory instance; 
     public ItemInventory[] ItemsInventory => itemsInventory;
+
+    public HandSlot HandSlot
+    {
+        get => handSlot;
+        set => handSlot = value;
+    }
     public int SlotsNum => slotsNum;
 
     void Awake()
@@ -153,7 +161,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    private void EquippedUsedItem(int index)
+    public void EquippedUsedItem(int index)
     {
         itemsInventory[index].quantity--;
       
@@ -192,10 +200,27 @@ public class Inventory : MonoBehaviour
 
         if (itemsInventory[index].EquipItem() && itemsInventory[index].canBeEquipped)
         {
+            handSlot.ItemInventoryHand = itemsInventory[index];
+            handSlot.Update_Info_item_inventory();
             EquippedUsedItem(index);
         }
     }
     
+    private void UnequipItem(int index)
+    {
+        if (itemsInventory[index] == null && !itemsInventory[index].canBeEquipped)
+        {
+            return;
+        }
+
+        if (itemsInventory[index].EquipItem() && itemsInventory[index].canBeEquipped)
+        {
+            itemsInventory[index] = handSlot.ItemInventoryHand;
+            handSlot.Deactivate_Info_iteminventory();
+            EquippedUsedItem(index);
+        }
+    }
+
     #region Events
 
     private void SlotInteractionResponse(InteractionTypes type, int index)
@@ -214,16 +239,27 @@ public class Inventory : MonoBehaviour
                 break;
         }
     }
+
+    private void HandSlotInteractionResponse(HandInteractionTypes type, int index)
+    {
+        switch (type)
+        {
+            case HandInteractionTypes.Unequip:
+                UnequipItem(index);
+                break;
+        }
+    }
     
     private void OnEnable()
     {
         InventorySlot.SlotInteractionEvent += SlotInteractionResponse;
+        HandSlot.HandSlotInteractionEvent += HandSlotInteractionResponse;
     }
 
     private void OnDisable()
     {
         InventorySlot.SlotInteractionEvent -= SlotInteractionResponse;
-
+        HandSlot.HandSlotInteractionEvent += HandSlotInteractionResponse;
     }
 
     #endregion
