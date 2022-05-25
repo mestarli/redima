@@ -41,8 +41,8 @@ public class TimeManager : MonoBehaviour
     {
         while(true)
         {
-            yield return new WaitForSeconds(1/timeScale);
             Tick();
+            yield return new WaitForSeconds(1/timeScale);
         }
     }
     
