@@ -125,7 +125,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3820980163780250089}
         m_TargetAssemblyTypeName: HandSlot, Assembly-CSharp
-        m_MethodName: UnequipSlot
+        m_MethodName: UnequipItemSlot
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -150,6 +150,7 @@ MonoBehaviour:
   itemIcon: {fileID: 5323368338320875273}
   backgroundQuantity: {fileID: 5323368338041192951}
   quantityTMP: {fileID: 5323368339105092589}
+  itemInventory_hand: {fileID: 0}
 --- !u!1 &5323368338041192951
 GameObject:
   m_ObjectHideFlags: 0

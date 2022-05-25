@@ -16,7 +16,7 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
     [Header("Status Panel")]
     private List<HandSlot> availableSlot = new List<HandSlot>();
     [SerializeField] private HandSlot slotPrefab;
-    [SerializeField] private Transform inventoryContent;
+    [SerializeField] private Transform handContent;
     [SerializeField] private int slotsNum;
 
     [Header("Time Info Panel")]
@@ -40,7 +40,7 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
     {
         for (int i = 0; i < slotsNum; i++)
         {
-            HandSlot newSlot = Instantiate(slotPrefab, inventoryContent);
+            HandSlot newSlot = Instantiate(slotPrefab, handContent);
             newSlot.Index = i;
             availableSlot.Add(newSlot);
         }
