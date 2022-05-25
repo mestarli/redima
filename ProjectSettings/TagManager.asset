@@ -8,6 +8,10 @@ TagManager:
   - Water
   - Activate_Camera_02
   - Oveja
+  - Activate_Camera_01
+  - Activate_Camera_01_01
+  - Activate_Camera_01_02
+  - Activate_Camera_01_02_01
   layers:
   - Default
   - TransparentFX
