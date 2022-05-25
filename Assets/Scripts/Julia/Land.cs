@@ -70,6 +70,6 @@ public class Land : MonoBehaviour
     public void Interact()
     {
         // Interactuar
-        SwitchLandStatus(LandStatus.Farmland);
+        SwitchLandStatus(LandStatus.Watered);
     }
 }
