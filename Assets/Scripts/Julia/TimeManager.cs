@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class TimeManager : MonoBehaviour
 {
+    //https://www.youtube.com/watch?v=jNbOXAGJbZ4
+    //19:09
+    
     // Variables
     public static TimeManager instance;
 
