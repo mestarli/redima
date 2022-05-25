@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.XR;
 
 public class UI_Manager : MonoBehaviour, ITimeTracker
 {
@@ -18,6 +19,7 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
     [SerializeField] private HandSlot slotPrefab;
     [SerializeField] private Transform handContent;
     [SerializeField] private int slotsNum;
+    public HandSlot SelectedSlot { get; private set; }
 
     [Header("Time Info Panel")]
     public Text timeText;
@@ -59,6 +61,15 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
         else
         {
             slot.ActivateSlotUI(false);
+        }
+    }
+
+    public void EquipItem()
+    {
+        if (SelectedSlot != null)
+        {
+            SelectedSlot.UnequipItemSlot();
+            SelectedSlot.SelectSlot();
         }
     }
 

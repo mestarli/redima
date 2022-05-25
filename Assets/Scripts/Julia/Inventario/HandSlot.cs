@@ -16,7 +16,7 @@ public class HandSlot : MonoBehaviour
     [SerializeField] private Image itemIcon;
     [SerializeField] private GameObject backgroundQuantity;
     [SerializeField] private TextMeshProUGUI quantityTMP;
-    [SerializeField] private ItemInventory itemInventory_hand; 
+    [SerializeField] private ItemInventory itemInventory_hand;
 
     private Button slotButton;
     public int Index { get; set; }
@@ -74,5 +74,7 @@ public class HandSlot : MonoBehaviour
         {
             HandSlotInteractionEvent?.Invoke(HandInteractionTypes.Unequip, Index);
         }
+        
+        UI_Manager.instanceUI.EquipItem();
     }
 }
