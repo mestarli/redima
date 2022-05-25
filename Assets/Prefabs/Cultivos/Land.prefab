@@ -193,8 +193,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   landStatus: 0
   soilMat: {fileID: 2100000, guid: 1d489237227f47a4f951ea75a1ac334a, type: 2}
-  farmlandMat: {fileID: 2100000, guid: 9efd13d2abaf0c54d822a6bc44135b62, type: 2}
-  wateredMat: {fileID: 2100000, guid: d1e15d63e3b34b14788222b844d317a8, type: 2}
+  farmlandMat: {fileID: 2100000, guid: 5fe1567cc11000947b61a35890907b6e, type: 2}
+  wateredMat: {fileID: 2100000, guid: 9efd13d2abaf0c54d822a6bc44135b62, type: 2}
   select: {fileID: 7610957006390575423}
 --- !u!1 &7610957006390575423
 GameObject:
