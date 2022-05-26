@@ -170,13 +170,16 @@ public class Inventory : MonoBehaviour
 
     public void EquippedUsedItem(int index)
     {
-        itemsInventory[index].quantity--;
-      
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            itemsInventory[index].quantity--;
+        }
+
         if (itemsInventory[index].quantity <= 0)
         {
             itemsInventory[index].quantity = 0;
             itemsInventory[index] = null;
-            UIInventory.instanceInventoryUI.DrawItemInInventory(null, 0, index);
+            UIInventory.instanceInventoryUI.DrawItemInInventory(itemsInventory[index], itemsInventory[index].quantity, index);
         }
 
         else

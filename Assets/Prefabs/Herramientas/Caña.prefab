@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 5474127252717021917}
   - component: {fileID: 8959869878931858808}
   - component: {fileID: 6607674999180644786}
+  - component: {fileID: 3169875174833831282}
+  - component: {fileID: 1379048443949723077}
   m_Layer: 0
   m_Name: "Ca\xF1a"
   m_TagString: Untagged
@@ -86,3 +88,30 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3169875174833831282
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4662299936707833959}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.00053848, y: 0.00207692, z: 0.00030768}
+  m_Center: {x: 0, y: 0.00103846, z: 0}
+--- !u!114 &1379048443949723077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4662299936707833959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726f32ae3168956448664f209aafc4a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemInventoryReference: {fileID: 11400000, guid: 00560a566a17b0f4ebd757ec6fe2ff27, type: 2}
+  quantityToAdd: 1

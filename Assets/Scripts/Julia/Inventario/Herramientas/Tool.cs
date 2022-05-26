@@ -7,8 +7,9 @@ public class Tool : ItemInventory
     public enum ToolType
     {
         WateringCan,
-        FishinRod,
-        Shovel
+        FishingRod,
+        Shovel,
+        Sickle
     }
 
     public ToolType toolType;

@@ -65,7 +65,7 @@ public class HandSlot : MonoBehaviour
     
     public void UnequipItemSlot()
     {
-        Inventory.instance.AddItem(itemInventory_hand, 1);
+        Inventory.instance.AddItem(itemInventory_hand, itemInventory_hand.quantity);
         //itemInventory_hand = null; 
         ActivateSlotUI(false);
     }

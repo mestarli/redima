@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6456aa8c61f4c32836a9562b92fee2b, type: 3}
-  m_Name: "ToolCa\xF1aPescar"
+  m_Name: ToolPala
   m_EditorClassIdentifier: 
-  ID: "Ca\xF1aPescar"
-  name: "Ca\xF1a De Pescar"
+  ID: Pala
+  name: Pala
   icon: {fileID: 0}
-  description: Sirve para pescar peces.
+  description: Sirve para plantar las semillas.
   type: 3
   canBeConsumed: 0
   canBeEquipped: 1
   isCumulative: 0
   maxCumulative: 1
-  gameModel: {fileID: 4662299936707833959, guid: e23df49379990fc409c23e719cbc232c, type: 3}
+  gameModel: {fileID: 1499283613842086403, guid: 2f6247ab2dc6b174c9dd468806f2ff80, type: 3}
   quantity: 0
-  toolType: 1
+  toolType: 2
