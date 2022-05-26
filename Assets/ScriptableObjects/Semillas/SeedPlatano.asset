@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31f56fdd50fb4044b54c9aeea40ef155, type: 3}
+  m_Name: SeedPlatano
+  m_EditorClassIdentifier: 
+  ID: SemillasPlatano
+  name: Semillas De Platano
+  icon: {fileID: 21300000, guid: c3c15b80fcb1f8d489b4236278703f6e, type: 3}
+  description: Semillas de platano para cultivos.
+  type: 1
+  canBeConsumed: 0
+  canBeEquipped: 1
+  isCumulative: 1
+  maxCumulative: 60
+  gameModel: {fileID: 0}
+  quantity: 0
+  daysToGrow: 0
+  cropToYield: {fileID: 0}
+  seedling: {fileID: 0}
