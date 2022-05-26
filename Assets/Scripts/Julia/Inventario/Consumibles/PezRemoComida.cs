@@ -1,11 +1,12 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Items/Platano")]
-public class ItemPlatano : ItemInventory
+[CreateAssetMenu(menuName = "Consumables/PezRemo")]
+
+public class PezRemoComida : ItemInventory
 {
-    [Header("Platano info")] 
+    [Header("Pez Remo info")] 
     public float hungryRestoration;
-    
+
     public override bool UseItem()
     {
         if (Inventory.instance.Player.puedeAlimentarse)

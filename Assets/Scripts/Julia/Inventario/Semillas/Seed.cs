@@ -1,8 +1,8 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Seeds/SeedPatata")]
+[CreateAssetMenu(menuName = "Seeds")]
 
-public class SeedPatata : ItemInventory
+public class Seed : ItemInventory
 {
     // Variables
     public int daysToGrow;
