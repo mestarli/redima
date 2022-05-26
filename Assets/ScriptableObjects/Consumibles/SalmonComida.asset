@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3687cf9ca3cd08498a735994ea8f573, type: 3}
   m_Name: SalmonComida
   m_EditorClassIdentifier: 
-  ID: 
-  name: 
-  icon: {fileID: 0}
-  description: 
+  ID: Salmon
+  name: Salmon
+  icon: {fileID: 21300000, guid: 72ef6af3b720963499859800e9415c5b, type: 3}
+  description: Te restaura 3 de hambre.
   type: 2
-  canBeConsumed: 0
+  canBeConsumed: 1
   canBeEquipped: 0
-  isCumulative: 0
-  maxCumulative: 0
+  isCumulative: 1
+  maxCumulative: 60
   gameModel: {fileID: 0}
   quantity: 0
-  hungryRestoration: 2
+  hungryRestoration: 3

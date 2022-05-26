@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: Atun
   name: Atun
-  icon: {fileID: 0}
-  description: 
+  icon: {fileID: 21300000, guid: 8c720d0ca544e754eaf38a40b3b93f91, type: 3}
+  description: Te restaura 10 de comida.
   type: 2
   canBeConsumed: 1
   canBeEquipped: 0
@@ -23,4 +23,4 @@ MonoBehaviour:
   maxCumulative: 60
   gameModel: {fileID: 0}
   quantity: 0
-  hungryRestoration: 2
+  hungryRestoration: 10

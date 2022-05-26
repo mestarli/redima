@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ce1140d57d6ad240828414159c8eab6, type: 3}
   m_Name: CelacantoComida
   m_EditorClassIdentifier: 
-  ID: 
-  name: 
+  ID: Celacanto
+  name: Celacanto
   icon: {fileID: 0}
   description: 
   type: 2
