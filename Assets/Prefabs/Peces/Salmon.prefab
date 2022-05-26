@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 551218222505320972}
   - component: {fileID: 2324602070767113926}
   - component: {fileID: 349106866270783104}
+  - component: {fileID: 1005227922}
   m_Layer: 0
   m_Name: Salmon
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4270073478026737427}
-  m_LocalRotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -12.904, y: 1.342, z: 11.548}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
@@ -97,3 +98,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.00208332, y: 0.0010833399, z: 0.00041667998}
   m_Center: {x: 0, y: 0.00054166996, z: 0}
+--- !u!114 &1005227922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4270073478026737427}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726f32ae3168956448664f209aafc4a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemInventoryReference: {fileID: 0}
+  quantityToAdd: 1

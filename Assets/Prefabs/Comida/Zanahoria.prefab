@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3062085703832765836
+--- !u!1 &5644202995348007912
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,46 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2392931020659842870}
-  - component: {fileID: 1628822574924189843}
-  - component: {fileID: 3566370183925638233}
-  - component: {fileID: 696013713167504051}
-  - component: {fileID: 85313585}
+  - component: {fileID: 4980959286950211922}
+  - component: {fileID: 8264166345786441463}
+  - component: {fileID: 6148751358226221629}
+  - component: {fileID: 5303908686023278521}
   m_Layer: 0
-  m_Name: PezPayaso
+  m_Name: Zanahoria
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2392931020659842870
+--- !u!4 &4980959286950211922
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3062085703832765836}
+  m_GameObject: {fileID: 5644202995348007912}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.987, y: 1.3039988, z: 11.81}
+  m_LocalPosition: {x: -12.85515, y: 1.303999, z: 10.979746}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1628822574924189843
+--- !u!33 &8264166345786441463
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3062085703832765836}
-  m_Mesh: {fileID: 4950743696956881874, guid: f06dc87658adee840b9db60800103bbf, type: 3}
---- !u!23 &3566370183925638233
+  m_GameObject: {fileID: 5644202995348007912}
+  m_Mesh: {fileID: -7588213584500772261, guid: 7ab3a0c363a87394db5bcfb7900dd3e0, type: 3}
+--- !u!23 &6148751358226221629
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3062085703832765836}
+  m_GameObject: {fileID: 5644202995348007912}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -61,12 +60,9 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -883165817853704012, guid: f06dc87658adee840b9db60800103bbf, type: 3}
-  - {fileID: 6424857129517025537, guid: f06dc87658adee840b9db60800103bbf, type: 3}
-  - {fileID: 385020249019140928, guid: f06dc87658adee840b9db60800103bbf, type: 3}
-  - {fileID: 3842717857771564953, guid: f06dc87658adee840b9db60800103bbf, type: 3}
-  - {fileID: -4831302213755980277, guid: f06dc87658adee840b9db60800103bbf, type: 3}
-  - {fileID: -4781680485916231957, guid: f06dc87658adee840b9db60800103bbf, type: 3}
+  - {fileID: -6788576865441762776, guid: 7ab3a0c363a87394db5bcfb7900dd3e0, type: 3}
+  - {fileID: -1404943664471277209, guid: 7ab3a0c363a87394db5bcfb7900dd3e0, type: 3}
+  - {fileID: -4815977077720037189, guid: 7ab3a0c363a87394db5bcfb7900dd3e0, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -88,30 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &696013713167504051
+--- !u!65 &5303908686023278521
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3062085703832765836}
+  m_GameObject: {fileID: 5644202995348007912}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.00036842, y: 0.00073684, z: 0.0010526399}
-  m_Center: {x: 0, y: 0.00036842, z: 0}
---- !u!114 &85313585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3062085703832765836}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726f32ae3168956448664f209aafc4a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _itemInventoryReference: {fileID: 0}
-  quantityToAdd: 1
+  m_Size: {x: 0.00037332805, y: 0.00085333607, z: 0.00037332805}
+  m_Center: {x: 0, y: 0.00042666803, z: 0}

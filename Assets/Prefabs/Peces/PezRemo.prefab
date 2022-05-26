@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 716418355776354605}
   - component: {fileID: 3320786778386763239}
   - component: {fileID: 5475780437137233781}
+  - component: {fileID: 521223173}
   m_Layer: 0
   m_Name: PezRemo
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3825017932566572082}
-  m_LocalRotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -12.985, y: 1.3039988, z: 11.652}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
@@ -100,3 +101,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0020274, y: 0.00021918, z: 0.00010959999}
   m_Center: {x: 0, y: 0.00010959, z: 0}
+--- !u!114 &521223173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3825017932566572082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726f32ae3168956448664f209aafc4a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemInventoryReference: {fileID: 0}
+  quantityToAdd: 1
