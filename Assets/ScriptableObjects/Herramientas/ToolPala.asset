@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: Pala
   name: Pala
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 159a0f5df57de4540903d216b44d5267, type: 3}
   description: Sirve para plantar las semillas.
   type: 3
   canBeConsumed: 0

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: "Ca\xF1aPescar"
   name: "Ca\xF1a De Pescar"
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 255f61f0a1db9bb4f9709477d44d957f, type: 3}
   description: Sirve para pescar peces.
   type: 3
   canBeConsumed: 0
