@@ -15,10 +15,12 @@ MonoBehaviour:
   ID: Pizza
   name: Pizza
   icon: {fileID: 21300000, guid: c3a7d7e9acddcc947868c45ba86794bf, type: 3}
-  description: Pizza recupera 30 de histamina.
+  description: Pizza recupera 30 de estamina.
   type: 2
   canBeConsumed: 1
+  canBeEquipped: 0
   isCumulative: 1
   maxCumulative: 60
+  gameModel: {fileID: 0}
   quantity: 0
   estamineRestoration: 30

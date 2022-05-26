@@ -72,8 +72,6 @@ public class UIInventory : MonoBehaviour
     {
         InventorySlot slot = availableSlots[itemIndex];
         
-        Debug.Log("eddeedsdsdd");
-
         if (itemToAdd != null)
         {
             slot.ActivateSlotUI(true);

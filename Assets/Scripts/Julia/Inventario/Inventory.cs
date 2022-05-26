@@ -148,6 +148,16 @@ public class Inventory : MonoBehaviour
                 UIInventory.instanceInventoryUI.DrawItemInInventory(item, quantity, i);
                 return; 
             }
+
+            /*
+            if(itemsInventory[i] != null && itemsInventory[i].type == ItemTypes.Seeds)
+            {
+                itemsInventory[i] = item;
+                itemsInventory[i].quantity = quantity;
+                UIInventory.instanceInventoryUI.DrawItemInInventory(item, quantity, i);
+                return;
+            }
+            */
         }
     }
 
@@ -170,11 +180,8 @@ public class Inventory : MonoBehaviour
 
     public void EquippedUsedItem(int index)
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            itemsInventory[index].quantity--;
-        }
-
+        itemsInventory[index].quantity--;
+      
         if (itemsInventory[index].quantity <= 0)
         {
             itemsInventory[index].quantity = 0;
