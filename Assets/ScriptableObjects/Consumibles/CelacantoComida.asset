@@ -17,10 +17,10 @@ MonoBehaviour:
   icon: {fileID: 0}
   description: 
   type: 2
-  canBeConsumed: 0
+  canBeConsumed: 1
   canBeEquipped: 0
-  isCumulative: 0
-  maxCumulative: 0
+  isCumulative: 1
+  maxCumulative: 60
   gameModel: {fileID: 0}
   quantity: 0
   hungryRestoration: 2
