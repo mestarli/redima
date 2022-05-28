@@ -52,6 +52,11 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void Tamaño(float tamaño)
+    {
+        transform.localScale = new Vector3(tamaño, tamaño, tamaño);
+    }
+    
     public void alimentarse(float cantidad)
     {
         diferencia = maxHambre - hambre;
