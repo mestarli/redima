@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2894281536383766300}
   - component: {fileID: 1138982930776898518}
   - component: {fileID: 1218997000329715412}
-  - component: {fileID: 1044668170336736833}
   m_Layer: 0
   m_Name: Pala
   m_TagString: Untagged
@@ -99,17 +98,3 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.00064, y: 0.0020799998, z: 0.00024000001}
   m_Center: {x: 0, y: 0.0010399999, z: 0}
---- !u!114 &1044668170336736833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1499283613842086403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726f32ae3168956448664f209aafc4a9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _itemInventoryReference: {fileID: 0}
-  quantityToAdd: 1

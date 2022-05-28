@@ -75,6 +75,8 @@ public class Land : MonoBehaviour, ITimeTracker
     // Cuando el player pulse la tecla de interaccion y esté un trozo de tierra seleccionado
     public void Interact()
     {
+        // Miramos que el player tenga una herramienta equipada
+        
         // Interactuar
         SwitchLandStatus(LandStatus.Watered);
     }
