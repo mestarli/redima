@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ChampisReduccionComida
   m_EditorClassIdentifier: 
   ID: ChampiReduccion
-  name: ChampiReduccion
+  name: Champi Reduccion
   icon: {fileID: 0}
   description: "Alimento que reduce tu tama\xF1o al tomartelo."
   type: 2
@@ -24,4 +24,3 @@ MonoBehaviour:
   gameModel: {fileID: 5376497017250793565, guid: d5ec362b6b8c6db4183bf13c2cf657a3, type: 3}
   quantity: 0
   reduccion: 0.15
-  normal: 1

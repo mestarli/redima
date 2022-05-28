@@ -14,6 +14,10 @@ public class Player : MonoBehaviour
     public bool puedeRecuperarEstamina;
 
     private float diferencia;
+
+    private float x;
+    private float y;
+    private float z;
     private void Awake()
     {
         //estamina = maxEstamina;
@@ -54,7 +58,10 @@ public class Player : MonoBehaviour
 
     public void Tamaño(float tamaño)
     {
-        transform.localScale = new Vector3(tamaño, tamaño, tamaño);
+        x = tamaño;
+        y = tamaño;
+        z = tamaño;
+        transform.localScale = new Vector3(x, y, z);
     }
     
     public void alimentarse(float cantidad)

@@ -9,11 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 034c6bf35d587d742bcf06f0e81d4b84, type: 3}
+  m_Script: {fileID: 11500000, guid: a506225da35fc0046a6ca8626f71911e, type: 3}
   m_Name: ChampisNormalComida
   m_EditorClassIdentifier: 
-  ID: ChampisNormal
-  name: ChampiNormal
+  ID: ChampiNormal
+  name: Champi Normal
   icon: {fileID: 0}
   description: "Alimento que vuelve a tu tama\xF1o original al tomartelo."
   type: 2
@@ -23,5 +23,4 @@ MonoBehaviour:
   maxCumulative: 60
   gameModel: {fileID: 5749874071404164469, guid: cab66b365b6aa5e4f98055d70fb0d8a2, type: 3}
   quantity: 0
-  reduccion: 0.15
   normal: 1

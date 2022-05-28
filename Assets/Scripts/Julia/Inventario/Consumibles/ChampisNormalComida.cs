@@ -1,22 +1,14 @@
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Consumables/Champis")]
+[CreateAssetMenu(menuName = "Consumables/ChampisNormal")]
 
-public class ChampisComida : ItemInventory
+public class ChampisNormalComida : ItemInventory
 {  
     [Header("Champis info")] 
-    public float reduccion;
-
     public float normal;
 
     public override bool UseItem()
     {
-        if (ID == "ChampiReduccion")
-        {
-            Inventory.instance.Player.Tamaño(reduccion);
-            return true;
-        }
-
         if (ID == "ChampiNormal")
         {
             Inventory.instance.Player.Tamaño(normal);
