@@ -15,7 +15,9 @@ MonoBehaviour:
   ID: SemillasPatata
   name: Semillas De Patata
   icon: {fileID: 21300000, guid: d0cfaa24d75db7c42b4bb04cc907abfc, type: 3}
-  description: Semillas de patata para cultivos.
+  description: 'Semillas de patata para cultivos.
+
+    Tardan 2 dias en crecer.'
   type: 1
   canBeConsumed: 0
   canBeEquipped: 1
@@ -23,6 +25,6 @@ MonoBehaviour:
   maxCumulative: 60
   gameModel: {fileID: 7876265040951078180, guid: b64e12787855ed2428ab7a330319ed6e, type: 3}
   quantity: 0
-  daysToGrow: 0
+  daysToGrow: 2
   cropToYield: {fileID: 0}
   seedling: {fileID: 7642935795857826253, guid: a2802d712b134c8448ccfb14f8b0e509, type: 3}

@@ -15,14 +15,16 @@ MonoBehaviour:
   ID: SemillasTrigo
   name: Semillas De Trigo
   icon: {fileID: 21300000, guid: 68e8cba2c1c24d44ea091423f4c4ff1e, type: 3}
-  description: Semillas de patata para cultivos.
+  description: 'Semillas de trigo para cultivos.
+
+    Tardan 1 dia en crecer.'
   type: 1
   canBeConsumed: 0
   canBeEquipped: 1
   isCumulative: 1
   maxCumulative: 60
-  gameModel: {fileID: 0}
+  gameModel: {fileID: 8718319602492511057, guid: e801d4087cff49f4b8981c597ecf40be, type: 3}
   quantity: 0
-  daysToGrow: 0
+  daysToGrow: 1
   cropToYield: {fileID: 0}
   seedling: {fileID: 7642935795857826253, guid: a2802d712b134c8448ccfb14f8b0e509, type: 3}

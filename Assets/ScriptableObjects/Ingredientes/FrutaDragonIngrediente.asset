@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea0beac0f5476791db6b447190e5e2, type: 3}
+  m_Name: FrutaDragonIngrediente
+  m_EditorClassIdentifier: 
+  ID: FrutaDragon
+  name: Fruta De Dragon
+  icon: {fileID: 0}
+  description: 
+  type: 0
+  canBeConsumed: 0
+  canBeEquipped: 0
+  isCumulative: 1
+  maxCumulative: 60
+  gameModel: {fileID: 2371613124078232407, guid: 2209fff193673964bb5f2d0593c92d17, type: 3}
+  quantity: 0

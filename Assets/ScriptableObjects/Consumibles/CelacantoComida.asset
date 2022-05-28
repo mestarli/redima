@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: Celacanto
   name: Celacanto
   icon: {fileID: 0}
-  description: 
+  description: Te restaura 2 de comida.
   type: 2
   canBeConsumed: 1
   canBeEquipped: 0
