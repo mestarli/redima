@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Land : MonoBehaviour, ITimeTracker
 {
-    //https://www.youtube.com/watch?v=uij6JL_8LWo
-    
     // Variables
     public enum LandStatus
     {
