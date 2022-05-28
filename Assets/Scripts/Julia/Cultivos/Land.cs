@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Land : MonoBehaviour, ITimeTracker
 {
+    // https://www.youtube.com/watch?v=uij6JL_8LWo - 13:09
+    
     // Variables
     public enum LandStatus
     {
@@ -18,6 +20,8 @@ public class Land : MonoBehaviour, ITimeTracker
     public GameObject select;
 
     private GameTimestamp timeWatered;
+
+    public Tool tool;
     
     void Start()
     {
@@ -76,9 +80,23 @@ public class Land : MonoBehaviour, ITimeTracker
     public void Interact()
     {
         // Miramos que el player tenga una herramienta equipada
-        
-        // Interactuar
-        SwitchLandStatus(LandStatus.Watered);
+        if (Inventory.instance.isEquipped)
+        {
+            if (tool.tools.type == ItemTypes.Tools)
+            {
+                if (tool.toolType == Tool.ToolType.WateringCan)
+                {
+                    // Interactuar
+                    SwitchLandStatus(LandStatus.Watered);
+                }
+            }
+
+            if (tool.tools.type == ItemTypes.Seeds)
+            {
+                // Interactuar
+                SwitchLandStatus(LandStatus.Farmland);
+            }
+        }
     }
 
     public void ClockUpdate(GameTimestamp timestamp)

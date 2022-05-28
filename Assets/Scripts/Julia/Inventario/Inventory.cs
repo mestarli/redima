@@ -19,6 +19,8 @@ public class Inventory : MonoBehaviour
     public static Inventory instance; 
     public ItemInventory[] ItemsInventory => itemsInventory;
 
+    public bool isEquipped;
+
     public HandSlot HandSlot
     {
         get => handSlot;

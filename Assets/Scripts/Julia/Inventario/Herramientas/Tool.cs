@@ -11,4 +11,6 @@ public class Tool : ItemInventory
     }
 
     public ToolType toolType;
+    
+    public ItemInventory tools;
 }

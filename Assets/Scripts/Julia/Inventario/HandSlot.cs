@@ -20,7 +20,7 @@ public class HandSlot : MonoBehaviour
 
     private Button slotButton;
     public int Index { get; set; }
-
+    
     public ItemInventory ItemInventoryHand
     {
         get => itemInventory_hand;
@@ -60,6 +60,7 @@ public class HandSlot : MonoBehaviour
         ActivateSlotUI(true);
         itemIcon.sprite = itemInventory_hand.icon;
         quantityTMP.text = itemInventory_hand.quantity.ToString();
+        Inventory.instance.isEquipped = true;
     }
     
     
@@ -68,5 +69,6 @@ public class HandSlot : MonoBehaviour
         Inventory.instance.AddItem(itemInventory_hand, /*itemInventory_hand.quantity*/ 1);
         //itemInventory_hand = null; 
         ActivateSlotUI(false);
+        Inventory.instance.isEquipped = false;
     }
 }

@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class CropBehaviour : MonoBehaviour
 {
-    //https://www.youtube.com/watch?v=_ZlipdzdJns - 8:10
-    //https://www.youtube.com/watch?v=uij6JL_8LWo - 11:01
-
     //Variables
     private Seed seedToGrow;
 

@@ -67,6 +67,6 @@ public class PlayerInteraction : MonoBehaviour
             _selectedLand.Interact();
             return;
         }
-        //sDebug.Log("It's not in any land");
+        //Debug.Log("It's not in any land");
     }
 }
