@@ -27,8 +27,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1478512520}
-  m_LocalRotation: {x: 0.0436023, y: 0.94864786, z: -0.15052891, w: 0.27478594}
-  m_LocalPosition: {x: -1.2455387, y: 0.7586615, z: 1.9696046}
+  m_LocalRotation: {x: 0.11548977, y: -0.34323657, z: 0.0425714, w: 0.931149}
+  m_LocalPosition: {x: 1.9555215, y: 0.75906146, z: -2.2920985}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7061936796288068499}
@@ -59,7 +59,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 43
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -271,13 +271,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 0.3
-  m_Radius: 0.126
+  m_Height: 0.15
+  m_Radius: 0.12
   m_SlopeLimit: 45
   m_StepOffset: 0.1
   m_SkinWidth: 0.0001
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.12, z: 0}
+  m_Center: {x: 0, y: 0.085, z: 0}
 --- !u!1 &7604607736816889996
 GameObject:
   m_ObjectHideFlags: 0
