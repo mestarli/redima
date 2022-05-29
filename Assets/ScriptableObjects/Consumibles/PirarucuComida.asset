@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46aa49f3476cc8845a5aca1c02a616f0, type: 3}
   m_Name: PirarucuComida
   m_EditorClassIdentifier: 
-  ID: 
-  name: 
+  ID: Pirarucu
+  name: Pirarucu
   icon: {fileID: 0}
-  description: 
+  description: Te restaura 2 de hambre.
   type: 2
-  canBeConsumed: 0
+  canBeConsumed: 1
   canBeEquipped: 0
-  isCumulative: 0
-  maxCumulative: 0
-  gameModel: {fileID: 0}
+  isCumulative: 1
+  maxCumulative: 60
+  gameModel: {fileID: 4276429958962463402, guid: f98402e564ce4f74bb7dbddd71989763, type: 3}
   quantity: 0
   hungryRestoration: 2

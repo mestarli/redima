@@ -24,3 +24,4 @@ MonoBehaviour:
   gameModel: {fileID: 4662299936707833959, guid: e23df49379990fc409c23e719cbc232c, type: 3}
   quantity: 0
   toolType: 1
+  tools: {fileID: 11400000}

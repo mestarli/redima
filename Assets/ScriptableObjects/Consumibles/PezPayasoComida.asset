@@ -21,6 +21,6 @@ MonoBehaviour:
   canBeEquipped: 0
   isCumulative: 1
   maxCumulative: 60
-  gameModel: {fileID: 0}
+  gameModel: {fileID: 3062085703832765836, guid: dd0b8155ab9cca94588a2b22af590566, type: 3}
   quantity: 0
   hungryRestoration: 2

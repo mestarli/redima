@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdece2742880ec74a8cb40a39a9da8e8, type: 3}
   m_Name: PezLunaComida
   m_EditorClassIdentifier: 
-  ID: 
-  name: 
+  ID: PezLuna
+  name: Pez Luna
   icon: {fileID: 0}
-  description: 
+  description: Te restaura 2 de hambre.
   type: 2
-  canBeConsumed: 0
+  canBeConsumed: 1
   canBeEquipped: 0
-  isCumulative: 0
-  maxCumulative: 0
-  gameModel: {fileID: 0}
+  isCumulative: 1
+  maxCumulative: 60
+  gameModel: {fileID: 2954713118806576656, guid: c327bf7da01036645aad27dd7f532f83, type: 3}
   quantity: 0
   hungryRestoration: 2
