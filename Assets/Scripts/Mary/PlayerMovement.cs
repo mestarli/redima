@@ -57,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         // comprobamos que esta tocando suelo, si no es así, es que está saltando
-        isGrounded  = Physics.CheckSphere(groundCheck.position,0.15f,groundLayer);
+        isGrounded  = Physics.CheckSphere(groundCheck.position,0.01f,groundLayer);
         Movement();
         
         // Llamamos al metodo Interact para interactuar con los cultivos
