@@ -7,8 +7,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public static PlayerMovement Instance;
     [SerializeField] private float gravity = -9.81f;
-    [SerializeField] private float speed = 1.5f;
-    [SerializeField] private float speedRun = 2.5f;
+    [SerializeField] private float speed = 10f;
+    [SerializeField] private float speedRun = 25f;
     private float initialSpeed;
     private CharacterController _characterController;
     
