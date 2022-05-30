@@ -22,8 +22,10 @@ public class Land : MonoBehaviour, ITimeTracker
     private GameTimestamp timeWatered;
 
     public Tool tool;
-    
-    void Start()
+
+    public Seed seed;
+
+        void Start()
     {
         // Accedemos al componente Renderer del objeto
         gameObject.GetComponent<MeshRenderer>().material = soilMat;
@@ -91,7 +93,7 @@ public class Land : MonoBehaviour, ITimeTracker
                 }
             }
 
-            if (tool.tools.type == ItemTypes.Seeds)
+            if (seed.cropToYield.type == ItemTypes.Seeds)
             {
                 // Interactuar
                 SwitchLandStatus(LandStatus.Farmland);

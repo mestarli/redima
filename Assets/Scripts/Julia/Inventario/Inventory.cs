@@ -1,10 +1,5 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.XR;
 
 public class Inventory : MonoBehaviour
 {
