@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6456aa8c61f4c32836a9562b92fee2b, type: 3}
   m_Name: "ToolCa\xF1aPescar"
   m_EditorClassIdentifier: 
-  ID: "Ca\xF1aPescar"
+  ID: CanaPescar
   name: "Ca\xF1a De Pescar"
   icon: {fileID: 21300000, guid: 255f61f0a1db9bb4f9709477d44d957f, type: 3}
   description: Sirve para pescar peces.
