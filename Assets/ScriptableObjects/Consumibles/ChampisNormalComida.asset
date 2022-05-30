@@ -23,4 +23,4 @@ MonoBehaviour:
   maxCumulative: 60
   gameModel: {fileID: 5749874071404164469, guid: cab66b365b6aa5e4f98055d70fb0d8a2, type: 3}
   quantity: 0
-  normal: 1
+  normal: 10
