@@ -1,4 +1,3 @@
-using TMPro;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,7 +14,7 @@ public class HandSlot : MonoBehaviour
     
     [SerializeField] private Image itemIcon;
     [SerializeField] private GameObject backgroundQuantity;
-    [SerializeField] private TextMeshProUGUI quantityTMP;
+    [SerializeField] private Text quantityText;
     [SerializeField] private ItemInventory itemInventory_hand;
 
     private Button slotButton;
@@ -36,7 +35,7 @@ public class HandSlot : MonoBehaviour
     public void UpdateSlotUI(ItemInventory item, int quantity)
     {
         itemIcon.sprite = item.icon;
-        quantityTMP.text = quantity.ToString();
+        quantityText.text = quantity.ToString();
     }
 
     public void ActivateSlotUI(bool state)
@@ -59,7 +58,7 @@ public class HandSlot : MonoBehaviour
     {
         ActivateSlotUI(true);
         itemIcon.sprite = itemInventory_hand.icon;
-        quantityTMP.text = itemInventory_hand.quantity.ToString();
+        quantityText.text = itemInventory_hand.quantity.ToString();
         Inventory.instance.isEquipped = true;
     }
     

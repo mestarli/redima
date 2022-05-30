@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: ChampiReduccion
   name: Champi Reduccion
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 98610fa5f828b574581e8a0c6033591b, type: 3}
   description: "Alimento que reduce tu tama\xF1o al tomartelo."
   type: 2
   canBeConsumed: 1

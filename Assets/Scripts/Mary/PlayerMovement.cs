@@ -7,8 +7,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public static PlayerMovement Instance;
     [SerializeField] private float gravity = -9.81f;
-    [SerializeField] private float speed = 1.5f;
-    [SerializeField] private float speedRun = 2.5f;
+    [SerializeField] private float speed = 10f;
+    [SerializeField] private float speedRun = 25f;
     private float initialSpeed;
     private CharacterController _characterController;
     
@@ -57,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         // comprobamos que esta tocando suelo, si no es así, es que está saltando
-        isGrounded  = Physics.CheckSphere(groundCheck.position,0.15f,groundLayer);
+        isGrounded  = Physics.CheckSphere(groundCheck.position,0.01f,groundLayer);
         Movement();
         
         // Llamamos al metodo Interact para interactuar con los cultivos
