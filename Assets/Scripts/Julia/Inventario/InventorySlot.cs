@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public enum InteractionTypes
 {
@@ -18,7 +17,7 @@ public class InventorySlot : MonoBehaviour
     
     [SerializeField] private Image itemIcon;
     [SerializeField] private GameObject backgroundQuantity;
-    [SerializeField] private TextMeshProUGUI quantityTMP;
+    [SerializeField] private Text quantityText;
 
     private Button slotButton;
     public int Index { get; set; }
@@ -31,7 +30,7 @@ public class InventorySlot : MonoBehaviour
     public void UpdateSlotUI(ItemInventory item, int quantity)
     {
         itemIcon.sprite = item.icon;
-        quantityTMP.text = quantity.ToString();
+        quantityText.text = quantity.ToString();
     }
 
     public void ActivateSlotUI(bool state)

@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -11,8 +9,8 @@ public class UIInventory : MonoBehaviour
     [Header("Inventory Description Panel")]
     [SerializeField] private GameObject inventoryDescriptionPanel;
     [SerializeField] private Image itemIcon;
-    [SerializeField] private TextMeshProUGUI itemName;
-    [SerializeField] private TextMeshProUGUI itemDescription;
+    [SerializeField] private Text itemName;
+    [SerializeField] private Text itemDescription;
 
     public static UIInventory instanceInventoryUI;
     
