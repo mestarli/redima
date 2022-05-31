@@ -226,7 +226,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1087310964815378426}
-  m_LocalRotation: {x: -0, y: 0.31656826, z: -0, w: 0.9485698}
+  m_LocalRotation: {x: 0, y: 0.31656796, z: 0, w: 0.94856983}
   m_LocalPosition: {x: -140.6, y: 13.88, z: 120.5}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
@@ -253,7 +253,7 @@ MonoBehaviour:
   speed: 10
   speedRun: 25
   isGrounded: 0
-  jumHeight: 0.45
+  jumHeight: 2
   _animator: {fileID: 0}
   groundCheck: {fileID: 1087310965092498528}
   groundLayer:
@@ -299,7 +299,7 @@ CharacterController:
   m_StepOffset: 0.1
   m_SkinWidth: 0.0001
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.105, z: 0}
+  m_Center: {x: 0, y: 0.08, z: 0}
 --- !u!1 &1087310965092498529
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,7 +312,7 @@ GameObject:
   m_Layer: 0
   m_Name: GroundChecker
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -324,7 +324,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1087310965092498529}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.0118, z: 0}
+  m_LocalPosition: {x: 0, y: -0.0265, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1087310964815378422}
