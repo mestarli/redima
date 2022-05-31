@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2895924867772578304}
   - component: {fileID: 2278750800740283813}
   - component: {fileID: 4069926464119767407}
-  - component: {fileID: 3439304461824073193}
+  - component: {fileID: -7252868050196515028}
   m_Layer: 0
   m_Name: Sandia
   m_TagString: Untagged
@@ -83,7 +83,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3439304461824073193
+--- !u!65 &-7252868050196515028
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,8 +91,8 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2556836218448748730}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.00093333994, y: 0.00106667, z: 0.00093333994}
-  m_Center: {x: 0, y: 0.000533335, z: 0}
+  m_Size: {x: 0.746672, y: 0.85333604, z: 0.746672}
+  m_Center: {x: 0, y: 0.42666802, z: 0}
