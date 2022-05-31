@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 4936077873404866511}
   - component: {fileID: 8300032104112676970}
   - component: {fileID: 6110070162959471776}
-  - component: {fileID: 1374828043690085894}
   - component: {fileID: 83659765224010390}
+  - component: {fileID: -4234423734381995669}
   m_Layer: 0
   m_Name: Champi_Normal
   m_TagString: Untagged
@@ -85,19 +85,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1374828043690085894
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5749874071404164469}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.00058974, y: 0.0010256399, z: 0.00058974}
-  m_Center: {x: 0, y: 0.00051281997, z: 0}
 --- !u!114 &83659765224010390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,3 +99,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemInventoryReference: {fileID: 11400000, guid: 97538bdb7f7c5e047886101b188d77c1, type: 2}
   quantityToAdd: 1
+--- !u!65 &-4234423734381995669
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5749874071404164469}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.47179198, y: 0.820512, z: 0.47179198}
+  m_Center: {x: 0, y: 0.410256, z: 0}

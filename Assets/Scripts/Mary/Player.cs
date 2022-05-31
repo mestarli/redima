@@ -23,10 +23,13 @@ public class Player : MonoBehaviour
     private float x;
     private float y;
     private float z;
+    
+    [SerializeField] private Vector3 posicionPlayer;
     private void Awake()
     {
         //estamina = maxEstamina;
         //hambre = maxHambre;
+        posicionPlayer = gameObject.transform.position;
     }
 
     private void Update()
@@ -125,8 +128,10 @@ public class Player : MonoBehaviour
         isInBoat = false;
         if (hit.gameObject.tag ==  "Water")
         {
-            Debug.Log("Hola agua");
-            //PlayerMovement.Instance._animator.SetTrigger("IsDrawned");
+            Debug.Log("Esta tocando el agua");
+            PlayerMovement.Instance._animator.SetTrigger("IsDrawned");
+            gameObject.GetComponent<PlayerMovement>().enabled = false;
+            StartCoroutine(ResetPlayerToHome());
         }
         if (hit.gameObject.tag ==  "Ship" && !isInBoat)
         {
@@ -134,4 +139,17 @@ public class Player : MonoBehaviour
             Debug.Log("Hola barco");
         }
     }
+    
+    IEnumerator ResetPlayerToHome()
+    {
+      
+        yield return new WaitForSeconds(2f);
+        gameObject.transform.position = posicionPlayer;
+        PlayerMovement.Instance._animator.ResetTrigger("IsDrawned");
+        PlayerMovement.Instance._animator.SetTrigger("Default");
+        yield return new WaitForSeconds(0.01f);
+        gameObject.GetComponent<PlayerMovement>().enabled = true;
+        PlayerMovement.Instance._animator.ResetTrigger("Default");
+    }
+    
 }
