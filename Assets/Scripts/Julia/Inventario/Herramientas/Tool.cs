@@ -8,6 +8,7 @@ public class Tool : ItemInventory
     {
         WateringCan,
         FishingRod,
+        Lantern
     }
 
     public ToolType toolType;
