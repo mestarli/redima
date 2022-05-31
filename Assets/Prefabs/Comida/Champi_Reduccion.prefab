@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8536903724517367106}
   - component: {fileID: 5881098568483334536}
   - component: {fileID: 873822565458103401}
-  - component: {fileID: 1268532335628190011}
+  - component: {fileID: -4963669275090529875}
   m_Layer: 0
   m_Name: Champi_Reduccion
   m_TagString: Untagged
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemInventoryReference: {fileID: 11400000, guid: d1f805ec8c7537d4ea9e83e0415f6c54, type: 2}
   quantityToAdd: 1
---- !u!65 &1268532335628190011
+--- !u!65 &-4963669275090529875
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,5 +110,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.000471792, y: 0.00082051207, z: 0.000471792}
-  m_Center: {x: 0, y: 0.00041025603, z: 0}
+  m_Size: {x: 0.29487, y: 0.51281995, z: 0.29487}
+  m_Center: {x: 0, y: 0.25640997, z: 0}
