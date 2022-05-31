@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 8375497203930411112}
   - component: {fileID: 4869628979642089421}
   - component: {fileID: 7237445715164875527}
-  - component: {fileID: 3883137820672452182}
   - component: {fileID: 6599195477615792024}
+  - component: {fileID: 6318826244420319991}
   m_Layer: 0
   m_Name: Semillas_FrutaDragon
   m_TagString: Untagged
@@ -87,19 +87,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &3883137820672452182
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9182961653572758226}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.0004, y: 0.00055, z: 0.00014999999}
-  m_Center: {x: 0, y: 0.000275, z: 0}
 --- !u!114 &6599195477615792024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,3 +101,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemInventoryReference: {fileID: 11400000, guid: ed9b8e8e33a349747b35a0a3552e1e77, type: 2}
   quantityToAdd: 5
+--- !u!65 &6318826244420319991
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9182961653572758226}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.48, y: 0.65999997, z: 0.17999999}
+  m_Center: {x: 0, y: 0.32999998, z: 0}

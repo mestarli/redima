@@ -131,7 +131,7 @@ public class Player : MonoBehaviour
             Debug.Log("Esta tocando el agua");
             PlayerMovement.Instance._animator.SetTrigger("IsDrawned");
             gameObject.GetComponent<PlayerMovement>().enabled = false;
-            StartCoroutine(ResetPlayerToHome());
+            StartCoroutine(ResetPlayerToHomeFromWater());
         }
         if (hit.gameObject.tag ==  "Ship" && !isInBoat)
         {
@@ -140,7 +140,7 @@ public class Player : MonoBehaviour
         }
     }
     
-    IEnumerator ResetPlayerToHome()
+    IEnumerator ResetPlayerToHomeFromWater()
     {
       
         yield return new WaitForSeconds(2f);
