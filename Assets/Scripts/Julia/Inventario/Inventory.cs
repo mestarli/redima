@@ -170,8 +170,6 @@ public class Inventory : MonoBehaviour
 
     public void EquippedUsedItem(int index)
     {
-        itemsInventory[index].quantity--;
-      
         if (itemsInventory[index].quantity <= 0)
         {
             itemsInventory[index].quantity = 0;
@@ -181,7 +179,8 @@ public class Inventory : MonoBehaviour
 
         else
         {
-            UI_Manager.instanceUI.DrawItemInEquippedSlot(itemsInventory[index], itemsInventory[index].quantity, index);
+            UIInventory.instanceInventoryUI.DrawItemInInventory(null, 0, index);
+            itemsInventory[index] = null;
         }
     }
     

@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1062881081018216756}
   m_LocalRotation: {x: -0.70698804, y: -0, z: -0, w: 0.7072255}
-  m_LocalPosition: {x: 0.034888823, y: 0.01259124, z: 0.0035264296}
-  m_LocalScale: {x: 0.0514276, y: 0.038638316, z: 0.051427595}
+  m_LocalPosition: {x: -1.98, y: 0.74, z: 1.44}
+  m_LocalScale: {x: 3.424924, y: 2.573196, z: 3.4249237}
   m_Children: []
   m_Father: {fileID: 6769996460846133219}
   m_RootOrder: 1
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 6769996460846133219}
   - component: {fileID: 7664001201765982278}
   - component: {fileID: 5600497944437281932}
-  - component: {fileID: 1892293152499246479}
+  - component: {fileID: -8956588624732918710}
   m_Layer: 0
   m_Name: rama_salientes
   m_TagString: Untagged
@@ -167,7 +167,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &1892293152499246479
+--- !u!65 &-8956588624732918710
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -178,8 +178,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.061538, y: 0.026923, z: 0.10384599}
-  m_Center: {x: -1.4594988e-21, y: 0.0134615, z: 0}
+  m_Size: {x: 3.0769, y: 1.34615, z: 5.1923}
+  m_Center: {x: 0, y: 0.673075, z: 0}
 --- !u!1 &6496592158061143450
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,13 +204,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6496592158061143450}
-  m_LocalRotation: {x: -0.70698804, y: -0, z: -0, w: 0.7072255}
-  m_LocalPosition: {x: 0.014862947, y: 0.008022864, z: 0.053130306}
-  m_LocalScale: {x: 0.0514276, y: 0.038638316, z: 0.051427595}
+  m_LocalRotation: {x: -0.65317196, y: -0.27064303, z: -0.27055213, w: 0.6533914}
+  m_LocalPosition: {x: 1.77, y: 0.83, z: 0.23}
+  m_LocalScale: {x: 2.0688596, y: 1.5543647, z: 2.0688593}
   m_Children: []
   m_Father: {fileID: 6769996460846133219}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: -44.986}
 --- !u!212 &2614076560002228143
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -287,8 +287,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6505916665289964907}
   m_LocalRotation: {x: -0.70710266, y: -0, z: -0, w: 0.707111}
-  m_LocalPosition: {x: -0.031759925, y: 0.0132171195, z: 0.020452807}
-  m_LocalScale: {x: 0.06869513, y: 0.051611666, z: 0.06869512}
+  m_LocalPosition: {x: 0.87, y: 0.66, z: 2.28}
+  m_LocalScale: {x: 2.829615, y: 2.1259315, z: 2.8296146}
   m_Children: []
   m_Father: {fileID: 6769996460846133219}
   m_RootOrder: 0

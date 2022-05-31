@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 8544362507610477361}
   - component: {fileID: 4700764031060204692}
   - component: {fileID: 7410814692829309022}
-  - component: {fileID: 8149568173074855129}
   - component: {fileID: 8149568173074855128}
+  - component: {fileID: -5898618133627984440}
   m_Layer: 0
   m_Name: Regadera
   m_TagString: Untagged
@@ -84,19 +84,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8149568173074855129
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9068135026016225675}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.00044999996, y: 0.00067499996, z: 0.0009750059}
-  m_Center: {x: 0, y: 0.00033749998, z: 0}
 --- !u!114 &8149568173074855128
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,3 +98,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemInventoryReference: {fileID: 11400000, guid: 04d27503e644ef240a25ca9b3b19ce29, type: 2}
   quantityToAdd: 1
+--- !u!65 &-5898618133627984440
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9068135026016225675}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.49999997, y: 0.74999994, z: 1.0833399}
+  m_Center: {x: 0, y: 0.37499997, z: 0}
