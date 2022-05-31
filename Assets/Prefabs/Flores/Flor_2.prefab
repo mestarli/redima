@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1814633039462583510}
   - component: {fileID: 1814633039462583511}
   - component: {fileID: 1814633039462583504}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Flor_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,13 +26,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1814633039462583505}
-  m_LocalRotation: {x: -0.7049536, y: -0.054330464, z: 0.054321554, w: -0.70508003}
-  m_LocalPosition: {x: 3.094, y: -0.3769, z: 10.947}
-  m_LocalScale: {x: 0.01095493, y: 0.01095493, z: 0.01095493}
+  m_LocalRotation: {x: 0.70710576, y: -0, z: -0, w: 0.70710784}
+  m_LocalPosition: {x: 0, y: 4.92, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 351.189}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!33 &1814633039462583510
 MeshFilter:
   m_ObjectHideFlags: 0
