@@ -10,14 +10,12 @@ public enum HandInteractionTypes
 
 public class HandSlot : MonoBehaviour
 {  // Variables
-    public static Action<HandInteractionTypes, int> HandSlotInteractionEvent;
     
     [SerializeField] private Image itemIcon;
     [SerializeField] private GameObject backgroundQuantity;
     [SerializeField] private Text quantityText;
     [SerializeField] private ItemInventory itemInventory_hand;
 
-    private Button slotButton;
     public int Index { get; set; }
     
     public ItemInventory ItemInventoryHand
@@ -28,41 +26,25 @@ public class HandSlot : MonoBehaviour
 
     private void Awake()
     {
-        slotButton = GetComponent<Button>();
         Inventory.instance.HandSlot = this;
     }
 
-    public void UpdateSlotUI(ItemInventory item, int quantity)
-    {
-        itemIcon.sprite = item.icon;
-        quantityText.text = quantity.ToString();
-    }
-
+    // Metodo para activar y desactivar las imagenes que hay dentro del slot
     public void ActivateSlotUI(bool state)
     {
         itemIcon.gameObject.SetActive(state);
         backgroundQuantity.gameObject.SetActive(state);
     }
 
-    public void SelectSlot()
-    {
-        slotButton.Select();
-    }
-    
-    public void ClickSlot()
-    {
-        HandSlotInteractionEvent?.Invoke(HandInteractionTypes.Click, Index);
-    }
-
+    // Método para actualizar la info de lo que tenemos equipado
     public void Update_Info_item_inventory()
     {
         ActivateSlotUI(true);
         itemIcon.sprite = itemInventory_hand.icon;
         quantityText.text = itemInventory_hand.quantity.ToString();
-        Inventory.instance.isEquipped = true;
     }
     
-    
+    // Método para desequipar objetos
     public void UnequipItemSlot()
     {
         if (itemInventory_hand != null)

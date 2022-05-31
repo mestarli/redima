@@ -9,8 +9,6 @@ using UnityEngine.XR;
 public class UI_Manager : MonoBehaviour, ITimeTracker
 {
     // Variables
-    public static UI_Manager instanceUI;
-
     [Header("PANELS")]
     [SerializeField] private GameObject inventoryPanel;
 
@@ -19,7 +17,6 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
     [SerializeField] private HandSlot slotPrefab;
     [SerializeField] private Transform handContent;
     [SerializeField] private int slotsNum;
-    public HandSlot SelectedSlot { get; private set; }
 
     [Header("Time Info Panel")]
     public Text timeText;
@@ -32,12 +29,14 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
 
     private void Start()
     {
+        // Llamada del método para crear el slot de equipacion
         InitializeEquippedSlot();
         
         // Añadir el UI_Manager a la lista de objetos del TimeManager notificará cuando el time se actualice
         TimeManager.instance.RegisterTracker(this);
     }
 
+    // Metodo para crear slots en funcion del numero que pongamos nosotros
     private void InitializeEquippedSlot()
     {
         for (int i = 0; i < slotsNum; i++)
@@ -45,31 +44,6 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
             HandSlot newSlot = Instantiate(slotPrefab, handContent);
             newSlot.Index = i;
             availableSlot.Add(newSlot);
-        }
-    }
-    
-    public void DrawItemInEquippedSlot(ItemInventory itemToAdd, int quantity, int itemIndex)
-    {
-        HandSlot slot = availableSlot[itemIndex]; 
-      
-        if (itemToAdd != null)
-        {
-            slot.ActivateSlotUI(true);
-            slot.UpdateSlotUI(itemToAdd, quantity);
-        }
-
-        else
-        {
-            slot.ActivateSlotUI(false);
-        }
-    }
-
-    public void EquipItem()
-    {
-        if (SelectedSlot != null)
-        {
-            SelectedSlot.UnequipItemSlot();
-            SelectedSlot.SelectSlot();
         }
     }
 

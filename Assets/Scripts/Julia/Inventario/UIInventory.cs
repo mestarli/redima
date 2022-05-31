@@ -31,14 +31,17 @@ public class UIInventory : MonoBehaviour
 
     void Start()
     {
+        // Llamada del metodo para crear los slots del inventario
         InitializeInventory();
     }
 
     private void Update()
     {
+        // Llamada del metodo que actualiza la info del slot seleccionado
         UpdateSelectedSlot();
     }
 
+    // Metodo que sirve para crear los slots del inventario
     private void InitializeInventory()
     {
         for (int i = 0; i < Inventory.instance.SlotsNum; i++)
@@ -49,6 +52,7 @@ public class UIInventory : MonoBehaviour
         }
     }
 
+    // Metodo para actualizar la informacion del slot que hemos seleccionado
     private void UpdateSelectedSlot()
     {
         GameObject goSeleccionado = EventSystem.current.currentSelectedGameObject;
@@ -66,6 +70,7 @@ public class UIInventory : MonoBehaviour
         }
     }
 
+    // Metodo para mostrar el objeto que se ha recogido en la UI del inventario
     public void DrawItemInInventory(ItemInventory itemToAdd, int quantity, int itemIndex)
     {
         InventorySlot slot = availableSlots[itemIndex];
@@ -82,6 +87,7 @@ public class UIInventory : MonoBehaviour
         }
     }
     
+    // Metodo que al hacer click sobre un slot nos muestra informacion de este
     private void UpdateDescriptionInventory(int index)
     {
         if (Inventory.instance.ItemsInventory[index] != null)
@@ -98,6 +104,7 @@ public class UIInventory : MonoBehaviour
         }
     }
 
+    // Metodo para usar un item
     public void UseItem()
     {
         if (SelectedSlot != null)
@@ -107,17 +114,20 @@ public class UIInventory : MonoBehaviour
         }
     }
 
+    // Metodo para equipar un item
     public void EquipItem()
     {
         if (SelectedSlot != null)
         {
             SelectedSlot.EquipItemSlot();
             SelectedSlot.SelectSlot();
+            Inventory.instance.isEquipped = true;
         }
     }
     
     #region Events
 
+    // Diferentes respuestas al interactuar con los slots
     private void SlotInteractionResponse(InteractionTypes type, int index)
     {
         if (type == InteractionTypes.Click)

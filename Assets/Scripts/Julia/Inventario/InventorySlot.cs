@@ -27,28 +27,34 @@ public class InventorySlot : MonoBehaviour
         slotButton = GetComponent<Button>();
     }
 
+    // Metodo para mostrar la info del scriptable object
     public void UpdateSlotUI(ItemInventory item, int quantity)
     {
         itemIcon.sprite = item.icon;
         quantityText.text = quantity.ToString();
     }
 
+    // Metodo para activar o desactivar las imagenes en la UI
     public void ActivateSlotUI(bool state)
     {
         itemIcon.gameObject.SetActive(state);
         backgroundQuantity.gameObject.SetActive(state);
     }
 
+    // Metodo si seleccionamos un slot
     public void SelectSlot()
     {
         slotButton.Select();
     }
     
+    // Metodo para saber si se le da click a un slot y en que indice
     public void ClickSlot()
     {
         SlotInteractionEvent?.Invoke(InteractionTypes.Click, Index);
     }
 
+    // Metodo para saber si en el slot que se ha seleccionado hay un item y para saber si se va a usar un item y
+    // en que indice se encuentra de la lista de int
     public void UseItemSlot()
     {
         if (Inventory.instance.ItemsInventory[Index] != null)
@@ -57,6 +63,8 @@ public class InventorySlot : MonoBehaviour
         }
     }
 
+    // Metodo para saber si en el slot que se ha seleccionado hay un item y para saber si se va a equipar un item y
+    // en que indice se encuentra de la lista de int
     public void EquipItemSlot()
     {
         if (Inventory.instance.ItemsInventory[Index] != null)

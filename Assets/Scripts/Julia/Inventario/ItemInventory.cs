@@ -27,6 +27,7 @@ public class ItemInventory : ScriptableObject
 
     public int quantity;
 
+    // Metodo que crea una copia del scriptable object para no modificar el original
     public ItemInventory copyItem()
     {
         ItemInventory newInstance = Instantiate(this);
