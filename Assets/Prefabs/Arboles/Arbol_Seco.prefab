@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 538995215160532853}
   - component: {fileID: 3518787813930193104}
   - component: {fileID: 1671338584748631066}
-  - component: {fileID: 7819665704966974447}
+  - component: {fileID: 2274886515098253227}
   m_Layer: 0
   m_Name: Arbol_Seco
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 878542665446524367}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.69975, y: 1.1041, z: 0.5188548}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -83,7 +83,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7819665704966974447
+--- !u!65 &2274886515098253227
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,5 +94,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.068965994, y: 0.103447996, z: 0.082757995}
-  m_Center: {x: 0, y: 0.051723998, z: -1.4700844e-15}
+  m_Size: {x: 3.4483, y: 5.1724, z: 4.1379}
+  m_Center: {x: 0, y: 2.5862, z: 0}
