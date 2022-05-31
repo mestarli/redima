@@ -90,6 +90,11 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
         dateText.text = season + " " + day + " " + "(" + dayOfTheWeek + ")";
     }
 
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+    
     #region Panels
 
     public void OpenCloseInventoryPanel()
