@@ -72,6 +72,5 @@ public class HandSlot : MonoBehaviour
             ActivateSlotUI(false);
             Inventory.instance.isEquipped = false;
         }
-        
     }
 }
