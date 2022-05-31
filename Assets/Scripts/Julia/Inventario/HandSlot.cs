@@ -65,9 +65,13 @@ public class HandSlot : MonoBehaviour
     
     public void UnequipItemSlot()
     {
-        Inventory.instance.AddItem(itemInventory_hand, /*itemInventory_hand.quantity*/ 1);
-        //itemInventory_hand = null; 
-        ActivateSlotUI(false);
-        Inventory.instance.isEquipped = false;
+        if (itemInventory_hand != null)
+        {
+            Inventory.instance.AddItem(itemInventory_hand, itemInventory_hand.quantity);
+            itemInventory_hand = null; 
+            ActivateSlotUI(false);
+            Inventory.instance.isEquipped = false;
+        }
+        
     }
 }
