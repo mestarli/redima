@@ -72,6 +72,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 direction = new Vector3(horizontal, 0, vertical).normalized;
         //_animator.SetBool("IsWalking",false);
         _animator.SetBool("IsRunning",false);
+        _animator.SetBool("IsWalking",false);
         if (direction.magnitude >= 0.1f)
         {
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
@@ -81,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
 
             Vector3 moveDir = Quaternion.Euler(0, targetAngle, 0) * Vector3.forward;
             _characterController.Move(moveDir.normalized * speed * Time.deltaTime);
-            //_animator.SetBool("IsWalking",true);
+            _animator.SetBool("IsWalking",true);
         }
 
         //Detección de suelo
@@ -99,6 +100,16 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             playerVelocity.y = Mathf.Sqrt(jumHeight * -2 * gravity);
+        }
+        
+        // Animacion de saltar
+        if (!isGrounded)
+        {
+            _animator.SetBool("IsJumping",true);
+        }
+        else
+        {
+            _animator.SetBool("IsJumping",false);
         }
         Run();
     }

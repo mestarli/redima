@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1850244405182394627}
   - component: {fileID: 3315415610195967654}
   - component: {fileID: 713345171450956396}
-  - component: {fileID: 2611324841742833889}
+  - component: {fileID: 6721324054554330540}
   m_Layer: 0
   m_Name: Platano
   m_TagString: Untagged
@@ -83,7 +83,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2611324841742833889
+--- !u!65 &6721324054554330540
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -91,8 +91,8 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1361973674872974265}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.00016000003, y: 0.00080000004, z: 0.00085332803}
-  m_Center: {x: 0, y: 0.00040000002, z: 0}
+  m_Size: {x: 0.16, y: 0.79999995, z: 0.853328}
+  m_Center: {x: 0, y: 0.39999998, z: 0}
