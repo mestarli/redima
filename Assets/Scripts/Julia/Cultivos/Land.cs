@@ -25,7 +25,19 @@ public class Land : MonoBehaviour, ITimeTracker
 
     public Seed seed;
 
-        void Start()
+    public Tool Tool
+    {
+        get => tool;
+        set => tool = value;
+    }
+    
+    public Seed Seed
+    {
+        get => seed;
+        set => seed = value;
+    }
+    
+    public void Start()
     {
         // Accedemos al componente Renderer del objeto
         gameObject.GetComponent<MeshRenderer>().material = soilMat;

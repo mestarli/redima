@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e6456aa8c61f4c32836a9562b92fee2b, type: 3}
-  m_Name: ToolFanalillo
+  m_Name: ToolFarolillo
   m_EditorClassIdentifier: 
-  ID: 
-  name: 
-  icon: {fileID: 0}
-  description: 
-  type: 0
+  ID: Farolillo
+  name: Farolillo
+  icon: {fileID: 21300000, guid: 45d2aabeaef233344847286007683699, type: 3}
+  description: Para iluminar tus dias.
+  type: 3
   canBeConsumed: 0
-  canBeEquipped: 0
+  canBeEquipped: 1
   isCumulative: 0
-  maxCumulative: 0
-  gameModel: {fileID: 0}
+  maxCumulative: 1
+  gameModel: {fileID: 8899473927013170818, guid: d7d1677ffb8fcf246a8eda34dcb185ad, type: 3}
   quantity: 0
-  toolType: 0
-  tools: {fileID: 0}
+  toolType: 2
+  tools: {fileID: 11400000}

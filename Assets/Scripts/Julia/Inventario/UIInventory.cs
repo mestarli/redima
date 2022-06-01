@@ -7,7 +7,7 @@ public class UIInventory : MonoBehaviour
 {
     // Variables
     [Header("Inventory Description Panel")]
-    //[SerializeField] private GameObject inventoryDescriptionPanel;
+    [SerializeField] private GameObject inventoryDescriptionPanel;
     [SerializeField] private Image itemIcon;
     [SerializeField] private Text itemName;
     [SerializeField] private Text itemDescription;
@@ -26,7 +26,7 @@ public class UIInventory : MonoBehaviour
     private void Awake()
     {
         instanceInventoryUI = this;
-        //inventoryDescriptionPanel.gameObject.SetActive(false);
+        inventoryDescriptionPanel.gameObject.SetActive(false);
     }
 
     void Start()
@@ -100,7 +100,7 @@ public class UIInventory : MonoBehaviour
 
         else
         {
-            //inventoryDescriptionPanel.SetActive(false);
+            inventoryDescriptionPanel.SetActive(false);
         }
     }
 
