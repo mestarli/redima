@@ -3,14 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
-using UnityEngine.XR;
+using UnityEngine.SceneManagement;
 
 public class UI_Manager : MonoBehaviour, ITimeTracker
 {
     // Variables
     [Header("PANELS")]
     [SerializeField] private GameObject inventoryPanel;
+    [SerializeField] private GameObject optionsPanel;
 
     [Header("Status Panel")]
     private List<HandSlot> availableSlot = new List<HandSlot>();
@@ -64,6 +64,16 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
         dateText.text = season + " " + day + " " + "(" + dayOfTheWeek + ")";
     }
 
+    public void PlayGame()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void Options()
+    {
+        
+    }
+    
     public void QuitGame()
     {
         Application.Quit();
