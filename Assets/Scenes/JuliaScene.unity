@@ -1345,10 +1345,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5909019297601713573, guid: 02e7f7184ab2a184b9c6997c34a9d075, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: edfcdbf7c34623c4e9160d77e57f5adc, type: 3}
     - target: {fileID: 7258148570951916941, guid: 02e7f7184ab2a184b9c6997c34a9d075, type: 3}
       propertyPath: player
       value: 
@@ -1376,18 +1372,6 @@ PrefabInstance:
     - target: {fileID: 7956743341350794111, guid: 02e7f7184ab2a184b9c6997c34a9d075, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8408241614517364051, guid: 02e7f7184ab2a184b9c6997c34a9d075, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2035999
-      objectReference: {fileID: 0}
-    - target: {fileID: 8408241614517364051, guid: 02e7f7184ab2a184b9c6997c34a9d075, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1.2035999
-      objectReference: {fileID: 0}
-    - target: {fileID: 8408241614517364051, guid: 02e7f7184ab2a184b9c6997c34a9d075, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.2035999
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 02e7f7184ab2a184b9c6997c34a9d075, type: 3}
