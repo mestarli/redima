@@ -9,7 +9,9 @@ public enum HandInteractionTypes
 }
 
 public class HandSlot : MonoBehaviour
-{  // Variables
+{  
+    // Variables
+    public static HandSlot instanceHandSlot;
     
     [SerializeField] private Image itemIcon;
     [SerializeField] private GameObject backgroundQuantity;
@@ -27,6 +29,7 @@ public class HandSlot : MonoBehaviour
     private void Awake()
     {
         Inventory.instance.HandSlot = this;
+        instanceHandSlot = this;
     }
 
     // Metodo para activar y desactivar las imagenes que hay dentro del slot

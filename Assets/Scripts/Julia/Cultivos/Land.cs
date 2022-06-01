@@ -25,18 +25,14 @@ public class Land : MonoBehaviour, ITimeTracker
 
     public Seed seed;
 
-    public Tool Tool
+    public HandSlot handSlotRef;
+
+    public HandSlot HandSlotRef
     {
-        get => tool;
-        set => tool = value;
+        get => handSlotRef;
+        set => handSlotRef = value;
     }
-    
-    public Seed Seed
-    {
-        get => seed;
-        set => seed = value;
-    }
-    
+
     public void Start()
     {
         // Accedemos al componente Renderer del objeto
