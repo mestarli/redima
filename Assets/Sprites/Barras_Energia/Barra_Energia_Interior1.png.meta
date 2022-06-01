@@ -1,7 +1,10 @@
 fileFormatVersion: 2
 guid: 64e048f766e3aee41aa47ef48aeeba2c
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7126288630149628482
+    second: Barra_Energia_Interior1_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,7 +104,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Barra_Energia_Interior1_0
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 11
+        width: 16
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebdb6016f365a1d90800000000000000
+      internalID: -7126288630149628482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
