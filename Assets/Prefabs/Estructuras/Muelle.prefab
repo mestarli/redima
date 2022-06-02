@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1827357435966804448}
   - component: {fileID: 4519613610139886890}
   - component: {fileID: 2178007838093169821}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Muelle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
