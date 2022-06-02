@@ -463,6 +463,146 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 228250871}
   m_CullTransparentMesh: 1
+--- !u!1 &281651158
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 281651160}
+  - component: {fileID: 281651159}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &281651159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281651158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0925a4e7a51f4b74180d36c6fbdf262a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listSounds:
+  - name: UIClick
+    audioClip: {fileID: 8300000, guid: 09d51d7b941a4ed4eaff76399f2132a2, type: 3}
+    volume: 1
+    loop: 0
+    playOnAwake: 0
+    audioSource: {fileID: 0}
+  - name: UISeleccion
+    audioClip: {fileID: 8300000, guid: 3a35294090d2c5e4281e22a9023d6809, type: 3}
+    volume: 1
+    loop: 0
+    playOnAwake: 0
+    audioSource: {fileID: 0}
+  - name: Zarzo_Salto
+    audioClip: {fileID: 8300000, guid: 1a6937f4d2bad4c43939f53eff3f7b2a, type: 3}
+    volume: 1
+    loop: 0
+    playOnAwake: 0
+    audioSource: {fileID: 0}
+  - name: ZarzoPaso_1
+    audioClip: {fileID: 8300000, guid: d4fda6f30f867174d8a95f3325b6c4cc, type: 3}
+    volume: 1
+    loop: 0
+    playOnAwake: 0
+    audioSource: {fileID: 0}
+  - name: ZarzoPaso_2
+    audioClip: {fileID: 8300000, guid: 304f300ff6f8741469191fd343fed931, type: 3}
+    volume: 1
+    loop: 0
+    playOnAwake: 0
+    audioSource: {fileID: 0}
+  - name: "Ca\xF1a_Lanzamiento"
+    audioClip: {fileID: 8300000, guid: bdbbe66bbe28ea84a8f07d75930d6a94, type: 3}
+    volume: 1
+    loop: 0
+    playOnAwake: 0
+    audioSource: {fileID: 0}
+  - name: Pez_Picando
+    audioClip: {fileID: 8300000, guid: f5fee535fb92d0a4ead37bbe63ce31c9, type: 3}
+    volume: 1
+    loop: 0
+    playOnAwake: 0
+    audioSource: {fileID: 0}
+  - name: Recogiendo_Pez
+    audioClip: {fileID: 8300000, guid: 48bcb8dbd6846c644a0ac6be772accfc, type: 3}
+    volume: 1
+    loop: 0
+    playOnAwake: 0
+    audioSource: {fileID: 0}
+  - name: Sacando_Pez
+    audioClip: {fileID: 8300000, guid: 1235fa67c9a77114fb8e3029d6cec317, type: 3}
+    volume: 1
+    loop: 0
+    playOnAwake: 0
+    audioSource: {fileID: 0}
+  - name: SonidoAmbiente
+    audioClip: {fileID: 8300000, guid: 8302bdf6fd7e5db469b208ef27de2ab6, type: 3}
+    volume: 1
+    loop: 0
+    playOnAwake: 0
+    audioSource: {fileID: 0}
+  - name: SonidoAmbiente_Mar
+    audioClip: {fileID: 8300000, guid: 85015796cd8c53546b4ef05a20c38e54, type: 3}
+    volume: 1
+    loop: 0
+    playOnAwake: 0
+    audioSource: {fileID: 0}
+  - name: Musica_Cala
+    audioClip: {fileID: 8300000, guid: d9841ad9c84b91b4c81712bde1792f2b, type: 3}
+    volume: 1
+    loop: 0
+    playOnAwake: 0
+    audioSource: {fileID: 0}
+  - name: Musica_Glaciares
+    audioClip: {fileID: 8300000, guid: 5e5bf146f1312d447b84980c60b400b5, type: 3}
+    volume: 1
+    loop: 0
+    playOnAwake: 0
+    audioSource: {fileID: 0}
+  - name: Musica_IslaCueva
+    audioClip: {fileID: 8300000, guid: 4cb369897a6c3374a84b2ef78ae7491d, type: 3}
+    volume: 1
+    loop: 0
+    playOnAwake: 0
+    audioSource: {fileID: 0}
+  - name: Musica_IslaPaloma
+    audioClip: {fileID: 8300000, guid: a849238ebc866dd47b72be1045bf92d9, type: 3}
+    volume: 1
+    loop: 0
+    playOnAwake: 0
+    audioSource: {fileID: 0}
+  - name: Musica_IslaPrincipal
+    audioClip: {fileID: 8300000, guid: 1235fa67c9a77114fb8e3029d6cec317, type: 3}
+    volume: 1
+    loop: 0
+    playOnAwake: 0
+    audioSource: {fileID: 0}
+--- !u!4 &281651160
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281651158}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &391551859
 GameObject:
   m_ObjectHideFlags: 0
