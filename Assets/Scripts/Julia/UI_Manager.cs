@@ -9,8 +9,10 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
 {
     // Variables
     [Header("PANELS")]
-    [SerializeField] private GameObject inventoryPanel;
+    [SerializeField] private GameObject inGamePanel;
     [SerializeField] private GameObject optionsPanel;
+    [SerializeField] private GameObject mainMenuPanel;
+    [SerializeField] private GameObject inventoryPanel;
 
     [Header("Status Panel")]
     private List<HandSlot> availableSlot = new List<HandSlot>();
@@ -21,9 +23,25 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
     [Header("Time Info Panel")]
     public Text timeText;
     public Text dateText;
+    // Variables
+    public static UI_Manager instance;
     
     private void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+
+        else
+        {
+            Destroy(gameObject);
+        }
+        
+        inGamePanel.SetActive(false);
+        optionsPanel.SetActive(false);
+        mainMenuPanel.SetActive(true);
         inventoryPanel.SetActive(false);
     }
 
@@ -66,12 +84,20 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MainScene");
+        
+        inGamePanel.SetActive(true);
+        optionsPanel.SetActive(false);
+        mainMenuPanel.SetActive(false);
+        inventoryPanel.SetActive(false);
     }
 
     public void Options()
     {
-        
+        inGamePanel.SetActive(false);
+        optionsPanel.SetActive(true);
+        mainMenuPanel.SetActive(false);
+        inventoryPanel.SetActive(false);
     }
     
     public void QuitGame()
