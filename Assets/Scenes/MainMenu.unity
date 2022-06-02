@@ -302,8 +302,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 971b4e8f8b669cc4590b492d55f53634, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryPanel: {fileID: 0}
+  inGamePanel: {fileID: 0}
   optionsPanel: {fileID: 0}
+  mainMenuPanel: {fileID: 0}
+  inventoryPanel: {fileID: 0}
   slotPrefab: {fileID: 0}
   handContent: {fileID: 0}
   slotsNum: 0
