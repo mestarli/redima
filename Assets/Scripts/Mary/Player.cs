@@ -25,11 +25,13 @@ public class Player : MonoBehaviour
     private float z;
     
     [SerializeField] private Vector3 posicionPlayer;
+    [SerializeField] private Vector3 posicionBarco;
     private void Awake()
     {
         //estamina = maxEstamina;
         //hambre = maxHambre;
         posicionPlayer = gameObject.transform.position;
+        posicionBarco = Boat.transform.position;
     }
 
     private void Update()
@@ -159,6 +161,7 @@ public class Player : MonoBehaviour
       
         yield return new WaitForSeconds(2f);
         gameObject.transform.position = posicionPlayer;
+        Boat.transform.position = posicionBarco;
         PlayerMovement.Instance._animator.ResetTrigger("IsDrawned");
         PlayerMovement.Instance._animator.SetTrigger("Default");
         yield return new WaitForSeconds(0.01f);
