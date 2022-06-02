@@ -38,11 +38,32 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
         {
             Destroy(gameObject);
         }
-        
-        inGamePanel.SetActive(false);
-        optionsPanel.SetActive(false);
-        mainMenuPanel.SetActive(true);
-        inventoryPanel.SetActive(false);
+        try {
+            inGamePanel.SetActive(false);
+        }       
+        catch (UnassignedReferenceException ex) {
+            Debug.Log("In Game Panel not assigned");
+        }
+      
+        try {
+            optionsPanel.SetActive(false);
+        }       
+        catch (UnassignedReferenceException ex) {
+            Debug.Log("Options Panel not assigned");
+        }
+        try {
+            mainMenuPanel.SetActive(true);
+        }       
+        catch (UnassignedReferenceException ex) {
+            Debug.Log("Main Menu Panel not assigned");
+        }
+        try {
+            inventoryPanel.SetActive(false);
+        }       
+        catch (UnassignedReferenceException ex) {
+            Debug.Log("Inventory Panel not assigned");
+        }
+
     }
 
     private void Start()
@@ -51,7 +72,13 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
         InitializeEquippedSlot();
         
         // Añadir el UI_Manager a la lista de objetos del TimeManager notificará cuando el time se actualice
-        TimeManager.instance.RegisterTracker(this);
+        try {
+            TimeManager.instance.RegisterTracker(this);
+        }       
+        catch (NullReferenceException ex) {
+            Debug.Log("TimeManager not assigned");
+        }
+       
     }
 
     // Metodo para crear slots en funcion del numero que pongamos nosotros
