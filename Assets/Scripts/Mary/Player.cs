@@ -36,15 +36,31 @@ public class Player : MonoBehaviour
     {
         PuedeAlimentarse();
         PuedeRecuperarEstamina();
+        if (isInBoat && Input.GetKeyDown(KeyCode.G) && SetActiveBoat)
+        {
+
+            Boat.GetComponent<ShipMovement>().enabled = false;
+            Boat.gameObject.GetComponent<ShipFloatMovement>().enabled = false;
+            gameObject.GetComponent<PlayerMovement>().enabled = true;
+            gameObject.transform.parent = null;
+            PlayerMovement.Instance._animator.SetLayerWeight(1, 0);
+            Boat.transform.GetChild(0).GetComponent<CinemachineVirtualCamera>().Priority = 10;
+            StartCoroutine(ResetExitBoat(false));
+        }
+
         if (isInBoat && Input.GetKeyDown(KeyCode.G) && !SetActiveBoat)
         {
             Boat.GetComponent<ShipMovement>().enabled = true;
             Boat.gameObject.GetComponent<ShipFloatMovement>().enabled = true;
             gameObject.GetComponent<PlayerMovement>().enabled = false;
             gameObject.transform.parent = Boat.transform;
+            gameObject.transform.position = Boat.transform.GetChild(1).transform.position;
+            gameObject.transform.rotation = Boat.transform.GetChild(1).transform.rotation;
             Boat.transform.GetChild(0).GetComponent<CinemachineVirtualCamera>().Priority = 14;
-            SetActiveBoat = true;
+            PlayerMovement.Instance._animator.SetLayerWeight(1, 1);
+            StartCoroutine(ResetExitBoat(true));
         }
+        
     }
 
     private void PuedeAlimentarse()
@@ -128,7 +144,6 @@ public class Player : MonoBehaviour
         isInBoat = false;
         if (hit.gameObject.tag ==  "Water")
         {
-            Debug.Log("Esta tocando el agua");
             PlayerMovement.Instance._animator.SetTrigger("IsDrawned");
             gameObject.GetComponent<PlayerMovement>().enabled = false;
             StartCoroutine(ResetPlayerToHomeFromWater());
@@ -136,7 +151,6 @@ public class Player : MonoBehaviour
         if (hit.gameObject.tag ==  "Ship" && !isInBoat)
         {
             isInBoat = true;
-            Debug.Log("Hola barco");
         }
     }
     
@@ -151,5 +165,13 @@ public class Player : MonoBehaviour
         gameObject.GetComponent<PlayerMovement>().enabled = true;
         PlayerMovement.Instance._animator.ResetTrigger("Default");
     }
+    
+    IEnumerator ResetExitBoat(bool estaBarco)
+    {
+      
+        yield return new WaitForSeconds(2f);
+        SetActiveBoat = estaBarco;
+    }
+    
     
 }
