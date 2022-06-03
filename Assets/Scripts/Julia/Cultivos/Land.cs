@@ -23,15 +23,9 @@ public class Land : MonoBehaviour, ITimeTracker
 
     public Tool tool;
 
-    public Seed seed;
-
-    public HandSlot handSlotRef;
-
-    public HandSlot HandSlotRef
-    {
-        get => handSlotRef;
-        set => handSlotRef = value;
-    }
+    [Header("Crop Prefab")]
+    public GameObject cropPrefab;
+    CropBehaviour cropPlanted = null;
 
     public void Start()
     {
@@ -100,7 +94,8 @@ public class Land : MonoBehaviour, ITimeTracker
                     SwitchLandStatus(LandStatus.Watered);
                 }
             }
-            if (HandSlot.instanceHandSlot.ItemInventoryHand.type == ItemTypes.Seeds && HandSlot.instanceHandSlot.ItemInventoryHand.quantity <= 0)
+            if (HandSlot.instanceHandSlot.ItemInventoryHand.type == ItemTypes.Seeds && 
+                HandSlot.instanceHandSlot.ItemInventoryHand.quantity <= 0 && landStatus != LandStatus.Soil && cropPlanted == null)
             {
                 // Interactuar
                 HandSlot.instanceHandSlot.ItemInventoryHand.quantity -= 1;
