@@ -125,7 +125,9 @@ MonoBehaviour:
   isInBoat: 0
   SetActiveBoat: 0
   Boat: {fileID: 0}
+  BoatColliders: {fileID: 0}
   posicionPlayer: {x: 0, y: 0, z: 0}
+  posicionBarco: {x: 0, y: 0, z: 0}
 --- !u!143 &1087310964815378416
 CharacterController:
   m_ObjectHideFlags: 0

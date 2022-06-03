@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     [SerializeField] private bool isInBoat;
     [SerializeField] private bool SetActiveBoat;
     [SerializeField] private GameObject Boat;
+    [SerializeField] private GameObject BoatColliders;
 
     private float diferencia;
 
@@ -47,6 +48,7 @@ public class Player : MonoBehaviour
             gameObject.transform.parent = null;
             PlayerMovement.Instance._animator.SetLayerWeight(1, 0);
             Boat.transform.GetChild(0).GetComponent<CinemachineVirtualCamera>().Priority = 10;
+            BoatColliders.SetActive(false);
             StartCoroutine(ResetExitBoat(false));
         }
 
@@ -58,6 +60,7 @@ public class Player : MonoBehaviour
             gameObject.transform.parent = Boat.transform;
             gameObject.transform.position = Boat.transform.GetChild(1).transform.position;
             gameObject.transform.rotation = Boat.transform.GetChild(1).transform.rotation;
+            BoatColliders.SetActive(true);
             Boat.transform.GetChild(0).GetComponent<CinemachineVirtualCamera>().Priority = 14;
             PlayerMovement.Instance._animator.SetLayerWeight(1, 1);
             StartCoroutine(ResetExitBoat(true));
