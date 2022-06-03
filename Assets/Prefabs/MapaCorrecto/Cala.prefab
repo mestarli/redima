@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 8170944215597366119}
   - component: {fileID: 5101133541085394114}
   - component: {fileID: 7002581355916247048}
-  m_Layer: 0
+  - component: {fileID: 7367316728846782595}
+  m_Layer: 3
   m_Name: Cala
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,3 +83,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7367316728846782595
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8804210529196761565}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4784509486593510182, guid: 550f95e4345f2e740a3540971ad643d4, type: 3}

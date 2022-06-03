@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 133922665144483383}
   - component: {fileID: 3923781383524217234}
   - component: {fileID: 1265763459536029016}
-  m_Layer: 0
+  - component: {fileID: 2911974652049007206}
+  m_Layer: 3
   m_Name: Cueva
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -84,3 +85,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2911974652049007206
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761136206162371725}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6010840552210647607, guid: e891bf11e567cef45bb6aa5def4171fe, type: 3}
