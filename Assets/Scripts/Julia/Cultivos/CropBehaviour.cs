@@ -5,7 +5,7 @@ using UnityEngine;
 public class CropBehaviour : MonoBehaviour
 {
     //Variables
-    private Seed seedToGrow;
+    [SerializeField] private Seed seedToGrow;
 
     public int growth;
     public int maxGrowth;
@@ -13,7 +13,7 @@ public class CropBehaviour : MonoBehaviour
     [Header("Etapas de vida")] 
     public GameObject seed;
     public GameObject seedling;
-    private GameObject harvestable;
+    [SerializeField]private GameObject harvestable;
     public enum CropState
     {
         Seed,

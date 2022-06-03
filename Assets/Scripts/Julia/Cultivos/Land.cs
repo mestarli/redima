@@ -27,10 +27,16 @@ public class Land : MonoBehaviour, ITimeTracker
     public GameObject cropPrefab;
     CropBehaviour cropPlanted = null;
 
+    [SerializeField] private Seed semillaAPlantar;
+    
+    public Seed[] availableSeeds;
+
+
     public void Start()
     {
         // Accedemos al componente Renderer del objeto
         gameObject.GetComponent<MeshRenderer>().material = soilMat;
+        availableSeeds = Resources.LoadAll<Seed>("ScriptableObjects/Semillas");
         
         // Ponemos el estado de la tierra a soil por defecto
         SwitchLandStatus(LandStatus.Soil);
@@ -95,15 +101,28 @@ public class Land : MonoBehaviour, ITimeTracker
                 }
             }
             if (HandSlot.instanceHandSlot.ItemInventoryHand.type == ItemTypes.Seeds && landStatus != LandStatus.Soil 
-                && cropPlanted == null)
+                && cropPlanted == null && HandSlot.instanceHandSlot.ItemInventoryHand.quantity > 0)
             {
+                HandSlot.instanceHandSlot.ItemInventoryHand.quantity -= 1;
+                HandSlot.instanceHandSlot.Update_Info_item_inventory();
                 // Instanciamos el objeto crop en los cultivos
                 GameObject cropObject = Instantiate(cropPrefab, transform);
                 cropObject.transform.localScale = new  Vector3(10, 1, 10);
                 
                 // Accedemos al script CropBehaviour que esta dentro del crop
                 cropPlanted = cropObject.GetComponent<CropBehaviour>();
-                //cropPlanted.Plant();
+                
+                //Recogemos la info de la semilla equipada y se la pasamos a uno de tipo semilla para poder plantarse
+                foreach (var seed in availableSeeds)
+                {
+                    if (seed.ID == HandSlot.instanceHandSlot.ItemInventoryHand.ID)
+                    {
+                        semillaAPlantar = seed;
+                    }
+                }
+                
+               // Debug.Log("Hola que tal "+semillaAPlantar.daysToGrow);
+                cropPlanted.Plant(semillaAPlantar);
                 
                 // Se cambia el material del suelo a Farmland
                 SwitchLandStatus(LandStatus.Farmland);
@@ -116,20 +135,10 @@ public class Land : MonoBehaviour, ITimeTracker
         // Miramos si han pasado 24 horas desde que la tierra se ha regado
         if (landStatus == LandStatus.Watered)
         {
-            // Horas desde que hemos regado la tierra
-            int hoursElapsed = GameTimestamp.CompareTimestamps(timeWatered, timestamp);
-
-            Debug.Log(hoursElapsed);
-            
             // Hacemos crecer la planta mientras esta la tierra regada
             if (cropPlanted != null)
             {
                 cropPlanted.Grow();
-            }
-
-            if (hoursElapsed > 24)
-            {
-                SwitchLandStatus(LandStatus.Farmland);
             }
         }
     }
