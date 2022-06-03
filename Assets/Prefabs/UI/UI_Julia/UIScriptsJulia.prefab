@@ -307,7 +307,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 878059652215782266}
   m_HandleRect: {fileID: 0}
@@ -771,7 +771,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 878059650272606674}
   m_HandleRect: {fileID: 0}
@@ -1600,8 +1600,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 971b4e8f8b669cc4590b492d55f53634, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inventoryPanel: {fileID: 7258148572503979103}
+  inGamePanel: {fileID: 0}
   optionsPanel: {fileID: 0}
+  mainMenuPanel: {fileID: 0}
+  inventoryPanel: {fileID: 7258148572503979103}
   slotPrefab: {fileID: 534740461631362604, guid: 13f4f29a028805b4a815cf964bbb2f44, type: 3}
   handContent: {fileID: 7258148571153927491}
   slotsNum: 1
@@ -2293,7 +2295,7 @@ MonoBehaviour:
     day: 0
     hour: 0
     minute: 0
-  timeScale: 1
+  timeScale: 3
   sunTransform: {fileID: 0}
 --- !u!1 &7258148572379815631
 GameObject:
