@@ -251,6 +251,11 @@ public class Inventory : MonoBehaviour
 
         if (itemsInventory[index].EquipItem() && itemsInventory[index].canBeEquipped)
         {
+            
+            if (HandSlot.instanceHandSlot.ItemInventoryHand)
+            {
+                AddItem(HandSlot.instanceHandSlot.ItemInventoryHand,HandSlot.instanceHandSlot.ItemInventoryHand.quantity);
+            }
             handSlot.ItemInventoryHand = itemsInventory[index];
             handSlot.Update_Info_item_inventory();
             EquippedUsedItem(index);

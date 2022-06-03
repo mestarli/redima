@@ -100,8 +100,7 @@ public class Land : MonoBehaviour, ITimeTracker
                     SwitchLandStatus(LandStatus.Watered);
                 }
             }
-
-            if (seed.cropToYield.type == ItemTypes.Seeds)
+            if (HandSlot.instanceHandSlot.ItemInventoryHand.type == ItemTypes.Seeds)
             {
                 // Interactuar
                 SwitchLandStatus(LandStatus.Farmland);
