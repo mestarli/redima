@@ -94,11 +94,18 @@ public class Land : MonoBehaviour, ITimeTracker
                     SwitchLandStatus(LandStatus.Watered);
                 }
             }
-            if (HandSlot.instanceHandSlot.ItemInventoryHand.type == ItemTypes.Seeds && 
-                HandSlot.instanceHandSlot.ItemInventoryHand.quantity <= 0 && landStatus != LandStatus.Soil && cropPlanted == null)
+            if (HandSlot.instanceHandSlot.ItemInventoryHand.type == ItemTypes.Seeds && landStatus != LandStatus.Soil 
+                && cropPlanted == null)
             {
-                // Interactuar
-                HandSlot.instanceHandSlot.ItemInventoryHand.quantity -= 1;
+                // Instanciamos el objeto crop en los cultivos
+                GameObject cropObject = Instantiate(cropPrefab, transform);
+                cropObject.transform.localScale = new  Vector3(10, 1, 10);
+                
+                // Accedemos al script CropBehaviour que esta dentro del crop
+                cropPlanted = cropObject.GetComponent<CropBehaviour>();
+                //cropPlanted.Plant();
+                
+                // Se cambia el material del suelo a Farmland
                 SwitchLandStatus(LandStatus.Farmland);
             }
         }
@@ -113,6 +120,12 @@ public class Land : MonoBehaviour, ITimeTracker
             int hoursElapsed = GameTimestamp.CompareTimestamps(timeWatered, timestamp);
 
             Debug.Log(hoursElapsed);
+            
+            // Hacemos crecer la planta mientras esta la tierra regada
+            if (cropPlanted != null)
+            {
+                cropPlanted.Grow();
+            }
 
             if (hoursElapsed > 24)
             {

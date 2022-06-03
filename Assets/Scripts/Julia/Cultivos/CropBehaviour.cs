@@ -7,6 +7,9 @@ public class CropBehaviour : MonoBehaviour
     //Variables
     private Seed seedToGrow;
 
+    public int growth;
+    public int maxGrowth;
+    
     [Header("Etapas de vida")] 
     public GameObject seed;
     public GameObject seedling;
@@ -36,13 +39,32 @@ public class CropBehaviour : MonoBehaviour
         // Instanciamos el gameobject cosechable
         harvestable = Instantiate(cropToYield.gameModel, transform);
         
+        // Conversion de los dias de crecimiento a horas
+        int hoursToGrow = GameTimestamp.DaysToHours(seedToGrow.daysToGrow);
+        
+        // Conversion de los dias de crecimiento a horas
+        maxGrowth = GameTimestamp.HoursToMinutes(hoursToGrow);
+        
         // Establecemos como predefinido el estado del crop a seed
         SwitchState(CropState.Seed);
     }
 
     public void Grow()
     {
+        // Aumentamos el crecimiento
+        growth++;
+
+        // La semilla brotará en una seedling cuando el crecimiento este al 50%
+        if (growth >= maxGrowth / 2 && cropState == CropState.Seed)
+        {
+            SwitchState(CropState.Seedling);
+        }
         
+        // Crecimiento de seedling a cosechable
+        if (growth >= maxGrowth && cropState == CropState.Seedling)
+        {
+            SwitchState(CropState.Harvestable);
+        }
     }
 
     // Metodo para cambiar el estado del crop
