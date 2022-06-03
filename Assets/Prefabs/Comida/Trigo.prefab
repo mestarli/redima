@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6903857480591391672}
   - component: {fileID: 8659184604781105010}
   - component: {fileID: -1862267152002872991}
+  - component: {fileID: 4635028651935616815}
   m_Layer: 0
   m_Name: Trigo
   m_TagString: Untagged
@@ -97,3 +98,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.55556, y: 1.05556, z: 0.49999997}
   m_Center: {x: 0, y: 0.52778, z: 0}
+--- !u!114 &4635028651935616815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7145918437182533287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726f32ae3168956448664f209aafc4a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemInventoryReference: {fileID: 11400000, guid: 6840fae49397f0a479636a821ee26adb, type: 2}
+  quantityToAdd: 1

@@ -16,11 +16,10 @@ MonoBehaviour:
   name: Atun
   icon: {fileID: 21300000, guid: 8c720d0ca544e754eaf38a40b3b93f91, type: 3}
   description: Te restaura 10 de comida.
-  type: 2
-  canBeConsumed: 1
+  type: 0
+  canBeConsumed: 0
   canBeEquipped: 0
   isCumulative: 1
   maxCumulative: 60
   gameModel: {fileID: 1598848563356447090, guid: 25a08cc7a4ca48a469d37c5e9046593f, type: 3}
   quantity: 0
-  hungryRestoration: 10

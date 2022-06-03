@@ -31,7 +31,7 @@ public class CropBehaviour : MonoBehaviour
         this.seedToGrow = seedToGrow;
         
         // Instanciar la seedling y los gameobjects cosechables
-        seedling = Instantiate(seedToGrow.gameModel, transform);
+        seedling = Instantiate(seedToGrow.seedling, transform);
 
         // Accedemos al script del crop
         ItemInventory cropToYield = seedToGrow.cropToYield;

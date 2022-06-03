@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2021450667140920904}
   - component: {fileID: 4317076147431654018}
   - component: {fileID: -4598925673867686237}
+  - component: {fileID: 2045456531064241140}
   m_Layer: 0
   m_Name: Fruta Dragon
   m_TagString: Untagged
@@ -97,3 +98,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.581824, y: 0.87272793, z: 0.581824}
   m_Center: {x: 0, y: 0.43636397, z: 0}
+--- !u!114 &2045456531064241140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2371613124078232407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726f32ae3168956448664f209aafc4a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemInventoryReference: {fileID: 11400000, guid: e5e30946abc18f54f8c5cecc1bc2679b, type: 2}
+  quantityToAdd: 1

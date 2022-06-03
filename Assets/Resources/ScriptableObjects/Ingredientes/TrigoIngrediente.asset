@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 650dbd625ba745c59a54368e9a51dbb4, type: 3}
+  m_Name: TrigoIngrediente
+  m_EditorClassIdentifier: 
+  ID: Trigo
+  name: Trigo
+  icon: {fileID: 21300000, guid: 4c5b2909d76839f4cbf0ca58b9aadcdf, type: 3}
+  description: 
+  type: 0
+  canBeConsumed: 0
+  canBeEquipped: 0
+  isCumulative: 1
+  maxCumulative: 60
+  gameModel: {fileID: 7145918437182533287, guid: ca48ac837fc88b84fbab301e3b1e08fe, type: 3}
+  quantity: 0

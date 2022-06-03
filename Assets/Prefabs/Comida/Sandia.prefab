@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2278750800740283813}
   - component: {fileID: 4069926464119767407}
   - component: {fileID: -7252868050196515028}
+  - component: {fileID: -7577154363907439359}
   m_Layer: 0
   m_Name: Sandia
   m_TagString: Untagged
@@ -96,3 +97,17 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.746672, y: 0.85333604, z: 0.746672}
   m_Center: {x: 0, y: 0.42666802, z: 0}
+--- !u!114 &-7577154363907439359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2556836218448748730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 726f32ae3168956448664f209aafc4a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _itemInventoryReference: {fileID: 11400000, guid: 4e1ebbc023ad00643a91f431212f4fed, type: 2}
+  quantityToAdd: 1

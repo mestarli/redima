@@ -9,18 +9,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ee6d0f3c301b074ba4c7701e2a182dd, type: 3}
-  m_Name: SalmonRojoComida
+  m_Script: {fileID: 11500000, guid: 0ac4812b115241bca936d06ccf0090ac, type: 3}
+  m_Name: TomacoIngrediente
   m_EditorClassIdentifier: 
-  ID: SalmonRojo
-  name: Salmon Rojo
-  icon: {fileID: 0}
-  description: Te restaura 3 de hambre.
-  type: 2
-  canBeConsumed: 1
+  ID: Tomaco
+  name: Tomaco
+  icon: {fileID: 21300000, guid: 05c88d017e51265428010d207aa937aa, type: 3}
+  description: 
+  type: 0
+  canBeConsumed: 0
   canBeEquipped: 0
   isCumulative: 1
   maxCumulative: 60
-  gameModel: {fileID: 6155818985570115440, guid: 4ce1ee04bf12a624ebed485948581f8a, type: 3}
+  gameModel: {fileID: 6948330443496872479, guid: be08c129661460747bd2afb796a55a80, type: 3}
   quantity: 0
-  hungryRestoration: 2
