@@ -77,8 +77,8 @@ public class EnemyController : MonoBehaviour
     IEnumerator Waiting()
     {
         isWaiting = true;
-        _animator.SetBool("IsWalking",false); 
-        yield return new WaitForSeconds(4f);
+        //_animator.SetBool("IsWalking",false); 
+        yield return new WaitForSeconds(0.1f);
         isWaiting = false;
 
     }
