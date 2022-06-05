@@ -9,8 +9,15 @@ public class Inventory : MonoBehaviour
     [SerializeField] private Player player;
     [SerializeField] private int slotsNum;
     [SerializeField] private HandSlot handSlot;
+    [SerializeField] private bool collected;
 
     public Player Player => player;
+    public bool Collected
+    { 
+        get => collected;
+        set => collected = value;
+    }
+    
     public static Inventory instance; 
     public ItemInventory[] ItemsInventory => itemsInventory;
 

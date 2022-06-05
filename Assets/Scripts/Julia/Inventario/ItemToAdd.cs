@@ -24,6 +24,11 @@ public class ItemToAdd : MonoBehaviour
         {
             Inventory.instance.AddItem(_itemInventoryReference, quantityToAdd);
             Destroy(gameObject);
+
+            if (_itemInventoryReference.type == ItemTypes.Ingredients)
+            {
+                Inventory.instance.Collected = true;
+            }
         }
     }
 }
