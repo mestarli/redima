@@ -72,7 +72,7 @@ public class Land : MonoBehaviour, ITimeTracker
                 materialToSwitch = wateredMat;
                 
                 // 
-                timeWatered = TimeManager.instance.GetGameTimestamp();
+                //timeWatered = TimeManager.instance.GetGameTimestamp();
                 break;
         }
         
@@ -98,13 +98,26 @@ public class Land : MonoBehaviour, ITimeTracker
                 {
                     // Interactuar
                     SwitchLandStatus(LandStatus.Watered);
+                    
+                    StartCoroutine(ChangeMatToFarmland());
+
+                    if (landStatus == LandStatus.Farmland)
+                    {
+                        SwitchLandStatus(LandStatus.Farmland);
+                    }
                 }
             }
-            if (HandSlot.instanceHandSlot.ItemInventoryHand.type == ItemTypes.Seeds && landStatus != LandStatus.Soil 
+            
+            if (HandSlot.instanceHandSlot.ItemInventoryHand.type == ItemTypes.Seeds && landStatus == LandStatus.Watered
                 && cropPlanted == null && HandSlot.instanceHandSlot.ItemInventoryHand.quantity > 0)
             {
                 HandSlot.instanceHandSlot.ItemInventoryHand.quantity -= 1;
-                HandSlot.instanceHandSlot.Update_Info_item_inventory();
+                
+                if (HandSlot.instanceHandSlot.ItemInventoryHand.quantity <= 0)
+                {
+                    HandSlot.instanceHandSlot.ActivateSlotUI(false);
+                }
+
                 // Instanciamos el objeto crop en los cultivos
                 GameObject cropObject = Instantiate(cropPrefab, transform);
                 cropObject.transform.localScale = new  Vector3(10, 1, 10);
@@ -121,19 +134,14 @@ public class Land : MonoBehaviour, ITimeTracker
                     }
                 }
                 
-               // Debug.Log("Hola que tal "+semillaAPlantar.daysToGrow);
                 cropPlanted.Plant(semillaAPlantar);
-                
-                // Se cambia el material del suelo a Farmland
-                SwitchLandStatus(LandStatus.Farmland);
             }
         }
     }
 
     public void ClockUpdate(GameTimestamp timestamp)
     {
-        // Miramos si han pasado 24 horas desde que la tierra se ha regado
-        if (landStatus == LandStatus.Watered)
+        if (landStatus == LandStatus.Farmland)
         {
             // Hacemos crecer la planta mientras esta la tierra regada
             if (cropPlanted != null)
@@ -141,5 +149,11 @@ public class Land : MonoBehaviour, ITimeTracker
                 cropPlanted.Grow();
             }
         }
+    }
+
+    IEnumerator ChangeMatToFarmland()
+    {
+        yield return new WaitForSeconds(1); 
+        SwitchLandStatus(LandStatus.Farmland);
     }
 }

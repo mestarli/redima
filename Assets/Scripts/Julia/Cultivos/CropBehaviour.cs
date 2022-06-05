@@ -13,7 +13,8 @@ public class CropBehaviour : MonoBehaviour
     [Header("Etapas de vida")] 
     public GameObject seed;
     public GameObject seedling;
-    [SerializeField]private GameObject harvestable;
+    [SerializeField] private GameObject harvestable;
+
     public enum CropState
     {
         Seed,
@@ -51,8 +52,11 @@ public class CropBehaviour : MonoBehaviour
 
     public void Grow()
     {
-        // Aumentamos el crecimiento
-        growth++;
+        if (growth < maxGrowth)
+        {
+            // Aumentamos el crecimiento
+            growth++;
+        }
 
         // La semilla brotará en una seedling cuando el crecimiento este al 50%
         if (growth >= maxGrowth / 2 && cropState == CropState.Seed)
@@ -64,6 +68,15 @@ public class CropBehaviour : MonoBehaviour
         if (growth >= maxGrowth && cropState == CropState.Seedling)
         {
             SwitchState(CropState.Harvestable);
+        }
+    }
+
+    public void Collect()
+    {
+        if (Inventory.instance.Collected && growth >= maxGrowth && cropState == CropState.Harvestable)
+        {
+            Inventory.instance.Collected = false;
+            Destroy(gameObject);
         }
     }
 
