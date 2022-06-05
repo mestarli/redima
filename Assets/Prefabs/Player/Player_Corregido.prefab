@@ -55,6 +55,7 @@ GameObject:
   - component: {fileID: 1087310964815378417}
   - component: {fileID: 1087310964815378418}
   - component: {fileID: 1087310964815378416}
+  - component: {fileID: 1779717959}
   m_Layer: 0
   m_Name: Player_Corregido
   m_TagString: Player
@@ -93,8 +94,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravity: -9.81
-  speed: 10
-  speedRun: 25
+  speed: 8
+  speedRun: 12
   _characterController: {fileID: 0}
   isGrounded: 0
   jumHeight: 2
@@ -105,7 +106,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   isGliding: 0
-  turnSmoothTime: 0.4
+  turnSmoothTime: 0.2
   groundDistance: 0.4
 --- !u!114 &1087310964815378418
 MonoBehaviour:
@@ -148,6 +149,20 @@ CharacterController:
   m_SkinWidth: 0.0001
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1.08, z: 0}
+--- !u!114 &1779717959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087310964815378426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6418ff7e85e83104eb6c3d0b18e8917e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  freeLookCamera: {fileID: 0}
+  freeLookComponent: {fileID: 0}
 --- !u!1 &1087310965092498529
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,7 +217,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7861012904237775090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.974, z: 0}
+  m_LocalPosition: {x: 0, y: 0.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1087310964815378422}
