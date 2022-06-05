@@ -754,7 +754,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Zarzo_Idle
-  m_Speed: 1
+  m_Speed: 0.68
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 2604496400430037091}
@@ -768,7 +768,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 9afee58e016178c4dbfcfb862ab99350, type: 2}
+  m_Motion: {fileID: 7400000, guid: 18ad8c735e4bf6c4883bf39d51896ff5, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
