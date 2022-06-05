@@ -37,7 +37,7 @@ public class CameraController : MonoBehaviour
         // comment out the below if condition if you are using mouse control for zoom
         if (Input.mouseScrollDelta.y != 0)
         {
-            //freeLookComponent.m_YAxis.m_MaxSpeed = 10;
+            freeLookComponent.m_YAxis.m_MaxSpeed = 60;
         }
     }
 }
