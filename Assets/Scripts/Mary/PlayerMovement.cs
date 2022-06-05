@@ -10,7 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed = 10f;
     [SerializeField] private float speedRun = 25f;
     private float initialSpeed;
-    private CharacterController _characterController;
+    public CharacterController _characterController;
     
     [SerializeField] private bool isGrounded;
     [SerializeField] private float jumHeight = 3.5f;

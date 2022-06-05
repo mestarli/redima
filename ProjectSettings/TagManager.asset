@@ -10,6 +10,7 @@ TagManager:
   - Oveja
   - Activate_Camera_01_01
   - Ship
+  - PlayerFramingCamera
   layers:
   - Default
   - TransparentFX

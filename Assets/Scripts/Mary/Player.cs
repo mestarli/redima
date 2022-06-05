@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public static Player Instance;
     public float hambre;
     private float maxHambre = 100;
     public bool puedeAlimentarse;
@@ -30,6 +31,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Vector3 posicionBarco;
     private void Awake()
     {
+        Instance = this;
         //estamina = maxEstamina;
         //hambre = maxHambre;
         posicionPlayer = gameObject.transform.position;
@@ -75,11 +77,13 @@ public class Player : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            gameObject.GetComponent<CameraController>().enabled = false;
             StartCoroutine(ResetCursor(true));
         }else if (cursorEnabled && Input.GetKeyDown(KeyCode.LeftAlt))
         {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+            gameObject.GetComponent<CameraController>().enabled = true;
             StartCoroutine(ResetCursor(false));
             cursorEnabled = false;
         }
