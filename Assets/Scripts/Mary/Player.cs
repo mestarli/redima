@@ -122,6 +122,14 @@ public class Player : MonoBehaviour
         y = tamaño;
         z = tamaño;
         transform.localScale = new Vector3(x, y, z);
+        if (tamaño == 0.1f)
+        {
+            PlayerMovement.Instance._characterController.stepOffset = 0;
+        }
+        else
+        {
+            PlayerMovement.Instance._characterController.stepOffset = 1;
+        }
     }
     
     public void alimentarse(float cantidad)
