@@ -131,6 +131,10 @@ MonoBehaviour:
   BoatColliders: {fileID: 0}
   posicionPlayer: {x: 0, y: 0, z: 0}
   posicionBarco: {x: 0, y: 0, z: 0}
+  isInBag: 0
+  Bag: {fileID: 7439628741677761855}
+  AnimalesGranja: {fileID: 0}
+  AnimalesAviario: {fileID: 0}
 --- !u!143 &1087310964815378416
 CharacterController:
   m_ObjectHideFlags: 0
@@ -675,6 +679,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c76958513113d3b46b06acdcfb0a1bde, type: 3}
+--- !u!1 &7439628741677761855 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c76958513113d3b46b06acdcfb0a1bde, type: 3}
+  m_PrefabInstance: {fileID: 7782140156365011054}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7815168400217153413 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c76958513113d3b46b06acdcfb0a1bde, type: 3}

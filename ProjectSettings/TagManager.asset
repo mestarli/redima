@@ -20,6 +20,7 @@ TagManager:
   - Pingu
   - Tortuga
   - AddToBag
+  - SendToGranja
   layers:
   - Default
   - TransparentFX

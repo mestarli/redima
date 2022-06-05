@@ -31,6 +31,8 @@ public class Player : MonoBehaviour
     [SerializeField] private Vector3 posicionBarco;
     [SerializeField] private bool isInBag;
     [SerializeField] private GameObject Bag;
+    [SerializeField] private GameObject AnimalesGranja;
+    [SerializeField] private GameObject AnimalesAviario;
     private void Awake()
     {
         Instance = this;
@@ -201,6 +203,27 @@ public class Player : MonoBehaviour
                 }
             }
             isInBag = true;
+        }
+        if (hit.gameObject.tag ==  "SendToGranja" && isInBag && Input.GetKeyDown(KeyCode.R))
+        {
+            String tagAnimal = "";
+            foreach (Transform animal in Bag.transform)
+            {
+                if (animal.gameObject.active)
+                {
+                    tagAnimal = animal.gameObject.tag;
+                    isInBag = false;
+                    animal.gameObject.SetActive(false);
+                }
+            }
+            foreach (Transform animal in AnimalesGranja.transform)
+            {
+                if (animal.tag == tagAnimal)
+                {
+                    animal.gameObject.SetActive(true);
+                }
+            }
+            
         }
     }
     
