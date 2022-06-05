@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Land : MonoBehaviour, ITimeTracker
 {
-    // https://www.youtube.com/watch?v=uij6JL_8LWo - 13:09
+    // https://www.youtube.com/watch?v=uij6JL_8LWo
     
     // Variables
     public enum LandStatus
@@ -43,9 +43,6 @@ public class Land : MonoBehaviour, ITimeTracker
         
         // Deselccionar la tierra por defecto
         Select(false);
-        
-        // Añadir este script a la lista de listeners del TimeManager
-        TimeManager.instance.RegisterTracker(this);
     }
 
     public void SwitchLandStatus(LandStatus statusToSwitch)
@@ -69,10 +66,7 @@ public class Land : MonoBehaviour, ITimeTracker
             
             case LandStatus.Watered:
                 // Mostrará el material Watered
-                materialToSwitch = wateredMat;
-                
-                // 
-                //timeWatered = TimeManager.instance.GetGameTimestamp();
+                materialToSwitch = wateredMat; 
                 break;
         }
         
@@ -108,8 +102,8 @@ public class Land : MonoBehaviour, ITimeTracker
                 }
             }
             
-            if (HandSlot.instanceHandSlot.ItemInventoryHand.type == ItemTypes.Seeds && landStatus == LandStatus.Watered
-                && cropPlanted == null && HandSlot.instanceHandSlot.ItemInventoryHand.quantity > 0)
+            if (HandSlot.instanceHandSlot.ItemInventoryHand.type == ItemTypes.Seeds && landStatus != LandStatus.Soil && 
+                landStatus == LandStatus.Watered && cropPlanted == null && HandSlot.instanceHandSlot.ItemInventoryHand.quantity > 0)
             {
                 HandSlot.instanceHandSlot.ItemInventoryHand.quantity -= 1;
                 

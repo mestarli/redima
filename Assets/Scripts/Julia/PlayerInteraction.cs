@@ -20,6 +20,8 @@ public class PlayerInteraction : MonoBehaviour
         {
             OnInteractableHit(hit);
         }
+        
+        AdvanceTime();
     }
     
     // Metodo cuando el raycast hit choca con algo que es interactuable
@@ -67,6 +69,13 @@ public class PlayerInteraction : MonoBehaviour
             _selectedLand.Interact();
             return;
         }
-        //Debug.Log("It's not in any land");
+    }
+
+    public void AdvanceTime()
+    {
+        if (Input.GetKey(KeyCode.T))
+        {
+            TimeManager.instance.Tick();
+        }
     }
 }
