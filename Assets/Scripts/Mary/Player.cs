@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     public float estamina;
     private float maxEstamina = 150;
     public bool puedeRecuperarEstamina;
+    public bool cursorEnabled;
 
     [SerializeField] private bool isInBoat;
     [SerializeField] private bool SetActiveBoat;
@@ -33,6 +34,9 @@ public class Player : MonoBehaviour
         //hambre = maxHambre;
         posicionPlayer = gameObject.transform.position;
         posicionBarco = Boat.transform.position;
+        //to hide the cursor
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
 
     private void Update()
@@ -64,6 +68,20 @@ public class Player : MonoBehaviour
             Boat.transform.GetChild(0).GetComponent<CinemachineVirtualCamera>().Priority = 14;
             PlayerMovement.Instance._animator.SetLayerWeight(1, 1);
             StartCoroutine(ResetExitBoat(true));
+        }
+
+        // Habilitaremos el cursor con la tecla alt izquierda
+        if (!cursorEnabled && Input.GetKeyDown(KeyCode.LeftAlt))
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            StartCoroutine(ResetCursor(true));
+        }else if (cursorEnabled && Input.GetKeyDown(KeyCode.LeftAlt))
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            StartCoroutine(ResetCursor(false));
+            cursorEnabled = false;
         }
         
     }
@@ -177,6 +195,13 @@ public class Player : MonoBehaviour
       
         yield return new WaitForSeconds(2f);
         SetActiveBoat = estaBarco;
+    }
+    
+    IEnumerator ResetCursor(bool enable)
+    {
+      
+        yield return new WaitForSeconds(0.2f);
+        cursorEnabled  = enable;
     }
     
     
