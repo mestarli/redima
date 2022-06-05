@@ -1310,14 +1310,14 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.990566, g: 0.9088724, b: 0.6494749, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -4221,7 +4221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1576622316, guid: 630b41c10f218e641a2934464779f759, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.021532746
+      value: 0.021532742
       objectReference: {fileID: 0}
     - target: {fileID: 1576622316, guid: 630b41c10f218e641a2934464779f759, type: 3}
       propertyPath: m_LocalRotation.y
@@ -4229,7 +4229,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1576622316, guid: 630b41c10f218e641a2934464779f759, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.039844025
+      value: -0.039844017
       objectReference: {fileID: 0}
     - target: {fileID: 1576622317, guid: 630b41c10f218e641a2934464779f759, type: 3}
       propertyPath: m_Follow
@@ -5634,45 +5634,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 360322745, guid: 91ca45a61b1082c478d4f08794f34b31, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1676953166, guid: 91ca45a61b1082c478d4f08794f34b31, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1676953167, guid: 91ca45a61b1082c478d4f08794f34b31, type: 3}
-      propertyPath: m_Color.b
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1676953167, guid: 91ca45a61b1082c478d4f08794f34b31, type: 3}
-      propertyPath: m_Color.g
-      value: 0.85783035
-      objectReference: {fileID: 0}
-    - target: {fileID: 1676953167, guid: 91ca45a61b1082c478d4f08794f34b31, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1676953167, guid: 91ca45a61b1082c478d4f08794f34b31, type: 3}
-      propertyPath: m_Intensity
-      value: 15000
-      objectReference: {fileID: 0}
-    - target: {fileID: 1676953167, guid: 91ca45a61b1082c478d4f08794f34b31, type: 3}
-      propertyPath: m_SpotAngle
-      value: 24.969877
-      objectReference: {fileID: 0}
-    - target: {fileID: 1676953167, guid: 91ca45a61b1082c478d4f08794f34b31, type: 3}
-      propertyPath: m_InnerSpotAngle
-      value: 21.694836
-      objectReference: {fileID: 0}
     - target: {fileID: 184721171452037922, guid: 91ca45a61b1082c478d4f08794f34b31, type: 3}
       propertyPath: m_Name
       value: Mapa
-      objectReference: {fileID: 0}
-    - target: {fileID: 470317570202183339, guid: 91ca45a61b1082c478d4f08794f34b31, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8653123606080303507, guid: 91ca45a61b1082c478d4f08794f34b31, type: 3}
       propertyPath: m_RootOrder
