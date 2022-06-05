@@ -52,6 +52,7 @@ public class CropBehaviour : MonoBehaviour
 
     public void Grow()
     {
+        Collect();
         if (growth < maxGrowth)
         {
             // Aumentamos el crecimiento
@@ -76,7 +77,7 @@ public class CropBehaviour : MonoBehaviour
         if (Inventory.instance.Collected && growth >= maxGrowth && cropState == CropState.Harvestable)
         {
             Inventory.instance.Collected = false;
-            Destroy(gameObject);
+            Destroy(this);
         }
     }
 
