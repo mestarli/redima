@@ -11,6 +11,15 @@ TagManager:
   - Activate_Camera_01_01
   - Ship
   - PlayerFramingCamera
+  - Trigger_move_01
+  - Trigger_move_02
+  - Trigger_move_03
+  - Mochila
+  - Gallina
+  - Vaca
+  - Pingu
+  - Tortuga
+  - AddToBag
   layers:
   - Default
   - TransparentFX

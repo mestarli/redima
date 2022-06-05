@@ -29,6 +29,8 @@ public class Player : MonoBehaviour
     
     [SerializeField] private Vector3 posicionPlayer;
     [SerializeField] private Vector3 posicionBarco;
+    [SerializeField] private bool isInBag;
+    [SerializeField] private GameObject Bag;
     private void Awake()
     {
         Instance = this;
@@ -186,6 +188,19 @@ public class Player : MonoBehaviour
         if (hit.gameObject.tag ==  "Ship" && !isInBoat)
         {
             isInBoat = true;
+        }
+        if (hit.gameObject.tag ==  "AddToBag" && !isInBag && Input.GetKeyDown(KeyCode.R))
+        {
+            String tagAnimal = hit.gameObject.transform.parent.gameObject.tag;
+            Destroy(hit.gameObject.transform.parent.gameObject);
+            foreach (Transform animal in Bag.transform)
+            {
+                if (animal.tag == tagAnimal)
+                {
+                    animal.gameObject.SetActive(true);
+                }
+            }
+            isInBag = true;
         }
     }
     
