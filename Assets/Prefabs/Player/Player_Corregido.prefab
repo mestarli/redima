@@ -95,15 +95,16 @@ MonoBehaviour:
   gravity: -9.81
   speed: 10
   speedRun: 25
+  _characterController: {fileID: 0}
   isGrounded: 0
   jumHeight: 2
   _animator: {fileID: 0}
+  cam: {fileID: 0}
   groundCheck: {fileID: 1087310965092498528}
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
   isGliding: 0
-  cam: {fileID: 0}
   turnSmoothTime: 0.4
   groundDistance: 0.4
 --- !u!114 &1087310964815378418
@@ -122,6 +123,7 @@ MonoBehaviour:
   puedeAlimentarse: 0
   estamina: 0
   puedeRecuperarEstamina: 0
+  cursorEnabled: 0
   isInBoat: 0
   SetActiveBoat: 0
   Boat: {fileID: 0}
@@ -140,7 +142,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 2.18
-  m_Radius: 1.02
+  m_Radius: 1
   m_SlopeLimit: 45
   m_StepOffset: 1
   m_SkinWidth: 0.0001

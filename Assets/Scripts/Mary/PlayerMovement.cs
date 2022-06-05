@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator _animator;
     private Transform _modelTransform;
+    [SerializeField] private Transform cam;
     
     //For check if its toching ground
     [SerializeField] private Transform groundCheck;
@@ -28,7 +29,6 @@ public class PlayerMovement : MonoBehaviour
     // For gliding palomo
     [SerializeField] private float isGliding;
     
-    [SerializeField] private Transform cam;
     
     // Componentes para interactuar
     private PlayerInteraction _playerInteraction;
@@ -73,13 +73,13 @@ public class PlayerMovement : MonoBehaviour
         //_animator.SetBool("IsWalking",false);
         _animator.SetBool("IsRunning",false);
         _animator.SetBool("IsWalking",false);
+        
         if (direction.magnitude >= 0.1f)
         {
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
 
             transform.rotation = Quaternion.Euler(0, angle, 0);
-
             Vector3 moveDir = Quaternion.Euler(0, targetAngle, 0) * Vector3.forward;
             _characterController.Move(moveDir.normalized * speed * Time.deltaTime);
             _animator.SetBool("IsWalking",true);
@@ -101,7 +101,6 @@ public class PlayerMovement : MonoBehaviour
         {
             playerVelocity.y = Mathf.Sqrt(jumHeight * -2 * gravity);
         }
-        
         // Animacion de saltar
         if (!isGrounded)
         {
@@ -120,7 +119,7 @@ public class PlayerMovement : MonoBehaviour
     private void Run()
     {
         bool isShiftKeyDown = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
-        if(isShiftKeyDown)
+        if(isShiftKeyDown && isGrounded)
         {
             speed = speedRun;
             //_animator.SetBool("IsRunning", isShiftKeyDown);

@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 5
-  m_FollowOffset: {x: 0, y: 23.5, z: -20}
+  m_FollowOffset: {x: 0, y: 5.081431, z: -10.801334}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -117,8 +117,8 @@ MonoBehaviour:
   m_LookaheadIgnoreY: 0
   m_HorizontalDamping: 0
   m_VerticalDamping: 0
-  m_ScreenX: 0.5
-  m_ScreenY: 0.5
+  m_ScreenX: 0.4130206
+  m_ScreenY: 0.5148147
   m_DeadZoneWidth: 0
   m_DeadZoneHeight: 0
   m_SoftZoneWidth: 0.8
@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 5
-  m_FollowOffset: {x: 0, y: 23.5, z: -20}
+  m_FollowOffset: {x: 0, y: 5.081431, z: -10.801334}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -276,7 +276,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1590408335472109693}
-  m_LocalRotation: {x: 0.33054963, y: -0.45195264, z: 0.18497778, w: 0.80762553}
+  m_LocalRotation: {x: 0.14394774, y: 0.34705362, z: -0.05399897, w: 0.92515785}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -384,7 +384,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 5
-  m_FollowOffset: {x: 0, y: 23.5, z: -20}
+  m_FollowOffset: {x: 0, y: 5.081431, z: -10.801334}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -476,7 +476,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3979094329461069583}
-  m_LocalRotation: {x: 0.36603653, y: -0.44330573, z: 0.2048364, w: 0.79217386}
+  m_LocalRotation: {x: 0.19477054, y: 0.3938887, z: -0.08579711, w: 0.8941784}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -550,7 +550,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6563137291689974340}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 18.309471, y: 19.790752, z: -17.952095}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -576,7 +576,7 @@ MonoBehaviour:
   - m_Script
   m_LockStageInInspector: 
   m_StreamingVersion: 20170927
-  m_Priority: 10
+  m_Priority: 12
   m_StandbyUpdate: 2
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
@@ -596,9 +596,9 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_YAxis:
-    Value: 1
+    Value: 0.29
     m_SpeedMode: 0
-    m_MaxSpeed: 0
+    m_MaxSpeed: 60
     m_AccelTime: 0.25
     m_DecelTime: 0.25
     m_InputAxisName: Mouse ScrollWheel
@@ -685,7 +685,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7860641187879543884}
-  m_LocalRotation: {x: 0.3515667, y: -0.44695827, z: 0.19673908, w: 0.79870075}
+  m_LocalRotation: {x: 0.18754606, y: 0.34411106, z: -0.07035398, w: 0.9173137}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
