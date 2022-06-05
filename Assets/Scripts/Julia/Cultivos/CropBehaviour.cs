@@ -13,7 +13,7 @@ public class CropBehaviour : MonoBehaviour
     [Header("Etapas de vida")] 
     public GameObject seed;
     public GameObject seedling;
-    [SerializeField]private GameObject harvestable;
+    [SerializeField] private GameObject harvestable;
     public enum CropState
     {
         Seed,
