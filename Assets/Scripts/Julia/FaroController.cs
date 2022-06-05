@@ -16,6 +16,6 @@ public class FaroController : MonoBehaviour
 
     public void UpdateFaro()
     {
-      faro.transform.Rotate(0, angleRotation * Time.deltaTime, 0);
+        faro.transform.Rotate(0, angleRotation * Time.deltaTime, 0);
     }
 }

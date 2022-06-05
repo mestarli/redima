@@ -4187,6 +4187,11 @@ Light:
   m_CorrespondingSourceObject: {fileID: 2301986776754112781, guid: 2240324fb64aae741b498f9fab9a5981, type: 3}
   m_PrefabInstance: {fileID: 188386895}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1676953166 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1676953166, guid: 91ca45a61b1082c478d4f08794f34b31, type: 3}
+  m_PrefabInstance: {fileID: 470317570745192176}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1689398883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4216,7 +4221,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1576622316, guid: 630b41c10f218e641a2934464779f759, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.021532742
+      value: 0.021532746
       objectReference: {fileID: 0}
     - target: {fileID: 1576622316, guid: 630b41c10f218e641a2934464779f759, type: 3}
       propertyPath: m_LocalRotation.y
@@ -4224,7 +4229,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1576622316, guid: 630b41c10f218e641a2934464779f759, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.039844017
+      value: -0.039844025
       objectReference: {fileID: 0}
     - target: {fileID: 1576622317, guid: 630b41c10f218e641a2934464779f759, type: 3}
       propertyPath: m_Follow
@@ -5422,6 +5427,10 @@ PrefabInstance:
       propertyPath: sunTransform
       value: 
       objectReference: {fileID: 326004039}
+    - target: {fileID: 7258148572349403379, guid: 02e7f7184ab2a184b9c6997c34a9d075, type: 3}
+      propertyPath: faroTransform
+      value: 
+      objectReference: {fileID: 1676953166}
     - target: {fileID: 7471831918802127138, guid: 02e7f7184ab2a184b9c6997c34a9d075, type: 3}
       propertyPath: m_Name
       value: UIScriptsJulia
@@ -5625,6 +5634,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 360322745, guid: 91ca45a61b1082c478d4f08794f34b31, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1676953166, guid: 91ca45a61b1082c478d4f08794f34b31, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -5656,6 +5669,10 @@ PrefabInstance:
     - target: {fileID: 184721171452037922, guid: 91ca45a61b1082c478d4f08794f34b31, type: 3}
       propertyPath: m_Name
       value: Mapa
+      objectReference: {fileID: 0}
+    - target: {fileID: 470317570202183339, guid: 91ca45a61b1082c478d4f08794f34b31, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8653123606080303507, guid: 91ca45a61b1082c478d4f08794f34b31, type: 3}
       propertyPath: m_RootOrder

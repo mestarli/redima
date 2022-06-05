@@ -14,6 +14,7 @@ public class TimeManager : MonoBehaviour
 
     [Header("Day & Night Cycle")]
     public Transform sunTransform;
+    public GameObject faroTransform;
 
     private List<ITimeTracker> listeners = new List<ITimeTracker>();
 
@@ -28,6 +29,8 @@ public class TimeManager : MonoBehaviour
         {
             instance = this;
         }
+        
+        faroTransform.SetActive(false);
     }
 
     private void Start()
@@ -73,6 +76,17 @@ public class TimeManager : MonoBehaviour
         
         // Aplicamos el angulo a la luz direccional
         sunTransform.eulerAngles = new Vector3(sunAngle, 0, 0);
+       
+        if (GetGameTimestamp().hour >= 19 || GetGameTimestamp().hour <= 5)
+        {
+            faroTransform.SetActive(true);
+            faroTransform.transform.Rotate(0, 1.5f, 0);
+        }
+
+        else
+        {
+            faroTransform.SetActive(false);
+        }
     }
 
     // Para obtener el GameTimestamp en otro script
@@ -89,7 +103,7 @@ public class TimeManager : MonoBehaviour
     }
 
     // Eliminar un objeto de la lista de listeners
-    public void UnregidterTracker(ITimeTracker listener)
+    public void UnregisterTracker(ITimeTracker listener)
     {
         listeners.Remove(listener);
     }
