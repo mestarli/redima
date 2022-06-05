@@ -385,6 +385,7 @@ GameObject:
   - component: {fileID: 7487750115949365028}
   - component: {fileID: 704785391028402502}
   - component: {fileID: 7355071698580563895}
+  - component: {fileID: 9142079700139814056}
   m_Layer: 0
   m_Name: Oveja
   m_TagString: Oveja
@@ -457,6 +458,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.13664617, y: 0.11435528, z: 0.14404398}
   m_Center: {x: 0.0046476796, y: 0.056360357, z: 0.008796759}
+--- !u!114 &9142079700139814056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4197963394206189540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2045c12ae4ee7714595f3e6006957af4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy_life: 0
+  enemy_trigger_01: {fileID: 0}
+  enemy_trigger_02: {fileID: 0}
 --- !u!1 &4320979173726740153
 GameObject:
   m_ObjectHideFlags: 0
