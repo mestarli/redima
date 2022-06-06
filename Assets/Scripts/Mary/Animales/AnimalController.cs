@@ -7,6 +7,7 @@ public class AnimalController : MonoBehaviour
     [SerializeField] private GameObject animal_trigger_01;
     [SerializeField] private GameObject animal_trigger_02;
     [SerializeField] private GameObject animal_trigger_03;
+    public GameObject enablePokedex;
     private Vector3 position;
 
     [SerializeField] private Animator _animator;

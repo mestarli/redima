@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -196,18 +197,33 @@ public class Player : MonoBehaviour
         if (hit.gameObject.tag ==  "Paloma" && Input.GetKeyDown(KeyCode.R))
         {
             isInBagPaloma = true;
+            //Para la pokedex
+            if ( hit.transform.parent.transform.GetChild(0).GetComponent<AnimalController>().enablePokedex.transform.GetChild(1).gameObject.tag != "Active")
+            {
+                hit.transform.parent.transform.GetChild(0).GetComponent<AnimalController>().enablePokedex.transform.GetChild(1).gameObject.transform.GetComponent<Image>().color = new Color32(255,255,225,100);
+                hit.transform.parent.transform.GetChild(0).GetComponent<AnimalController>().enablePokedex.transform.GetChild(1).gameObject.tag = "Active"; 
+            }
             Destroy(hit.gameObject.transform.parent.gameObject);
             PalomaHead.SetActive(true);
         }
         if (hit.gameObject.tag ==  "AddToBag" && !isInBag && Input.GetKeyDown(KeyCode.R))
         {
             String tagAnimal = hit.gameObject.transform.parent.gameObject.tag;
+            //Para la pokedex
+
+            if ( hit.transform.parent.transform.GetChild(0).GetComponent<AnimalController>().enablePokedex.transform.GetChild(1).gameObject.tag != "Active")
+            {
+                hit.transform.parent.transform.GetChild(0).GetComponent<AnimalController>().enablePokedex.transform.GetChild(1).gameObject.transform.GetComponent<Image>().color = new Color32(255,255,225,100);
+                hit.transform.parent.transform.GetChild(0).GetComponent<AnimalController>().enablePokedex.transform.GetChild(1).gameObject.tag = "Active"; 
+            }
             Destroy(hit.gameObject.transform.parent.gameObject);
             foreach (Transform animal in Bag.transform)
             {
                 if (animal.tag == tagAnimal)
                 {
                     animal.gameObject.SetActive(true);
+                    
+                    
                 }
             }
             isInBag = true;

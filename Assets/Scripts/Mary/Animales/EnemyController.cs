@@ -7,6 +7,7 @@ public class EnemyController : MonoBehaviour
     [SerializeField] private GameObject animal_trigger_01;
     [SerializeField] private GameObject animal_trigger_02;
     [SerializeField] private GameObject animal_trigger_03;
+    [SerializeField] private GameObject enablePokedex;
     private Vector3 position;
 
     [SerializeField] private Animator _animator;
@@ -78,7 +79,7 @@ public class EnemyController : MonoBehaviour
     {
         isWaiting = true;
         //_animator.SetBool("IsWalking",false); 
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(2f);
         isWaiting = false;
 
     }

@@ -22,6 +22,8 @@ TagManager:
   - AddToBag
   - SendToGranja
   - Paloma
+  - TortugaMordedora
+  - Active
   layers:
   - Default
   - TransparentFX
