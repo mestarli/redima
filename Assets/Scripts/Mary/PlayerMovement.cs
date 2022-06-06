@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     
     
     // For gliding palomo
-    [SerializeField] private float isGliding;
+    [SerializeField] private bool isGliding;
     
     
     // Componentes para interactuar
@@ -36,6 +36,13 @@ public class PlayerMovement : MonoBehaviour
     public float turnSmoothTime = 0.1f;
     float turnSmoothVelocity;
     public float groundDistance = 0.4f;
+    
+    
+    //Para planear si tenemo la paloma
+    [SerializeField] private  float forwardSpeed;
+    [SerializeField] private float liftFactor = 0.1f;
+    [SerializeField] private float dragValue = 0.05f;
+
     
     void Awake()
     {
@@ -101,6 +108,15 @@ public class PlayerMovement : MonoBehaviour
         {
             playerVelocity.y = Mathf.Sqrt(jumHeight * -2 * gravity);
         }
+
+        if(Input.GetButtonDown("Jump") && !isGrounded && Player.Instance.isInBagPaloma && !isGliding)
+        {
+
+            gravity = -2.81f;
+            isGliding = true;
+            StartCoroutine(VueloPaloma());
+            //isGliding = true;
+        }
         // Animacion de saltar
         if (!isGrounded)
         {
@@ -109,6 +125,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             _animator.SetBool("IsJumping",false);
+            isGliding = false;
         }
         Run();
     }
@@ -143,4 +160,14 @@ public class PlayerMovement : MonoBehaviour
             _playerInteraction.Interact();
         }
     }
+    
+    IEnumerator VueloPaloma()
+    {
+        _animator.SetBool("IsGliding",true);
+        yield return new WaitForSeconds(2f);
+        gravity = -9.81f;
+        isGliding = false;
+        _animator.SetBool("IsGliding",false);
+    }
+
 }

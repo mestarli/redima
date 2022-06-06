@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Vector3 posicionPlayer;
     [SerializeField] private Vector3 posicionBarco;
     [SerializeField] private bool isInBag;
-    [SerializeField] private bool isInBagPaloma;
+    public bool isInBagPaloma;
     [SerializeField] private GameObject PalomaHead;
     [SerializeField] private GameObject Bag;
     [SerializeField] private GameObject AnimalesGranja;

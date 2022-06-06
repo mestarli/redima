@@ -108,6 +108,9 @@ MonoBehaviour:
   isGliding: 0
   turnSmoothTime: 0.2
   groundDistance: 0.4
+  forwardSpeed: 0
+  liftFactor: 0.1
+  dragValue: 0.05
 --- !u!114 &1087310964815378418
 MonoBehaviour:
   m_ObjectHideFlags: 0
