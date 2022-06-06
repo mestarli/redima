@@ -21,6 +21,7 @@ TagManager:
   - Tortuga
   - AddToBag
   - SendToGranja
+  - Paloma
   layers:
   - Default
   - TransparentFX

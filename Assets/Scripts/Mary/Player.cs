@@ -195,15 +195,9 @@ public class Player : MonoBehaviour
         }
         if (hit.gameObject.tag ==  "Paloma" && Input.GetKeyDown(KeyCode.R))
         {
-            String tagAnimal = hit.gameObject.transform.parent.gameObject.tag;
+            isInBagPaloma = true;
             Destroy(hit.gameObject.transform.parent.gameObject);
-            foreach (Transform animal in Bag.transform)
-            {
-                if (animal.tag == tagAnimal)
-                {
-                    animal.gameObject.SetActive(true);
-                }
-            }
+            PalomaHead.SetActive(true);
         }
         if (hit.gameObject.tag ==  "AddToBag" && !isInBag && Input.GetKeyDown(KeyCode.R))
         {

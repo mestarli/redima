@@ -132,6 +132,8 @@ MonoBehaviour:
   posicionPlayer: {x: 0, y: 0, z: 0}
   posicionBarco: {x: 0, y: 0, z: 0}
   isInBag: 0
+  isInBagPaloma: 0
+  PalomaHead: {fileID: 2566325708158823022}
   Bag: {fileID: 7439628741677761855}
   AnimalesGranja: {fileID: 0}
   AnimalesAviario: {fileID: 0}
@@ -304,6 +306,88 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 158ef51d8cb448640be0fdc1e5fc9f9a, type: 3}
+--- !u!1001 &5223584987658950946
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2394517460679155852}
+    m_Modifications:
+    - target: {fileID: 3912344966255768460, guid: 5bbfa18ae2ceeb24e808c3299ac161fc, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8e061efbeed2092469cef549fe4dd06a, type: 2}
+    - target: {fileID: 6965764397483141622, guid: 5bbfa18ae2ceeb24e808c3299ac161fc, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965764397483141622, guid: 5bbfa18ae2ceeb24e808c3299ac161fc, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 6.188803
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965764397483141622, guid: 5bbfa18ae2ceeb24e808c3299ac161fc, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 6.188803
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965764397483141622, guid: 5bbfa18ae2ceeb24e808c3299ac161fc, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 6.188803
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965764397483141622, guid: 5bbfa18ae2ceeb24e808c3299ac161fc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.232
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965764397483141622, guid: 5bbfa18ae2ceeb24e808c3299ac161fc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.022
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965764397483141622, guid: 5bbfa18ae2ceeb24e808c3299ac161fc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.041
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965764397483141622, guid: 5bbfa18ae2ceeb24e808c3299ac161fc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.04241503
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965764397483141622, guid: 5bbfa18ae2ceeb24e808c3299ac161fc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7011542
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965764397483141622, guid: 5bbfa18ae2ceeb24e808c3299ac161fc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.71051526
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965764397483141622, guid: 5bbfa18ae2ceeb24e808c3299ac161fc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.041856326
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965764397483141622, guid: 5bbfa18ae2ceeb24e808c3299ac161fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -186.832
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965764397483141622, guid: 5bbfa18ae2ceeb24e808c3299ac161fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0.09100342
+      objectReference: {fileID: 0}
+    - target: {fileID: 6965764397483141622, guid: 5bbfa18ae2ceeb24e808c3299ac161fc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90.765
+      objectReference: {fileID: 0}
+    - target: {fileID: 7773368523505267532, guid: 5bbfa18ae2ceeb24e808c3299ac161fc, type: 3}
+      propertyPath: m_Name
+      value: Paloma
+      objectReference: {fileID: 0}
+    - target: {fileID: 7773368523505267532, guid: 5bbfa18ae2ceeb24e808c3299ac161fc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 5bbfa18ae2ceeb24e808c3299ac161fc, type: 3}
+--- !u!1 &2566325708158823022 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7773368523505267532, guid: 5bbfa18ae2ceeb24e808c3299ac161fc, type: 3}
+  m_PrefabInstance: {fileID: 5223584987658950946}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5298232755957128333
 PrefabInstance:
   m_ObjectHideFlags: 0

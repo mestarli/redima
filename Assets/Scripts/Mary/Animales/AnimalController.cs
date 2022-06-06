@@ -49,6 +49,7 @@ public class AnimalController : MonoBehaviour
     {
             if (other.gameObject.CompareTag("Trigger_move_01"))
             {
+                
                 animal_trigger_01.SetActive(false);
                 animal_trigger_02.SetActive(true);
                 animal_trigger_03.SetActive(false);
