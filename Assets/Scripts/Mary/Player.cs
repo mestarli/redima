@@ -29,7 +29,9 @@ public class Player : MonoBehaviour
     private float z;
     
     [SerializeField] private Vector3 posicionPlayer;
+    [SerializeField] private Quaternion rotationPlayer;
     [SerializeField] private Vector3 posicionBarco;
+    [SerializeField] private Quaternion rotationBarco;
     [SerializeField] private bool isInBag;
     public bool isInBagPaloma;
     [SerializeField] private GameObject PalomaHead;
@@ -43,6 +45,8 @@ public class Player : MonoBehaviour
         //hambre = maxHambre;
         posicionPlayer = gameObject.transform.position;
         posicionBarco = Boat.transform.position;
+        rotationPlayer = gameObject.transform.rotation;
+        rotationBarco = Boat.transform.rotation;
         //to hide the cursor
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
@@ -255,6 +259,8 @@ public class Player : MonoBehaviour
         yield return new WaitForSeconds(2f);
         gameObject.transform.position = posicionPlayer;
         Boat.transform.position = posicionBarco;
+        gameObject.transform.rotation = rotationPlayer;
+        Boat.transform.rotation = rotationBarco;
         PlayerMovement.Instance._animator.ResetTrigger("IsDrawned");
         PlayerMovement.Instance._animator.SetTrigger("Default");
         yield return new WaitForSeconds(0.01f);
