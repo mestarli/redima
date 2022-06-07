@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: Pirarucu
   name: Pirarucu
   icon: {fileID: 0}
-  description: Te restaura 2 de hambre.
+  description: "Pira-, Pira- \xBFQu\xE9?"
   type: 0
   canBeConsumed: 0
   canBeEquipped: 0

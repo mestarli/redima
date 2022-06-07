@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: PezLuna
   name: Pez Luna
   icon: {fileID: 0}
-  description: Te restaura 2 de hambre.
+  description: "No s\xE9 quien fue el genio en ponerle Luna a este pez..."
   type: 0
   canBeConsumed: 0
   canBeEquipped: 0
@@ -23,4 +23,3 @@ MonoBehaviour:
   maxCumulative: 60
   gameModel: {fileID: 2954713118806576656, guid: c327bf7da01036645aad27dd7f532f83, type: 3}
   quantity: 0
-  hungryRestoration: 2
