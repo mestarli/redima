@@ -64,6 +64,32 @@ public class Inventory : MonoBehaviour
 
         if (itemToAdd.isCumulative && itemToAdd.canBeConsumed)
         {
+            Debug.Log("Es un item acumulativo");
+            if (index.Count > 0)
+            {
+                for (int i = 0; i < index.Count; i++)
+                {
+                    if (itemsInventory[index[i]].quantity < itemToAdd.maxCumulative)
+                    {
+                        itemsInventory[index[i]].quantity += quantity;
+                        
+                        if (itemsInventory[index[i]].quantity > itemToAdd.maxCumulative)
+                        {
+                            int difference = itemsInventory[index[i]].quantity - itemToAdd.maxCumulative;
+                            itemsInventory[index[i]].quantity = itemToAdd.maxCumulative;
+                            AddItem(itemToAdd, difference);
+                        }
+                        
+                        UIInventory.instanceInventoryUI.DrawItemInInventory(itemToAdd, itemsInventory[index[i]].quantity, index[i]);
+                        return;
+                    }
+                }
+            }
+        }
+        
+        if (itemToAdd.isCumulative && !itemToAdd.canBeConsumed)
+        {
+            Debug.Log("Es un item acumulativo");
             if (index.Count > 0)
             {
                 for (int i = 0; i < index.Count; i++)
@@ -88,6 +114,7 @@ public class Inventory : MonoBehaviour
 
         if (!itemToAdd.isCumulative && itemToAdd.canBeEquipped)
         {
+            Debug.Log("No es un item acumulativo");
             if (index.Count > 0)
             {
                 for (int i = 0; i < index.Count; i++)

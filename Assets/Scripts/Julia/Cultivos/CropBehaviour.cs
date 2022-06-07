@@ -52,7 +52,6 @@ public class CropBehaviour : MonoBehaviour
 
     public void Grow()
     {
-        Collect();
         if (growth < maxGrowth)
         {
             // Aumentamos el crecimiento

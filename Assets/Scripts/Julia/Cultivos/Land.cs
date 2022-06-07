@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,8 @@ public class Land : MonoBehaviour, ITimeTracker
     // https://www.youtube.com/watch?v=uij6JL_8LWo
     
     // Variables
+    public static Land instance;
+    
     public enum LandStatus
     {
         Soil, Farmland, Watered
@@ -31,6 +34,10 @@ public class Land : MonoBehaviour, ITimeTracker
     
     public Seed[] availableSeeds;
 
+    private void Awake()
+    {
+        instance = this;
+    }
 
     public void Start()
     {
@@ -43,6 +50,9 @@ public class Land : MonoBehaviour, ITimeTracker
         
         // Deselccionar la tierra por defecto
         Select(false);
+        
+        // Añadir este script a la lista de listeners del TimeManager
+        TimeManager.instance.RegisterTracker(this);
     }
 
     public void SwitchLandStatus(LandStatus statusToSwitch)
@@ -86,22 +96,14 @@ public class Land : MonoBehaviour, ITimeTracker
         // Miramos que el player tenga una herramienta equipada
         if (Inventory.instance.isEquipped)
         {
-            if (tool.tools.type == ItemTypes.Tools)
-            {
-                if (tool.toolType == Tool.ToolType.WateringCan)
-                {
-                    // Interactuar
-                    SwitchLandStatus(LandStatus.Watered);
-                    
-                    StartCoroutine(ChangeMatToFarmland());
-
-                    if (landStatus == LandStatus.Farmland)
-                    {
-                        SwitchLandStatus(LandStatus.Farmland);
-                    }
-                }
+            if (Inventory.instance.HandSlot.ItemInventoryHand.ID == "Regadera")
+            { 
+                // Interactuar
+                SwitchLandStatus(LandStatus.Watered);
             }
-            
+
+
+            //Debug.Log("El estado de la tierra es " + landStatus + " carmele");
             if (HandSlot.instanceHandSlot.ItemInventoryHand.type == ItemTypes.Seeds && landStatus != LandStatus.Soil && 
                 landStatus == LandStatus.Watered && cropPlanted == null && HandSlot.instanceHandSlot.ItemInventoryHand.quantity > 0)
             {
@@ -111,6 +113,8 @@ public class Land : MonoBehaviour, ITimeTracker
                 {
                     HandSlot.instanceHandSlot.ActivateSlotUI(false);
                 }
+                
+                SwitchLandStatus(LandStatus.Farmland);
 
                 // Instanciamos el objeto crop en los cultivos
                 GameObject cropObject = Instantiate(cropPrefab, transform);
@@ -141,13 +145,14 @@ public class Land : MonoBehaviour, ITimeTracker
             if (cropPlanted != null)
             {
                 cropPlanted.Grow();
+                cropPlanted.Collect();
             }
-        }
-    }
 
-    IEnumerator ChangeMatToFarmland()
-    {
-        yield return new WaitForSeconds(1); 
-        SwitchLandStatus(LandStatus.Farmland);
+            if (cropPlanted.growth == cropPlanted.maxGrowth)
+            {
+                SwitchLandStatus(LandStatus.Soil);
+            }
+            //
+        }
     }
 }
