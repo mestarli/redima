@@ -15,6 +15,9 @@ public class TimeManager : MonoBehaviour
     [Header("Day & Night Cycle")]
     public Transform sunTransform;
     public GameObject faroTransform;
+    
+    //Variable para saber si es de día o de noche
+    public bool isNight;
 
     private List<ITimeTracker> listeners = new List<ITimeTracker>();
 
@@ -81,11 +84,13 @@ public class TimeManager : MonoBehaviour
         {
             faroTransform.SetActive(true);
             faroTransform.transform.Rotate(0, 1.5f, 0);
+            isNight = true;
         }
 
         else
         {
             faroTransform.SetActive(false);
+            isNight = false;
         }
     }
 
