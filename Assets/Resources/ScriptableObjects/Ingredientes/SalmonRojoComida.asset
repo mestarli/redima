@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: SalmonRojo
   name: Salmon Rojo
   icon: {fileID: 0}
-  description: Te restaura 3 de hambre.
+  description: Un pez muy popular y con un color sofisticado.
   type: 0
   canBeConsumed: 0
   canBeEquipped: 0

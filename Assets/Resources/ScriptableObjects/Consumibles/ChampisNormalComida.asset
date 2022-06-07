@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: ChampiNormal
   name: Champi Normal
   icon: {fileID: 21300000, guid: 04812775ba54f4f4ea2ee4baa57f937f, type: 3}
-  description: "Alimento que vuelve a tu tama\xF1o original al tomartelo."
+  description: "\xA1It's a me, Zarzo! \xA1Uaju!"
   type: 2
   canBeConsumed: 1
   canBeEquipped: 0

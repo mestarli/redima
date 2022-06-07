@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: PezPayaso
   name: Pez Payaso
   icon: {fileID: 21300000, guid: f3ab4ee987cb9c64e80b093311a796b3, type: 3}
-  description: Te restaura 2 de hambre.
+  description: "\xBFQui\xE9n se r\xEDe ahora, eh?"
   type: 2
   canBeConsumed: 1
   canBeEquipped: 0

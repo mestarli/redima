@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: Tomaco
   name: Tomaco
   icon: {fileID: 21300000, guid: 05c88d017e51265428010d207aa937aa, type: 3}
-  description: 
+  description: "\xBFFruta u hortaliza? Nunca lo sabremos..."
   type: 0
   canBeConsumed: 0
   canBeEquipped: 0

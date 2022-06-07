@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: Regadera
   name: Regadera
   icon: {fileID: 21300000, guid: a10f19de54c04624ab801abd5937a6ea, type: 3}
-  description: Sirve para regar los cultivos.
+  description: Awa para las plantitas.
   type: 3
   canBeConsumed: 0
   canBeEquipped: 1

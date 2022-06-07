@@ -95,7 +95,7 @@ public class UIInventory : MonoBehaviour
             itemIcon.sprite = Inventory.instance.ItemsInventory[index].icon;
             itemName.text = Inventory.instance.ItemsInventory[index].name;
             itemDescription.text = Inventory.instance.ItemsInventory[index].description;
-            //inventoryDescriptionPanel.SetActive(true);
+            inventoryDescriptionPanel.SetActive(true);
         }
 
         else
