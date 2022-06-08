@@ -64,7 +64,6 @@ public class Inventory : MonoBehaviour
 
         if (itemToAdd.isCumulative && itemToAdd.canBeConsumed)
         {
-            Debug.Log("Es un item acumulativo");
             if (index.Count > 0)
             {
                 for (int i = 0; i < index.Count; i++)
@@ -89,7 +88,6 @@ public class Inventory : MonoBehaviour
         
         if (itemToAdd.isCumulative && !itemToAdd.canBeConsumed)
         {
-            Debug.Log("Es un item acumulativo");
             if (index.Count > 0)
             {
                 for (int i = 0; i < index.Count; i++)
