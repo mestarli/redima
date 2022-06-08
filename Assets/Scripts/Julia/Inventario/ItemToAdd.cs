@@ -26,8 +26,8 @@ public class ItemToAdd : MonoBehaviour
         {
             Inventory.instance.AddItem(_itemInventoryReference, quantityToAdd);
             panelShow.SetActive(false);
-            Destroy(gameObject);
-
+            //Destroy(gameObject);
+            gameObject.SetActive(false);
             if (_itemInventoryReference.type == ItemTypes.Ingredients)
             {
                 Inventory.instance.Collected = true;
