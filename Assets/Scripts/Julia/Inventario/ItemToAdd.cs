@@ -18,9 +18,9 @@ public class ItemToAdd : MonoBehaviour
     [SerializeField] private ItemInventory _itemInventoryReference;
     [SerializeField] private int quantityToAdd;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.R))
         {
             Inventory.instance.AddItem(_itemInventoryReference, quantityToAdd);
             Destroy(gameObject);
