@@ -5,25 +5,20 @@ using UnityEngine.UI;
 
 public class ShowInstructions : MonoBehaviour
 {
-    public static ShowInstructions Instance;
-    public GameObject panelShow;
+    [SerializeField] private GameObject panelShow;
     [SerializeField] private Text textDetras;
     [SerializeField] private Text tecla;
     [SerializeField] private string tecla_text;
     [SerializeField] private string textDetras_text;
 
-    private void Awake()
-    {
-        Instance = this;
-    }
-
-    private void OnTriggerStay(Collider collider)
+    private void OnTriggerEnter(Collider collider)
     {
         textDetras.text = textDetras_text;
         tecla.text = tecla_text;
         if(collider.tag == "Player")
         {
             panelShow.SetActive(true);
+            StartCoroutine(ResetPanel());
         }
     }
     private void OnTriggerExit(Collider collider)
@@ -32,5 +27,12 @@ public class ShowInstructions : MonoBehaviour
         {
             panelShow.SetActive(false);
         }
+    }
+    
+    IEnumerator ResetPanel()
+    {
+      
+        yield return new WaitForSeconds(2f);
+        panelShow.SetActive(false);
     }
 }

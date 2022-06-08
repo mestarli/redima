@@ -17,12 +17,15 @@ public class ItemToAdd : MonoBehaviour
     [Header("Configuration")]
     [SerializeField] private ItemInventory _itemInventoryReference;
     [SerializeField] private int quantityToAdd;
+    
+    [SerializeField] private GameObject panelShow;
 
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.R))
         {
             Inventory.instance.AddItem(_itemInventoryReference, quantityToAdd);
+            panelShow.SetActive(false);
             Destroy(gameObject);
 
             if (_itemInventoryReference.type == ItemTypes.Ingredients)
