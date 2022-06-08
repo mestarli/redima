@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 public class UI_Manager : MonoBehaviour, ITimeTracker
 {
     // Variables
+    public static UI_Manager instance;
+
     [Header("PANELS")]
     [SerializeField] private GameObject mapPanel;
     [SerializeField] private GameObject pecedexPanel;
@@ -27,8 +29,7 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
     [Header("Time Info Panel")]
     public Text timeText;
     public Text dateText;
-    // Variables
-    public static UI_Manager instance;
+    public Text dateNumText;
     
     private void Awake()
     {
@@ -85,7 +86,8 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
         string season = timestamp.season.ToString();
         string dayOfTheWeek = timestamp.GetDayOfTheWeek().ToString();
 
-        dateText.text = season + " " + day + " " + "(" + dayOfTheWeek + ")";
+        dateText.text = season + " " + dayOfTheWeek;
+        dateNumText.text = "" + day;
     }
 
     public void Options()
@@ -98,6 +100,11 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
         recetadexPanel.SetActive(false);
         inventoryPanel.SetActive(false);
         enciclopediaPanels.SetActive(true);
+    }
+
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
     
     public void QuitGame()
