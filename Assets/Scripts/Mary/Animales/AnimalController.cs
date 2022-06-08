@@ -11,12 +11,14 @@ public class AnimalController : MonoBehaviour
     private Vector3 position;
 
     [SerializeField] private Animator _animator;
+    [SerializeField] private Rigidbody _rigidbody;
     [SerializeField] private bool isWaiting;
 
     
     void Awake()
     {
         _animator = GetComponent<Animator>();
+        _rigidbody = GetComponent<Rigidbody>();
     }
     // Start is called before the first frame update
     void Update()
@@ -30,19 +32,22 @@ public class AnimalController : MonoBehaviour
         {
             position = animal_trigger_01.transform.position;
             _animator.SetBool("IsWalking",true);
-            transform.position = Vector3.Lerp(transform.position, position, Time.deltaTime * 0.15f);
+            position = Vector3.Lerp(transform.position, position, Time.deltaTime * 0.15f);
+            _rigidbody.MovePosition(position);
         }
         if(animal_trigger_02.activeSelf  && !isWaiting)
         {
             position = animal_trigger_02.transform.position;
             _animator.SetBool("IsWalking",true);
-            transform.position = Vector3.Lerp(transform.position, position, Time.deltaTime * 0.15f);
+            position = Vector3.Lerp(transform.position, position, Time.deltaTime * 0.15f);
+            _rigidbody.MovePosition(position);
         }
         if(animal_trigger_03.activeSelf && !isWaiting)
         {
             position = animal_trigger_03.transform.position;
             _animator.SetBool("IsWalking",true);
-            transform.position = Vector3.Lerp(transform.position, position, Time.deltaTime * 0.15f);
+            position = Vector3.Lerp(transform.position, position, Time.deltaTime * 0.15f);
+            _rigidbody.MovePosition(position);
         }
     }
     
