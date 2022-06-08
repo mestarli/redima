@@ -7,6 +7,11 @@ public class AnimalController : MonoBehaviour
     [SerializeField] private GameObject animal_trigger_01;
     [SerializeField] private GameObject animal_trigger_02;
     [SerializeField] private GameObject animal_trigger_03;
+    
+    [SerializeField] private Vector3 posicionAnimal;
+    [SerializeField] private Quaternion rotationAnimal;
+    
+    
     public GameObject enablePokedex;
     private Vector3 position;
 
@@ -19,6 +24,8 @@ public class AnimalController : MonoBehaviour
     {
         _animator = GetComponent<Animator>();
         _rigidbody = GetComponent<Rigidbody>();
+        posicionAnimal = gameObject.transform.position;
+        rotationAnimal = gameObject.transform.rotation;
     }
     // Start is called before the first frame update
     void Update()
@@ -53,6 +60,7 @@ public class AnimalController : MonoBehaviour
     
     private void OnTriggerEnter(Collider other)
     {
+        
             if (other.gameObject.CompareTag("Trigger_move_01"))
             {
                 
@@ -81,12 +89,29 @@ public class AnimalController : MonoBehaviour
                 StartCoroutine(Waiting());
             }
      }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        
+        if (collision.gameObject.CompareTag("Water"))
+        {
+            StartCoroutine(WaitingToReset());
+        }
+    }
     IEnumerator Waiting()
     {
         isWaiting = true;
         _animator.SetBool("IsWalking",false); 
         yield return new WaitForSeconds(4f);
         isWaiting = false;
+
+    }
+    IEnumerator WaitingToReset()
+    {
+
+        yield return new WaitForSeconds(2f);
+        gameObject.transform.position = posicionAnimal;
+        gameObject.transform.rotation = rotationAnimal;
 
     }
 }
