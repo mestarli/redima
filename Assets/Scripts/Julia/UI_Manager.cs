@@ -11,9 +11,8 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
     [Header("PANELS")]
     [SerializeField] private GameObject mapPanel;
     [SerializeField] private GameObject pecedexPanel;
-    [SerializeField] private GameObject optionsPanel;
+    //[SerializeField] private GameObject optionsPanel;
     [SerializeField] private GameObject animadexPanel;
-    [SerializeField] private GameObject mainMenuPanel;
     [SerializeField] private GameObject plantadexPanel;
     [SerializeField] private GameObject recetadexPanel;
     [SerializeField] private GameObject inventoryPanel;
@@ -42,90 +41,6 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
         {
             Destroy(gameObject);
         }
-
-        #region TryCatch
-
-        try
-        {
-            mapPanel.SetActive(false);
-        }
-        catch (UnassignedReferenceException ex)
-        {
-            Debug.Log("Map Panel not assigned");
-        }
-
-        try
-        {
-            pecedexPanel.SetActive(false);
-        }
-        catch (UnassignedReferenceException ex)
-        {
-            Debug.Log("Pecedex Panel not assigned");
-        }
-      
-        try 
-        {
-            optionsPanel.SetActive(false);
-        }
-        catch (UnassignedReferenceException ex) 
-        {
-            Debug.Log("Options Panel not assigned");
-        }
-        
-        try 
-        {
-            animadexPanel.SetActive(false);
-        }
-        catch (UnassignedReferenceException ex) 
-        {
-            Debug.Log("Animadex Panel not assigned");
-        }
-        
-        try 
-        {
-            mainMenuPanel.SetActive(true);
-        }
-        catch (UnassignedReferenceException ex) 
-        {
-            Debug.Log("Main Menu Panel not assigned");
-        }
-        
-        try 
-        {
-            plantadexPanel.SetActive(false);
-        }
-        catch (UnassignedReferenceException ex) 
-        {
-            Debug.Log("Plantadex Panel not assigned");
-        }
-        
-        try 
-        {
-            recetadexPanel.SetActive(false);
-        }
-        catch (UnassignedReferenceException ex) 
-        {
-            Debug.Log("Recetadex Panel not assigned");
-        }
-        
-        try 
-        {
-            inventoryPanel.SetActive(false);
-        }
-        catch (UnassignedReferenceException ex) 
-        {
-            Debug.Log("Inventory Panel not assigned");
-        }
-        
-        try 
-        {
-            enciclopediaPanels.SetActive(false);
-        }
-        catch (UnassignedReferenceException ex) 
-        {
-            Debug.Log("Enciclopedia Panel not assigned");
-        }
-        #endregion
     }
 
     private void Start()
@@ -134,13 +49,7 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
         InitializeEquippedSlot();
         
         // Añadir el UI_Manager a la lista de objetos del TimeManager notificará cuando el time se actualice
-        try {
-            TimeManager.instance.RegisterTracker(this);
-        }       
-        catch (NullReferenceException ex) {
-            Debug.Log("TimeManager not assigned");
-        }
-       
+        TimeManager.instance.RegisterTracker(this);
     }
 
     // Metodo para crear slots en funcion del numero que pongamos nosotros
@@ -171,20 +80,7 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
         dateText.text = season + " " + day + " " + "(" + dayOfTheWeek + ")";
     }
 
-    public void PlayGame()
-    {
-        SceneManager.LoadScene("MainScene");
-        
-        mapPanel.SetActive(false);
-        pecedexPanel.SetActive(false);
-        optionsPanel.SetActive(false);
-        animadexPanel.SetActive(false);
-        plantadexPanel.SetActive(false);
-        recetadexPanel.SetActive(false);
-        inventoryPanel.SetActive(false);
-        enciclopediaPanels.SetActive(false);
-    }
-
+    /*
     public void Options()
     {
         mapPanel.SetActive(false);
@@ -196,6 +92,7 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
         inventoryPanel.SetActive(false);
         enciclopediaPanels.SetActive(true);
     }
+    */
     
     public void QuitGame()
     {
@@ -220,7 +117,7 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
     {
         mapPanel.SetActive(true);
         pecedexPanel.SetActive(false);
-        optionsPanel.SetActive(false);
+        //optionsPanel.SetActive(false);
         animadexPanel.SetActive(false);
         plantadexPanel.SetActive(false);
         recetadexPanel.SetActive(false);
@@ -231,13 +128,14 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
     {
         mapPanel.SetActive(false);
         pecedexPanel.SetActive(true);
-        optionsPanel.SetActive(false);
+        //optionsPanel.SetActive(false);
         animadexPanel.SetActive(false);
         plantadexPanel.SetActive(false);
         recetadexPanel.SetActive(false);
         inventoryPanel.SetActive(false);
     }
 
+    /*
     public void PassToOptionsPanel()
     {
         mapPanel.SetActive(false);
@@ -248,12 +146,13 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
         recetadexPanel.SetActive(false);
         inventoryPanel.SetActive(false);
     }
+    */
 
     public void PassToAnimadexPanel()
     {
         mapPanel.SetActive(false);
         pecedexPanel.SetActive(false);
-        optionsPanel.SetActive(false);
+        //optionsPanel.SetActive(false);
         animadexPanel.SetActive(true);
         plantadexPanel.SetActive(false);
         recetadexPanel.SetActive(false);
@@ -264,7 +163,7 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
     {
         mapPanel.SetActive(false);
         pecedexPanel.SetActive(false);
-        optionsPanel.SetActive(false);
+        //optionsPanel.SetActive(false);
         animadexPanel.SetActive(false);
         plantadexPanel.SetActive(true);
         recetadexPanel.SetActive(false);
@@ -275,7 +174,7 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
     {
         mapPanel.SetActive(false);
         pecedexPanel.SetActive(false);
-        optionsPanel.SetActive(false);
+        //optionsPanel.SetActive(false);
         animadexPanel.SetActive(false);
         plantadexPanel.SetActive(false);
         recetadexPanel.SetActive(true);
@@ -286,7 +185,7 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
     {
         mapPanel.SetActive(false);
         pecedexPanel.SetActive(false);
-        optionsPanel.SetActive(false);
+        //optionsPanel.SetActive(false);
         animadexPanel.SetActive(false);
         plantadexPanel.SetActive(false);
         recetadexPanel.SetActive(false);
