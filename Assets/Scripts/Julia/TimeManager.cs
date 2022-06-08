@@ -15,6 +15,7 @@ public class TimeManager : MonoBehaviour
     [Header("Day & Night Cycle")]
     public Transform sunTransform;
     public GameObject faroTransform;
+    public Material sunNightMat; 
     
     //Variable para saber si es de día o de noche
     public bool isNight;
@@ -71,6 +72,7 @@ public class TimeManager : MonoBehaviour
     {
         // Conversion del tiempo actual a minutos
         int timeInMinutes = GameTimestamp.HoursToMinutes(timestamp.hour) + timestamp.minute;
+        int timeInHours = GameTimestamp.DaysToHours(timestamp.day) - timestamp.hour;
 
         // El sol se mueve 15 grados en 1 hora
         // .25 grados en 1 minuto
@@ -79,17 +81,21 @@ public class TimeManager : MonoBehaviour
         
         // Aplicamos el angulo a la luz direccional
         sunTransform.eulerAngles = new Vector3(sunAngle, 0, 0);
+
        
         if (GetGameTimestamp().hour >= 19 || GetGameTimestamp().hour <= 5)
         {
             faroTransform.SetActive(true);
             faroTransform.transform.Rotate(0, 1.5f, 0);
+            sunNightMat.mainTextureOffset = new Vector2(0.5f, 0);
+            
             isNight = true;
         }
 
         else
         {
             faroTransform.SetActive(false);
+            sunNightMat.mainTextureOffset = new Vector2(0.1f, 0);
             isNight = false;
         }
     }

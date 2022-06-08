@@ -111,7 +111,7 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
     {
         Application.Quit();
     }
-    
+
     #region Panels
 
     public void OpenCloseInventoryPanel()

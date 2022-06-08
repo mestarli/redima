@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: Patata
   name: Patata
   icon: {fileID: 21300000, guid: d1be3225226f25040accb0edf983705f, type: 3}
-  description: "Aqu\xED hay patacas."
+  description: "Aqu\xED hay patacas"
   type: 0
   canBeConsumed: 0
   canBeEquipped: 0

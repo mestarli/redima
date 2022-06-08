@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: Trigo
   name: Trigo
-  icon: {fileID: 21300000, guid: 4c5b2909d76839f4cbf0ca58b9aadcdf, type: 3}
-  description: "Trigo - No - Metr\xEDa. Llevo demasiado tiempo solo..."
+  icon: {fileID: 21300000, guid: b4db92a68d99142459a05e4957c2399d, type: 3}
+  description: "Trigo - No - Metr\xEDa\n Llevo demasiado tiempo solo"
   type: 0
   canBeConsumed: 0
   canBeEquipped: 0

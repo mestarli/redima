@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: Sandia
   name: Sandia
   icon: {fileID: 21300000, guid: 7ba594341dc78264da063ecd8e56d278, type: 3}
-  description: "Puedo disfrutarla todo el d\xEDa."
+  description: "Puedo disfrutarla todo el d\xEDa"
   type: 0
   canBeConsumed: 0
   canBeEquipped: 0
