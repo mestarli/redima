@@ -237,9 +237,7 @@ public class Player : MonoBehaviour
             {
                 if (animal.gameObject.active)
                 {
-                    tagAnimal = animal.gameObject.tag;
-                    isInBag = false;
-                    animal.gameObject.SetActive(false);
+                    tagAnimal = animal.gameObject.tag; ;
                 }
             }
             foreach (Transform animal in AnimalesGranja.transform)
@@ -247,6 +245,41 @@ public class Player : MonoBehaviour
                 if (animal.tag == tagAnimal)
                 {
                     animal.gameObject.SetActive(true);
+                    foreach (Transform animal2 in Bag.transform)
+                    {
+                        if (animal2.gameObject.active)
+                        {
+                            isInBag = false;
+                            animal2.gameObject.SetActive(false);
+                        }
+                    }
+                }
+            }
+            
+        }
+        if (hit.gameObject.tag ==  "SendToAviario" && isInBag && Input.GetKeyDown(KeyCode.R))
+        {
+            String tagAnimal = "";
+            foreach (Transform animal in Bag.transform)
+            {
+                if (animal.gameObject.active)
+                {
+                    tagAnimal = animal.gameObject.tag; ;
+                }
+            }
+            foreach (Transform animal in AnimalesAviario.transform)
+            {
+                if (animal.tag == tagAnimal)
+                {
+                    animal.gameObject.SetActive(true);
+                    foreach (Transform animalr in Bag.transform)
+                    {
+                        if (animalr.gameObject.active)
+                        {
+                            isInBag = false;
+                            animalr.gameObject.SetActive(false);
+                        }
+                    }
                 }
             }
             

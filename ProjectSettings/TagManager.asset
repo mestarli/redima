@@ -24,6 +24,7 @@ TagManager:
   - Paloma
   - TortugaMordedora
   - Active
+  - SendToAviario
   layers:
   - Default
   - TransparentFX
