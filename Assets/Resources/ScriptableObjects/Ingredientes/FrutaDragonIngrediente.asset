@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: FrutaDragon
   name: Fruta De Dragon
   icon: {fileID: 21300000, guid: b5c22191c8930c44bb6ffef3b1b5efc3, type: 3}
-  description: "\"Cuentan las leyendas...\" A quien quiero enga\xF1ar, es una fruta
+  description: "\"Cuentan las leyendas...\" A quien quiero enga\xF1ar es una fruta
     muy colorida y ya."
   type: 0
   canBeConsumed: 0

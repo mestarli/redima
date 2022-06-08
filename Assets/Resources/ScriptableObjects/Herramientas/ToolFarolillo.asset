@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: Farolillo
   name: Farolillo
   icon: {fileID: 21300000, guid: 45d2aabeaef233344847286007683699, type: 3}
-  description: Para iluminar tus noches de soledad.
+  description: Para iluminar tus noches de soledad
   type: 3
   canBeConsumed: 0
   canBeEquipped: 1

@@ -15,7 +15,7 @@ MonoBehaviour:
   ID: CanaPescar
   name: "Ca\xF1a De Pescar"
   icon: {fileID: 21300000, guid: 255f61f0a1db9bb4f9709477d44d957f, type: 3}
-  description: "Un Palo y una Cuerda \xBFQu\xE9 m\xE1s se puede pedir?"
+  description: "Un Palo y una Cuerda \nQu\xE9 m\xE1s se puede pedir"
   type: 3
   canBeConsumed: 0
   canBeEquipped: 1
