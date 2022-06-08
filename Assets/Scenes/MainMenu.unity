@@ -187,7 +187,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &143593167
 GameObject:
@@ -283,7 +283,7 @@ RectTransform:
   m_Children:
   - {fileID: 1353527126}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -302,28 +302,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 971b4e8f8b669cc4590b492d55f53634, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inGamePanel: {fileID: 0}
+  mapPanel: {fileID: 0}
+  pecedexPanel: {fileID: 0}
   optionsPanel: {fileID: 0}
+  animadexPanel: {fileID: 0}
   mainMenuPanel: {fileID: 0}
+  plantadexPanel: {fileID: 0}
+  recetadexPanel: {fileID: 0}
   inventoryPanel: {fileID: 0}
+  enciclopediaPanels: {fileID: 0}
   slotPrefab: {fileID: 0}
   handContent: {fileID: 0}
   slotsNum: 0
   timeText: {fileID: 0}
   dateText: {fileID: 0}
---- !u!1 &152206972 stripped
+--- !u!1 &174788439 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 8642786592730051855, guid: 91ca45a61b1082c478d4f08794f34b31, type: 3}
+  m_CorrespondingSourceObject: {fileID: 184721171452037922, guid: 91ca45a61b1082c478d4f08794f34b31, type: 3}
   m_PrefabInstance: {fileID: 1120775942}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &152206973
+--- !u!95 &174788440
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 152206972}
+  m_GameObject: {fileID: 174788439}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: cce02a1a664ede543872a046d26d27f2, type: 2}
@@ -627,7 +632,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &391551859
 GameObject:
@@ -790,7 +795,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &446718906
 MonoBehaviour:
@@ -1048,7 +1053,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &600627732
 GameObject:
