@@ -11,7 +11,7 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
     [Header("PANELS")]
     [SerializeField] private GameObject mapPanel;
     [SerializeField] private GameObject pecedexPanel;
-    //[SerializeField] private GameObject optionsPanel;
+    [SerializeField] private GameObject optionsPanel;
     [SerializeField] private GameObject animadexPanel;
     [SerializeField] private GameObject plantadexPanel;
     [SerializeField] private GameObject recetadexPanel;
@@ -41,6 +41,14 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
         {
             Destroy(gameObject);
         }
+        
+        mapPanel.SetActive(false);
+        pecedexPanel.SetActive(false);
+        animadexPanel.SetActive(false);
+        plantadexPanel.SetActive(false);
+        recetadexPanel.SetActive(false);
+        inventoryPanel.SetActive(false);
+        enciclopediaPanels.SetActive(false);
     }
 
     private void Start()
@@ -80,7 +88,6 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
         dateText.text = season + " " + day + " " + "(" + dayOfTheWeek + ")";
     }
 
-    /*
     public void Options()
     {
         mapPanel.SetActive(false);
@@ -92,7 +99,6 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
         inventoryPanel.SetActive(false);
         enciclopediaPanels.SetActive(true);
     }
-    */
     
     public void QuitGame()
     {
@@ -117,7 +123,7 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
     {
         mapPanel.SetActive(true);
         pecedexPanel.SetActive(false);
-        //optionsPanel.SetActive(false);
+        optionsPanel.SetActive(false);
         animadexPanel.SetActive(false);
         plantadexPanel.SetActive(false);
         recetadexPanel.SetActive(false);
@@ -128,14 +134,13 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
     {
         mapPanel.SetActive(false);
         pecedexPanel.SetActive(true);
-        //optionsPanel.SetActive(false);
+        optionsPanel.SetActive(false);
         animadexPanel.SetActive(false);
         plantadexPanel.SetActive(false);
         recetadexPanel.SetActive(false);
         inventoryPanel.SetActive(false);
     }
-
-    /*
+    
     public void PassToOptionsPanel()
     {
         mapPanel.SetActive(false);
@@ -146,13 +151,12 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
         recetadexPanel.SetActive(false);
         inventoryPanel.SetActive(false);
     }
-    */
 
     public void PassToAnimadexPanel()
     {
         mapPanel.SetActive(false);
         pecedexPanel.SetActive(false);
-        //optionsPanel.SetActive(false);
+        optionsPanel.SetActive(false);
         animadexPanel.SetActive(true);
         plantadexPanel.SetActive(false);
         recetadexPanel.SetActive(false);
@@ -163,7 +167,7 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
     {
         mapPanel.SetActive(false);
         pecedexPanel.SetActive(false);
-        //optionsPanel.SetActive(false);
+        optionsPanel.SetActive(false);
         animadexPanel.SetActive(false);
         plantadexPanel.SetActive(true);
         recetadexPanel.SetActive(false);
@@ -174,7 +178,7 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
     {
         mapPanel.SetActive(false);
         pecedexPanel.SetActive(false);
-        //optionsPanel.SetActive(false);
+        optionsPanel.SetActive(false);
         animadexPanel.SetActive(false);
         plantadexPanel.SetActive(false);
         recetadexPanel.SetActive(true);
@@ -185,7 +189,7 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
     {
         mapPanel.SetActive(false);
         pecedexPanel.SetActive(false);
-        //optionsPanel.SetActive(false);
+        optionsPanel.SetActive(false);
         animadexPanel.SetActive(false);
         plantadexPanel.SetActive(false);
         recetadexPanel.SetActive(false);
