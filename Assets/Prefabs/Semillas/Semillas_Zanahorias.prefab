@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7808956025947440973}
   - component: {fileID: 8907954586902125514}
   - component: {fileID: 3973895601972808301}
+  - component: {fileID: 258281725}
   m_Layer: 0
   m_Name: Semillas_Zanahorias
   m_TagString: Untagged
@@ -101,6 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _itemInventoryReference: {fileID: 11400000, guid: 36d987a793e682e41974378b1e296251, type: 2}
   quantityToAdd: 5
+  panelShow: {fileID: 0}
 --- !u!65 &3973895601972808301
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -112,5 +114,22 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.48, y: 0.65999997, z: 0.17999999}
-  m_Center: {x: 0, y: 0.32999998, z: 0}
+  m_Size: {x: 1.3437881, y: 0.65999997, z: 1.1025963}
+  m_Center: {x: 0.06585312, y: 0.32999998, z: -0.04340172}
+--- !u!114 &258281725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8601312690504328856}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bab94db01c1fed34bbe13bbc939203a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelShow: {fileID: 0}
+  textDetras: {fileID: 0}
+  tecla: {fileID: 0}
+  tecla_text: R
+  textDetras_text: para recoger item
