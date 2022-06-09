@@ -561,31 +561,43 @@ MonoBehaviour:
     audioSource: {fileID: 0}
   - name: Musica_Cala
     audioClip: {fileID: 8300000, guid: d9841ad9c84b91b4c81712bde1792f2b, type: 3}
-    volume: 0.2
+    volume: 0.1
     loop: 1
     playOnAwake: 0
     audioSource: {fileID: 0}
   - name: Musica_Glaciares
     audioClip: {fileID: 8300000, guid: 5e5bf146f1312d447b84980c60b400b5, type: 3}
-    volume: 0.2
+    volume: 0.1
     loop: 1
     playOnAwake: 0
     audioSource: {fileID: 0}
   - name: Musica_IslaCueva
     audioClip: {fileID: 8300000, guid: 4cb369897a6c3374a84b2ef78ae7491d, type: 3}
-    volume: 0.2
+    volume: 0.1
     loop: 1
     playOnAwake: 0
     audioSource: {fileID: 0}
   - name: Musica_IslaPaloma
     audioClip: {fileID: 8300000, guid: a849238ebc866dd47b72be1045bf92d9, type: 3}
-    volume: 0.2
+    volume: 0.1
     loop: 1
     playOnAwake: 0
     audioSource: {fileID: 0}
   - name: Musica_IslaPrincipal
     audioClip: {fileID: 8300000, guid: b209c286250292e4e9116d3618ae15fd, type: 3}
+    volume: 0.1
+    loop: 1
+    playOnAwake: 0
+    audioSource: {fileID: 0}
+  - name: Musica_MenuPrincipal
+    audioClip: {fileID: 8300000, guid: c971f36e18a91f343bf75eaee0e70ad1, type: 3}
     volume: 0.2
+    loop: 1
+    playOnAwake: 0
+    audioSource: {fileID: 0}
+  - name: Barco_Motor
+    audioClip: {fileID: 8300000, guid: 9abfdb30218935444adc1c412e134d78, type: 3}
+    volume: 0.1
     loop: 1
     playOnAwake: 0
     audioSource: {fileID: 0}

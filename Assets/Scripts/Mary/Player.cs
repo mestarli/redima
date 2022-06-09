@@ -174,6 +174,10 @@ public class Player : MonoBehaviour
         if (hit.gameObject.tag ==  "Ship" && !isInBoat)
         {
             isInBoat = true;
+            AudioManager.instance.PlaySong("Barco_Motor");
+            AudioManager.instance.PlaySong("SonidoAmbiente_Mar");
+            
+            AudioManager.instance.StopSong("SonidoAmbiente");
         }
         if (hit.gameObject.tag ==  "Paloma" && Input.GetKeyDown(KeyCode.R))
         {
@@ -265,13 +269,15 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        
         if (other.gameObject.tag == "IslaPrincipal_Map")
         {
             AudioManager.instance.PlaySong("Musica_IslaPrincipal");
+            AudioManager.instance.PlaySong("SonidoAmbiente");
             
+            AudioManager.instance.StopSong("SonidoAmbiente_Mar");
+            AudioManager.instance.StopSong("Barco_Motor");
             AudioManager.instance.StopSong("Musica_IslaPaloma");
             AudioManager.instance.StopSong("Musica_Glaciares");
             AudioManager.instance.StopSong("Musica_Cala");
@@ -281,7 +287,10 @@ public class Player : MonoBehaviour
         if (other.gameObject.tag == "IslaPaloma_Map")
         {
             AudioManager.instance.PlaySong("Musica_IslaPaloma");
+            AudioManager.instance.PlaySong("SonidoAmbiente");
             
+            AudioManager.instance.StopSong("SonidoAmbiente_Mar");
+            AudioManager.instance.StopSong("Barco_Motor");
             AudioManager.instance.StopSong("Musica_IslaPrincipal");
             AudioManager.instance.StopSong("Musica_Glaciares");
             AudioManager.instance.StopSong("Musica_Cala");
@@ -291,7 +300,10 @@ public class Player : MonoBehaviour
         if (other.gameObject.tag == "Glaciar_Map")
         {
             AudioManager.instance.PlaySong("Musica_Glaciares");
+            AudioManager.instance.PlaySong("SonidoAmbiente");
             
+            AudioManager.instance.StopSong("SonidoAmbiente_Mar");
+            AudioManager.instance.StopSong("Barco_Motor");
             AudioManager.instance.StopSong("Musica_IslaPrincipal");
             AudioManager.instance.StopSong("Musica_IslaPaloma");
             AudioManager.instance.StopSong("Musica_Cala");
@@ -301,7 +313,10 @@ public class Player : MonoBehaviour
         if (other.gameObject.tag == "IslaTomaco_Map")
         {
             AudioManager.instance.PlaySong("Musica_Cala");
+            AudioManager.instance.PlaySong("SonidoAmbiente");
             
+            AudioManager.instance.StopSong("SonidoAmbiente_Mar");
+            AudioManager.instance.StopSong("Barco_Motor");
             AudioManager.instance.StopSong("Musica_IslaPrincipal");
             AudioManager.instance.StopSong("Musica_IslaPaloma");
             AudioManager.instance.StopSong("Musica_Glaciares");
@@ -311,7 +326,10 @@ public class Player : MonoBehaviour
         if (other.gameObject.tag == "Cala_Map")
         {
             AudioManager.instance.PlaySong("Musica_Cueva");
+            AudioManager.instance.PlaySong("SonidoAmbiente");
             
+            AudioManager.instance.StopSong("SonidoAmbiente_Mar");
+            AudioManager.instance.StopSong("Barco_Motor");
             AudioManager.instance.StopSong("Musica_IslaPrincipal");
             AudioManager.instance.StopSong("Musica_IslaPaloma");
             AudioManager.instance.StopSong("Musica_Glaciares");
