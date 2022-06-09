@@ -3123,6 +3123,7 @@ GameObject:
   - component: {fileID: 592485518}
   - component: {fileID: 592485517}
   - component: {fileID: 592485516}
+  - component: {fileID: 2061132379}
   m_Layer: 0
   m_Name: Button_Oveja
   m_TagString: Untagged
@@ -3232,7 +3233,37 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 592485517}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2061132379}
+        m_TargetAssemblyTypeName: Pokedex, Assembly-CSharp
+        m_MethodName: showInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2061132379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592485514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb38aa77a26174840881d72adc7d0573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image_pokedex: {fileID: 424558362}
+  title_pokedex_txt: Oveja
+  title_pokedex: {fileID: 5901443389226854534}
+  text_pokedex_txt: "\xBFOveja o pelusa?"
+  text_pokedex: {fileID: 7963602270592092152}
+  item_pokedex: {fileID: 6207863977121551199}
 --- !u!1 &597068425
 GameObject:
   m_ObjectHideFlags: 0
@@ -4917,6 +4948,7 @@ GameObject:
   - component: {fileID: 907557357}
   - component: {fileID: 907557356}
   - component: {fileID: 907557355}
+  - component: {fileID: 233278354}
   m_Layer: 0
   m_Name: Button_Tortuga
   m_TagString: Untagged
@@ -5026,7 +5058,37 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 907557356}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 233278354}
+        m_TargetAssemblyTypeName: Pokedex, Assembly-CSharp
+        m_MethodName: showInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &233278354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907557353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb38aa77a26174840881d72adc7d0573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image_pokedex: {fileID: 1570956234}
+  title_pokedex_txt: Tortu
+  title_pokedex: {fileID: 5901443389226854534}
+  text_pokedex_txt: Es una simple tortuga
+  text_pokedex: {fileID: 7963602270592092152}
+  item_pokedex: {fileID: 6207863977121551199}
 --- !u!1 &937008264
 GameObject:
   m_ObjectHideFlags: 0
@@ -6126,6 +6188,7 @@ GameObject:
   - component: {fileID: 1164900056}
   - component: {fileID: 1164900055}
   - component: {fileID: 1164900054}
+  - component: {fileID: 2061132380}
   m_Layer: 0
   m_Name: Button_Paloma
   m_TagString: Untagged
@@ -6235,7 +6298,37 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1164900055}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2061132380}
+        m_TargetAssemblyTypeName: Pokedex, Assembly-CSharp
+        m_MethodName: showInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2061132380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164900052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb38aa77a26174840881d72adc7d0573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image_pokedex: {fileID: 122934388}
+  title_pokedex_txt: Paloma
+  title_pokedex: {fileID: 5901443389226854534}
+  text_pokedex_txt: Rompiendo las leyes de Newton desde la Beta.
+  text_pokedex: {fileID: 7963602270592092152}
+  item_pokedex: {fileID: 6207863977121551199}
 --- !u!1 &1171752795
 GameObject:
   m_ObjectHideFlags: 0
@@ -6554,6 +6647,7 @@ GameObject:
   - component: {fileID: 1292325658}
   - component: {fileID: 1292325657}
   - component: {fileID: 1292325656}
+  - component: {fileID: 1739791416}
   m_Layer: 0
   m_Name: Button_Vaca
   m_TagString: Untagged
@@ -6663,7 +6757,37 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1292325657}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1739791416}
+        m_TargetAssemblyTypeName: Pokedex, Assembly-CSharp
+        m_MethodName: showInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1739791416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1292325654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb38aa77a26174840881d72adc7d0573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image_pokedex: {fileID: 1976352922}
+  title_pokedex_txt: 
+  title_pokedex: {fileID: 5901443389226854534}
+  text_pokedex_txt: 
+  text_pokedex: {fileID: 7963602270592092152}
+  item_pokedex: {fileID: 6207863977121551199}
 --- !u!1 &1297104458
 GameObject:
   m_ObjectHideFlags: 0
@@ -9111,6 +9235,7 @@ GameObject:
   - component: {fileID: 1762004665}
   - component: {fileID: 1762004664}
   - component: {fileID: 1762004663}
+  - component: {fileID: 1067322581}
   m_Layer: 0
   m_Name: Button_Gallina
   m_TagString: Untagged
@@ -9220,7 +9345,37 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1762004664}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1067322581}
+        m_TargetAssemblyTypeName: Pokedex, Assembly-CSharp
+        m_MethodName: showInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1067322581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762004661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb38aa77a26174840881d72adc7d0573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image_pokedex: {fileID: 1171752797}
+  title_pokedex_txt: Gallina
+  title_pokedex: {fileID: 5901443389226854534}
+  text_pokedex_txt: El peor downgrade en la historia.
+  text_pokedex: {fileID: 7963602270592092152}
+  item_pokedex: {fileID: 6207863977121551199}
 --- !u!1 &1788675355
 GameObject:
   m_ObjectHideFlags: 0
@@ -10659,6 +10814,7 @@ GameObject:
   - component: {fileID: 1975144035}
   - component: {fileID: 1975144034}
   - component: {fileID: 1975144033}
+  - component: {fileID: 2061132381}
   m_Layer: 0
   m_Name: Button_Pingu
   m_TagString: Untagged
@@ -10768,7 +10924,37 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1975144034}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2061132381}
+        m_TargetAssemblyTypeName: Pokedex, Assembly-CSharp
+        m_MethodName: showInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2061132381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975144031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb38aa77a26174840881d72adc7d0573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image_pokedex: {fileID: 38060946}
+  title_pokedex_txt: Pingu
+  title_pokedex: {fileID: 5901443389226854534}
+  text_pokedex_txt: "\xA1\xA1\xA1Un Shiny!!!!"
+  text_pokedex: {fileID: 7963602270592092152}
+  item_pokedex: {fileID: 6207863977121551199}
 --- !u!1 &1976352920
 GameObject:
   m_ObjectHideFlags: 0
