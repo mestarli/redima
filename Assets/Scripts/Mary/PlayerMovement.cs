@@ -147,7 +147,10 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            speed = initialSpeed;
+            if (Player.Instance.hambre > 0)
+            {
+                speed = initialSpeed;
+            }
         }
     }
 
