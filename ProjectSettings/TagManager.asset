@@ -26,6 +26,11 @@ TagManager:
   - Active
   - SendToAviario
   - ShowPanelDescription
+  - Glaciar_Map
+  - Cala_Map
+  - IslaPaloma_Map
+  - IslaTomaco_Map
+  - IslaPrincipal_Map
   layers:
   - Default
   - TransparentFX

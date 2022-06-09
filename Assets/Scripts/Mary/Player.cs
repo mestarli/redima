@@ -113,12 +113,19 @@ public class Player : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Metodo para controlar el tamaño del player al coger las 2 setas diferentes que hay en el mapa
+    /// </summary>
+    /// <param name="tamaño">Variable modificada por los scriptable objects de las setas</param>
     public void Tamaño(float tamaño)
     {
         x = tamaño;
         y = tamaño;
         z = tamaño;
         transform.localScale = new Vector3(x, y, z);
+
+        AudioManager.instance.PlaySong("Zarzo_Medida");
+        
         if (tamaño == 0.1f)
         {
             PlayerMovement.Instance._characterController.stepOffset = 0;
