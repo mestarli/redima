@@ -354,7 +354,7 @@ GameObject:
   - component: {fileID: 73301340}
   m_Layer: 0
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: Active
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -399,7 +399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.11320752, g: 0.11320752, b: 0.11320752, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -700,6 +700,7 @@ GameObject:
   - component: {fileID: 102567827}
   - component: {fileID: 102567826}
   - component: {fileID: 102567825}
+  - component: {fileID: 2061132402}
   m_Layer: 0
   m_Name: Button_Tiburon
   m_TagString: Untagged
@@ -809,7 +810,37 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 102567826}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2061132402}
+        m_TargetAssemblyTypeName: Pokedex, Assembly-CSharp
+        m_MethodName: showInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2061132402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102567823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb38aa77a26174840881d72adc7d0573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image_pokedex: {fileID: 776044657}
+  title_pokedex_txt: "Tibur\xF3n"
+  title_pokedex: {fileID: 1602229295345799755}
+  text_pokedex_txt: Cambian sus afilados dientes a menudo sus dientes son solo escamas
+  text_pokedex: {fileID: 2893363231703853711}
+  item_pokedex: {fileID: 4754826826673618647}
 --- !u!1 &122934386
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,6 +1288,7 @@ GameObject:
   - component: {fileID: 221861258}
   - component: {fileID: 221861257}
   - component: {fileID: 221861256}
+  - component: {fileID: 2061132389}
   m_Layer: 0
   m_Name: Button_PezRemo
   m_TagString: Untagged
@@ -1366,7 +1398,37 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 221861257}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2061132389}
+        m_TargetAssemblyTypeName: Pokedex, Assembly-CSharp
+        m_MethodName: showInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2061132389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221861254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb38aa77a26174840881d72adc7d0573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image_pokedex: {fileID: 566059093}
+  title_pokedex_txt: Pez Remo
+  title_pokedex: {fileID: 1602229295345799755}
+  text_pokedex_txt: Le gusta el deporte extremo
+  text_pokedex: {fileID: 2893363231703853711}
+  item_pokedex: {fileID: 4754826826673618647}
 --- !u!1 &230104916
 GameObject:
   m_ObjectHideFlags: 0
@@ -1501,6 +1563,7 @@ GameObject:
   - component: {fileID: 239704182}
   - component: {fileID: 239704181}
   - component: {fileID: 239704180}
+  - component: {fileID: 2061132387}
   m_Layer: 0
   m_Name: Button_Celacanto
   m_TagString: Untagged
@@ -1610,7 +1673,37 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 239704181}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2061132387}
+        m_TargetAssemblyTypeName: Pokedex, Assembly-CSharp
+        m_MethodName: showInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2061132387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239704178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb38aa77a26174840881d72adc7d0573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image_pokedex: {fileID: 1601704510}
+  title_pokedex_txt: Celacanto
+  title_pokedex: {fileID: 1602229295345799755}
+  text_pokedex_txt: Es viejo pero tiene encanto
+  text_pokedex: {fileID: 2893363231703853711}
+  item_pokedex: {fileID: 4754826826673618647}
 --- !u!1 &274247589
 GameObject:
   m_ObjectHideFlags: 0
@@ -2077,6 +2170,7 @@ GameObject:
   - component: {fileID: 339250104}
   - component: {fileID: 339250103}
   - component: {fileID: 339250102}
+  - component: {fileID: 2061132396}
   m_Layer: 0
   m_Name: Button_PezPayaso
   m_TagString: Untagged
@@ -2186,7 +2280,37 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 339250103}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2061132396}
+        m_TargetAssemblyTypeName: Pokedex, Assembly-CSharp
+        m_MethodName: showInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2061132396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339250100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb38aa77a26174840881d72adc7d0573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image_pokedex: {fileID: 587276734}
+  title_pokedex_txt: Pez Payaso
+  title_pokedex: {fileID: 1602229295345799755}
+  text_pokedex_txt: "Qui\xE9n se r\xEDe ahora"
+  text_pokedex: {fileID: 2893363231703853711}
+  item_pokedex: {fileID: 4754826826673618647}
 --- !u!1 &343679709
 GameObject:
   m_ObjectHideFlags: 0
@@ -2819,7 +2943,7 @@ GameObject:
   - component: {fileID: 566059093}
   m_Layer: 0
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: Active
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2864,7 +2988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.21698111, g: 0.21698111, b: 0.21698111, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3049,7 +3173,7 @@ GameObject:
   - component: {fileID: 587276734}
   m_Layer: 0
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: Active
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3094,7 +3218,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.20754719, g: 0.20754719, b: 0.20754719, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3712,6 +3836,7 @@ GameObject:
   - component: {fileID: 715235361}
   - component: {fileID: 715235360}
   - component: {fileID: 715235359}
+  - component: {fileID: 1181211255}
   m_Layer: 0
   m_Name: Button_Serpiente
   m_TagString: Untagged
@@ -3821,7 +3946,37 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 715235360}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1181211255}
+        m_TargetAssemblyTypeName: Pokedex, Assembly-CSharp
+        m_MethodName: showInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1181211255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715235357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb38aa77a26174840881d72adc7d0573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image_pokedex: {fileID: 821828720}
+  title_pokedex_txt: Serpiente
+  title_pokedex: {fileID: 5901443389226854534}
+  text_pokedex_txt: "\xBFD\xF3nde habr\xE9 dejado mi antidoto...?"
+  text_pokedex: {fileID: 7963602270592092152}
+  item_pokedex: {fileID: 6207863977121551199}
 --- !u!1 &727350138
 GameObject:
   m_ObjectHideFlags: 0
@@ -4061,7 +4216,7 @@ GameObject:
   - component: {fileID: 776044657}
   m_Layer: 0
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: Active
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4106,7 +4261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.1792453, g: 0.1792453, b: 0.1792453, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4826,6 +4981,7 @@ GameObject:
   - component: {fileID: 891470071}
   - component: {fileID: 891470070}
   - component: {fileID: 891470069}
+  - component: {fileID: 2061132399}
   m_Layer: 0
   m_Name: Button_Salmon
   m_TagString: Untagged
@@ -4935,7 +5091,37 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 891470070}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2061132399}
+        m_TargetAssemblyTypeName: Pokedex, Assembly-CSharp
+        m_MethodName: showInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2061132399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 891470067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb38aa77a26174840881d72adc7d0573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image_pokedex: {fileID: 1151472611}
+  title_pokedex_txt: "Salm\xF3n"
+  title_pokedex: {fileID: 1602229295345799755}
+  text_pokedex_txt: Aunque este viene sin ahumar
+  text_pokedex: {fileID: 2893363231703853711}
+  item_pokedex: {fileID: 4754826826673618647}
 --- !u!1 &907557353
 GameObject:
   m_ObjectHideFlags: 0
@@ -5906,7 +6092,7 @@ GameObject:
   - component: {fileID: 1151472611}
   m_Layer: 0
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: Active
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5951,7 +6137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.14150941, g: 0.14150941, b: 0.14150941, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6783,9 +6969,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image_pokedex: {fileID: 1976352922}
-  title_pokedex_txt: 
+  title_pokedex_txt: Vaca
   title_pokedex: {fileID: 5901443389226854534}
-  text_pokedex_txt: 
+  text_pokedex_txt: "No s\xE9 como la he metido en la mochila..."
   text_pokedex: {fileID: 7963602270592092152}
   item_pokedex: {fileID: 6207863977121551199}
 --- !u!1 &1297104458
@@ -7868,6 +8054,7 @@ GameObject:
   - component: {fileID: 1531894680}
   - component: {fileID: 1531894679}
   - component: {fileID: 1531894678}
+  - component: {fileID: 2061132393}
   m_Layer: 0
   m_Name: Button_TiburonBallena
   m_TagString: Untagged
@@ -7977,7 +8164,37 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1531894679}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2061132393}
+        m_TargetAssemblyTypeName: Pokedex, Assembly-CSharp
+        m_MethodName: showInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2061132393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531894676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb38aa77a26174840881d72adc7d0573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image_pokedex: {fileID: 73301340}
+  title_pokedex_txt: Tiburon Ballena
+  title_pokedex: {fileID: 1602229295345799755}
+  text_pokedex_txt: "He pescado un tibur\xF3n ballena pod\xE9is darme la enhorabuena"
+  text_pokedex: {fileID: 2893363231703853711}
+  item_pokedex: {fileID: 4754826826673618647}
 --- !u!1 &1539578561
 GameObject:
   m_ObjectHideFlags: 0
@@ -8264,7 +8481,7 @@ GameObject:
   - component: {fileID: 1588861063}
   m_Layer: 0
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: Active
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8309,7 +8526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.18867922, g: 0.18867922, b: 0.18867922, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8701,7 +8918,7 @@ GameObject:
   - component: {fileID: 1601704510}
   m_Layer: 0
   m_Name: 'Image '
-  m_TagString: Untagged
+  m_TagString: Active
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8746,7 +8963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.14150941, g: 0.14150941, b: 0.14150941, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -9672,6 +9889,7 @@ GameObject:
   - component: {fileID: 1837193682}
   - component: {fileID: 1837193681}
   - component: {fileID: 1837193680}
+  - component: {fileID: 641511713}
   m_Layer: 0
   m_Name: Button_TortugaMordedora
   m_TagString: Untagged
@@ -9781,7 +9999,37 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1837193681}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 641511713}
+        m_TargetAssemblyTypeName: Pokedex, Assembly-CSharp
+        m_MethodName: showInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &641511713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1837193678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb38aa77a26174840881d72adc7d0573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image_pokedex: {fileID: 315966211}
+  title_pokedex_txt: Tortuga Mordedora
+  title_pokedex: {fileID: 5901443389226854534}
+  text_pokedex_txt: "\xBFQui\xE9n dijo que la muerte es lenta pero precisa?"
+  text_pokedex: {fileID: 7963602270592092152}
+  item_pokedex: {fileID: 6207863977121551199}
 --- !u!1 &1853934580
 GameObject:
   m_ObjectHideFlags: 0
@@ -10415,6 +10663,7 @@ GameObject:
   - component: {fileID: 1919383717}
   - component: {fileID: 1919383716}
   - component: {fileID: 1919383715}
+  - component: {fileID: 2061132384}
   m_Layer: 0
   m_Name: Button_Atun
   m_TagString: Untagged
@@ -10524,7 +10773,37 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1919383716}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2061132384}
+        m_TargetAssemblyTypeName: Pokedex, Assembly-CSharp
+        m_MethodName: showInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2061132384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1919383713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb38aa77a26174840881d72adc7d0573, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image_pokedex: {fileID: 1588861063}
+  title_pokedex_txt: "At\xFAn"
+  title_pokedex: {fileID: 1602229295345799755}
+  text_pokedex_txt: Un simple pez normal y corriente
+  text_pokedex: {fileID: 2893363231703853711}
+  item_pokedex: {fileID: 4754826826673618647}
 --- !u!1 &1923005342
 GameObject:
   m_ObjectHideFlags: 0
@@ -11810,7 +12089,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5993343508846097648
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14642,7 +14921,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2674160489958648261
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14867,7 +15146,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8898462403053049881
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15211,7 +15490,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4585137569029592313
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16126,7 +16405,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4185413131296494296
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17126,7 +17405,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2675448265032198939
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18020,7 +18299,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8737132592399697026
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18893,7 +19172,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2143064050025890986
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19582,7 +19861,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1904272098798732552
 RectTransform:
   m_ObjectHideFlags: 0
@@ -21771,7 +22050,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8735685373512051739
 RectTransform:
   m_ObjectHideFlags: 0
