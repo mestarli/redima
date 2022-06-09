@@ -2354,6 +2354,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1903449226, guid: 02e7f7184ab2a184b9c6997c34a9d075, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 878059652215782266, guid: 02e7f7184ab2a184b9c6997c34a9d075, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -2586,6 +2590,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mapa
       objectReference: {fileID: 0}
+    - target: {fileID: 470317569822789558, guid: 91ca45a61b1082c478d4f08794f34b31, type: 3}
+      propertyPath: m_TagString
+      value: Glaciar_Map
+      objectReference: {fileID: 0}
+    - target: {fileID: 470317570247383768, guid: 91ca45a61b1082c478d4f08794f34b31, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 470317570548947670, guid: 91ca45a61b1082c478d4f08794f34b31, type: 3}
+      propertyPath: m_TagString
+      value: Cala_Map
+      objectReference: {fileID: 0}
+    - target: {fileID: 470317570847404671, guid: 91ca45a61b1082c478d4f08794f34b31, type: 3}
+      propertyPath: m_TagString
+      value: IslaPaloma_Map
+      objectReference: {fileID: 0}
+    - target: {fileID: 470317570875293732, guid: 91ca45a61b1082c478d4f08794f34b31, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 470317571066268692, guid: 91ca45a61b1082c478d4f08794f34b31, type: 3}
+      propertyPath: m_TagString
+      value: IslaPrincipal_Map
+      objectReference: {fileID: 0}
+    - target: {fileID: 470317571779404236, guid: 91ca45a61b1082c478d4f08794f34b31, type: 3}
+      propertyPath: m_TagString
+      value: IslaTomaco_Map
+      objectReference: {fileID: 0}
     - target: {fileID: 818264250912182767, guid: 91ca45a61b1082c478d4f08794f34b31, type: 3}
       propertyPath: enablePokedex
       value: 
@@ -2598,6 +2630,10 @@ PrefabInstance:
       propertyPath: enablePokedex
       value: 
       objectReference: {fileID: 2061132377}
+    - target: {fileID: 7863864466239445130, guid: 91ca45a61b1082c478d4f08794f34b31, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 8653123606080303507, guid: 91ca45a61b1082c478d4f08794f34b31, type: 3}
       propertyPath: m_RootOrder
       value: 13
