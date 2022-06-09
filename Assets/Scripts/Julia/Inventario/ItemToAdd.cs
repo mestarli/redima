@@ -25,10 +25,26 @@ public class ItemToAdd : MonoBehaviour
         if (other.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.R))
         {
             Inventory.instance.AddItem(_itemInventoryReference, quantityToAdd);
-            panelShow = GameObject.FindGameObjectWithTag("ShowPanelDescription");
-            panelShow.SetActive(false);
+            try
+            {
+                panelShow = GameObject.FindGameObjectWithTag("ShowPanelDescription");
+                panelShow.SetActive(false);
+            }
+            catch (NullReferenceException e)
+            {
+                Console.WriteLine(e);
+            }
+        
             //Destroy(gameObject);
-            gameObject.SetActive(false);
+            if (gameObject.transform.parent)
+            {
+                gameObject.SetActive(false);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+            
             if (_itemInventoryReference.type == ItemTypes.Ingredients)
             {
                 Inventory.instance.Collected = true;
