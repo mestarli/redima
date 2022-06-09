@@ -264,9 +264,54 @@ public class Player : MonoBehaviour
             
         }
 
+        if (hit.gameObject.tag == "IslaPrincipal_Map")
+        {
+            AudioManager.instance.PlaySong("Musica_IslaPrincipal");
+            
+            AudioManager.instance.StopSong("Musica_IslaPaloma");
+            AudioManager.instance.StopSong("Musica_Glaciares");
+            AudioManager.instance.StopSong("Musica_Cala");
+            AudioManager.instance.StopSong("Musica_Cueva");
+        } 
+        
         if (hit.gameObject.tag == "IslaPaloma_Map")
         {
+            AudioManager.instance.PlaySong("Musica_IslaPaloma");
             
+            AudioManager.instance.StopSong("Musica_IslaPrincipal");
+            AudioManager.instance.StopSong("Musica_Glaciares");
+            AudioManager.instance.StopSong("Musica_Cala");
+            AudioManager.instance.StopSong("Musica_Cueva");
+        }
+        
+        if (hit.gameObject.tag == "Glaciar_Map")
+        {
+            AudioManager.instance.PlaySong("Musica_Glaciares");
+            
+            AudioManager.instance.StopSong("Musica_IslaPrincipal");
+            AudioManager.instance.StopSong("Musica_IslaPaloma");
+            AudioManager.instance.StopSong("Musica_Cala");
+            AudioManager.instance.StopSong("Musica_Cueva");
+        }
+        
+        if (hit.gameObject.tag == "IslaTomaco_Map")
+        {
+            AudioManager.instance.PlaySong("Musica_Cala");
+            
+            AudioManager.instance.StopSong("Musica_IslaPrincipal");
+            AudioManager.instance.StopSong("Musica_IslaPaloma");
+            AudioManager.instance.StopSong("Musica_Glaciares");
+            AudioManager.instance.StopSong("Musica_Cueva");
+        }
+        
+        if (hit.gameObject.tag == "Cala_Map")
+        {
+            AudioManager.instance.PlaySong("Musica_Cueva");
+            
+            AudioManager.instance.StopSong("Musica_IslaPrincipal");
+            AudioManager.instance.StopSong("Musica_IslaPaloma");
+            AudioManager.instance.StopSong("Musica_Glaciares");
+            AudioManager.instance.StopSong("Musica_Cala");
         }
     }
     
