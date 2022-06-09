@@ -17,7 +17,7 @@ public class TimeManager : MonoBehaviour
     public GameObject faroTransform;
     public Material sunNightMat; 
     
-   public float timeSky = 0;
+    public float timeSky = 0;
     
     //Variable para saber si es de día o de noche
     public bool isNight;
@@ -74,7 +74,6 @@ public class TimeManager : MonoBehaviour
     {
         // Conversion del tiempo actual a minutos
         int timeInMinutes = GameTimestamp.HoursToMinutes(timestamp.hour) + timestamp.minute;
-        int timeInHours = GameTimestamp.DaysToHours(timestamp.day) - timestamp.hour;
 
         // El sol se mueve 15 grados en 1 hora
         // .25 grados en 1 minuto

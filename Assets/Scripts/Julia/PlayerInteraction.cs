@@ -73,7 +73,7 @@ public class PlayerInteraction : MonoBehaviour
 
     public void AdvanceTime()
     {
-        if (Input.GetKey(KeyCode.T))
+        if (Input.GetKey(KeyCode.L))
         {
             TimeManager.instance.Tick();
         }
