@@ -45,6 +45,7 @@ public class UI_Manager : MonoBehaviour, ITimeTracker
         
         mapPanel.SetActive(false);
         pecedexPanel.SetActive(false);
+        optionsPanel.SetActive(false);
         animadexPanel.SetActive(false);
         plantadexPanel.SetActive(false);
         recetadexPanel.SetActive(false);
