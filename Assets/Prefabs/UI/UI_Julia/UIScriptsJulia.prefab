@@ -10785,6 +10785,7 @@ GameObject:
   - component: {fileID: 328669543712043188}
   - component: {fileID: 231766959269462457}
   - component: {fileID: 3765604342448356510}
+  - component: {fileID: 1565812333}
   m_Layer: 0
   m_Name: "Button_PescadoChampi\xF1ones"
   m_TagString: Untagged
@@ -10894,7 +10895,37 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 231766959269462457}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1565812333}
+        m_TargetAssemblyTypeName: Recetadex, Assembly-CSharp
+        m_MethodName: showInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1565812333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176988731042485019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01106e6e401d68d46a4763d4b0972a28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image_pokedex: {fileID: 3668125767893261221}
+  title_pokedex_txt: Champescado
+  title_pokedex: {fileID: 6099922985317482503}
+  text_pokedex_txt: Tan creativo como la persona que le puso el nombre
+  text_pokedex: {fileID: 5068504220242417211}
+  item_pokedex: {fileID: 4325882997515749642}
 --- !u!1 &265569139109094623
 GameObject:
   m_ObjectHideFlags: 0
@@ -10907,6 +10938,7 @@ GameObject:
   - component: {fileID: 4967586507333123142}
   - component: {fileID: 286425989181046131}
   - component: {fileID: 3235973958815063036}
+  - component: {fileID: 833428148}
   m_Layer: 0
   m_Name: Button_PescadoZanahorias
   m_TagString: Untagged
@@ -11017,6 +11049,24 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &833428148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265569139109094623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01106e6e401d68d46a4763d4b0972a28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image_pokedex: {fileID: 0}
+  title_pokedex_txt: 
+  title_pokedex: {fileID: 0}
+  text_pokedex_txt: 
+  text_pokedex: {fileID: 0}
+  item_pokedex: {fileID: 0}
 --- !u!1 &303906444971021529
 GameObject:
   m_ObjectHideFlags: 0
@@ -13941,7 +13991,7 @@ GameObject:
   - component: {fileID: 3668125767893261221}
   m_Layer: 0
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: Active
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13986,14 +14036,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.18867922, g: 0.18867922, b: 0.18867922, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 51016db7fca4b5b42a0a677114cc0a49, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3bc8205aab6796d4c8ee2af87a4e9597, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14856,7 +14906,7 @@ GameObject:
   - component: {fileID: 3793304360322353230}
   m_Layer: 0
   m_Name: Image
-  m_TagString: Untagged
+  m_TagString: Active
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14901,7 +14951,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.21698111, g: 0.21698111, b: 0.21698111, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -15284,7 +15334,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 36e60e18176abbd469b64b8a94254ac4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c73bf550fd4f31b44ab974f87616aebe, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15359,7 +15409,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 31cc3656d23d558438a5d37aa0c15e19, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4538760ee0e673a4cad3703db05b9b13, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -15758,6 +15808,8 @@ GameObject:
   - component: {fileID: 8358812033286034442}
   - component: {fileID: 2164254923333495119}
   - component: {fileID: 2585970968045539478}
+  - component: {fileID: 1654937262}
+  - component: {fileID: 1654937265}
   m_Layer: 0
   m_Name: Button_Pizza_F_Dragon
   m_TagString: Untagged
@@ -15867,7 +15919,55 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2164254923333495119}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1654937265}
+        m_TargetAssemblyTypeName: Recetadex, Assembly-CSharp
+        m_MethodName: showInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1654937262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4164724900793904032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01106e6e401d68d46a4763d4b0972a28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image_pokedex: {fileID: 0}
+  title_pokedex_txt: 
+  title_pokedex: {fileID: 0}
+  text_pokedex_txt: 
+  text_pokedex: {fileID: 0}
+  item_pokedex: {fileID: 0}
+--- !u!114 &1654937265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4164724900793904032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01106e6e401d68d46a4763d4b0972a28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image_pokedex: {fileID: 6016508744396032504}
+  title_pokedex_txt: Pizza con Fruta Dragon
+  title_pokedex: {fileID: 6099922985317482503}
+  text_pokedex_txt: "La nueva invenci\xF3n de Panopoulos"
+  text_pokedex: {fileID: 5068504220242417211}
+  item_pokedex: {fileID: 4325882997515749642}
 --- !u!1 &4172269212826439694
 GameObject:
   m_ObjectHideFlags: 0
@@ -17204,14 +17304,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.11320752, g: 0.11320752, b: 0.11320752, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 31cc3656d23d558438a5d37aa0c15e19, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4538760ee0e673a4cad3703db05b9b13, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17927,7 +18027,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5533305029401270407
 RectTransform:
   m_ObjectHideFlags: 0
@@ -20420,7 +20520,7 @@ GameObject:
   - component: {fileID: 6016508744396032504}
   m_Layer: 0
   m_Name: 'Image '
-  m_TagString: Untagged
+  m_TagString: Active
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20465,14 +20565,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.14150941, g: 0.14150941, b: 0.14150941, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 36e60e18176abbd469b64b8a94254ac4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c73bf550fd4f31b44ab974f87616aebe, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -21343,7 +21443,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 51016db7fca4b5b42a0a677114cc0a49, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3bc8205aab6796d4c8ee2af87a4e9597, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -21673,6 +21773,7 @@ GameObject:
   - component: {fileID: 1231688049548935603}
   - component: {fileID: 3189560786359465930}
   - component: {fileID: 8317805848573732702}
+  - component: {fileID: 755863770}
   m_Layer: 0
   m_Name: Button_PescadoCocinado
   m_TagString: Untagged
@@ -21782,7 +21883,37 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3189560786359465930}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 755863770}
+        m_TargetAssemblyTypeName: Recetadex, Assembly-CSharp
+        m_MethodName: showInfo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &755863770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8886925102438928110}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01106e6e401d68d46a4763d4b0972a28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  image_pokedex: {fileID: 4405306245086768269}
+  title_pokedex_txt: "Pescado y ya nada m\xE1s"
+  title_pokedex: {fileID: 6099922985317482503}
+  text_pokedex_txt: Chao peskao
+  text_pokedex: {fileID: 5068504220242417211}
+  item_pokedex: {fileID: 4325882997515749642}
 --- !u!1 &8924107766564000538
 GameObject:
   m_ObjectHideFlags: 0

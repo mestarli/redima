@@ -1,0 +1,29 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class Recetadex : MonoBehaviour
+{
+    [SerializeField] private Image image_pokedex;
+
+    [SerializeField] private string title_pokedex_txt;
+    
+    [SerializeField] private Text title_pokedex;
+    
+    [SerializeField] private string text_pokedex_txt;
+    
+    [SerializeField] private Text text_pokedex;
+
+    [SerializeField] private Image item_pokedex;
+
+    public void showInfo()
+    {
+        if (gameObject.transform.GetChild(1).gameObject.tag == "Active")
+        {
+            item_pokedex.sprite = image_pokedex.sprite;
+            title_pokedex.text = title_pokedex_txt;
+            text_pokedex.text = text_pokedex_txt;
+        }   
+    }
+}
