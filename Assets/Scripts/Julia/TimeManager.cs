@@ -17,6 +17,8 @@ public class TimeManager : MonoBehaviour
     public GameObject faroTransform;
     public Material sunNightMat; 
     
+   public float timeSky = 0;
+    
     //Variable para saber si es de día o de noche
     public bool isNight;
 
@@ -87,7 +89,9 @@ public class TimeManager : MonoBehaviour
         {
             faroTransform.SetActive(true);
             faroTransform.transform.Rotate(0, 1.5f, 0);
-            sunNightMat.mainTextureOffset = new Vector2(0.5f, 0);
+            timeSky += Time.deltaTime;
+            float value = Mathf.Lerp(0.1f, 0.5f, timeSky);
+            sunNightMat.mainTextureOffset = new Vector2(value, 0);
             
             isNight = true;
         }
@@ -95,7 +99,9 @@ public class TimeManager : MonoBehaviour
         else
         {
             faroTransform.SetActive(false);
-            sunNightMat.mainTextureOffset = new Vector2(0.1f, 0);
+            timeSky += Time.deltaTime;
+            float value = Mathf.Lerp(0.5f, 0.1f, timeSky);
+            sunNightMat.mainTextureOffset = new Vector2(value, 0);
             isNight = false;
         }
     }

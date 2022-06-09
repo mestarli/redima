@@ -25,6 +25,7 @@ TagManager:
   - TortugaMordedora
   - Active
   - SendToAviario
+  - ShowPanelDescription
   layers:
   - Default
   - TransparentFX
