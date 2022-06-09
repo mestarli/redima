@@ -25,6 +25,7 @@ public class ItemToAdd : MonoBehaviour
         if (other.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.R))
         {
             Inventory.instance.AddItem(_itemInventoryReference, quantityToAdd);
+            panelShow = GameObject.FindGameObjectWithTag("ShowPanelDescription");
             panelShow.SetActive(false);
             //Destroy(gameObject);
             gameObject.SetActive(false);
