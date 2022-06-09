@@ -33,7 +33,7 @@ public class ShipMovement : MonoBehaviour
 
         // Movimiento player
         transform.Translate(y * Time.deltaTime * speed, 0, 0);
-        
+
         // Rotación player
         transform.Rotate(0, x * Time.deltaTime * rotationSpeed, 0);
     }

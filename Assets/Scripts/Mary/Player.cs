@@ -263,8 +263,12 @@ public class Player : MonoBehaviour
             }
             
         }
+    }
 
-        if (hit.gameObject.tag == "IslaPrincipal_Map")
+    private void OnTriggerStay(Collider other)
+    {
+        
+        if (other.gameObject.tag == "IslaPrincipal_Map")
         {
             AudioManager.instance.PlaySong("Musica_IslaPrincipal");
             
@@ -274,7 +278,7 @@ public class Player : MonoBehaviour
             AudioManager.instance.StopSong("Musica_Cueva");
         } 
         
-        if (hit.gameObject.tag == "IslaPaloma_Map")
+        if (other.gameObject.tag == "IslaPaloma_Map")
         {
             AudioManager.instance.PlaySong("Musica_IslaPaloma");
             
@@ -284,7 +288,7 @@ public class Player : MonoBehaviour
             AudioManager.instance.StopSong("Musica_Cueva");
         }
         
-        if (hit.gameObject.tag == "Glaciar_Map")
+        if (other.gameObject.tag == "Glaciar_Map")
         {
             AudioManager.instance.PlaySong("Musica_Glaciares");
             
@@ -294,7 +298,7 @@ public class Player : MonoBehaviour
             AudioManager.instance.StopSong("Musica_Cueva");
         }
         
-        if (hit.gameObject.tag == "IslaTomaco_Map")
+        if (other.gameObject.tag == "IslaTomaco_Map")
         {
             AudioManager.instance.PlaySong("Musica_Cala");
             
@@ -304,7 +308,7 @@ public class Player : MonoBehaviour
             AudioManager.instance.StopSong("Musica_Cueva");
         }
         
-        if (hit.gameObject.tag == "Cala_Map")
+        if (other.gameObject.tag == "Cala_Map")
         {
             AudioManager.instance.PlaySong("Musica_Cueva");
             
@@ -314,7 +318,7 @@ public class Player : MonoBehaviour
             AudioManager.instance.StopSong("Musica_Cala");
         }
     }
-    
+
     IEnumerator ResetPlayerToHomeFromWater()
     {
       

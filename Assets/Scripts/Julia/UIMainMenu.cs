@@ -5,14 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class UIMainMenu : MonoBehaviour
 {
-   private void Awake()
+   private void Start()
    {
-      AudioManager.instance.PlaySong("");
+      AudioManager.instance.PlaySong("Musica_MenuPrincipal");
    }
 
    public void PlayGame()
    {
       AudioManager.instance.PlaySong("UISeleccion");
+      AudioManager.instance.StopSong("Musica_MenuPrincipal");
       SceneManager.LoadScene("MainScene");
    }
    
