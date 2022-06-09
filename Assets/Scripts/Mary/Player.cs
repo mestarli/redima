@@ -263,6 +263,11 @@ public class Player : MonoBehaviour
             }
             
         }
+
+        if (hit.gameObject.tag == "IslaPaloma_Map")
+        {
+            
+        }
     }
     
     IEnumerator ResetPlayerToHomeFromWater()
