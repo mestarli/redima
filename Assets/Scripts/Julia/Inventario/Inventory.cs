@@ -112,7 +112,6 @@ public class Inventory : MonoBehaviour
 
         if (!itemToAdd.isCumulative && itemToAdd.canBeEquipped)
         {
-            Debug.Log("No es un item acumulativo");
             if (index.Count > 0)
             {
                 for (int i = 0; i < index.Count; i++)
