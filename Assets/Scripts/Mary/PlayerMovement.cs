@@ -107,6 +107,7 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             playerVelocity.y = Mathf.Sqrt(jumHeight * -2 * gravity);
+            AudioManager.instance.PlaySong("Zarzo_Salto");
         }
 
         if(Input.GetButtonDown("Jump") && !isGrounded && Player.Instance.isInBagPaloma && !isGliding)
@@ -141,6 +142,7 @@ public class PlayerMovement : MonoBehaviour
             speed = speedRun;
             //_animator.SetBool("IsRunning", isShiftKeyDown);
             _animator.SetBool("IsRunning",true);
+            AudioManager.instance.PlaySong("Zarzo_Paso1");
            
         }
         else
