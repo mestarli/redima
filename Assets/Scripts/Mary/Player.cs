@@ -12,9 +12,6 @@ public class Player : MonoBehaviour
     private float maxHambre = 100;
     public bool puedeAlimentarse;
     
-    public float estamina;
-    private float maxEstamina = 150;
-    public bool puedeRecuperarEstamina;
     public bool cursorEnabled;
 
     [SerializeField] private bool isInBoat;
@@ -41,7 +38,6 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        //estamina = maxEstamina;
         //hambre = maxHambre;
         posicionPlayer = gameObject.transform.position;
         posicionBarco = Boat.transform.position;
@@ -55,7 +51,6 @@ public class Player : MonoBehaviour
     private void Update()
     {
         PuedeAlimentarse();
-        PuedeRecuperarEstamina();
         if (isInBoat && Input.GetKeyDown(KeyCode.G) && SetActiveBoat)
         {
 
@@ -112,19 +107,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void PuedeRecuperarEstamina()
-    {
-        if (estamina < maxEstamina)
-        {
-            puedeRecuperarEstamina = true;
-        }
-        
-        else
-        {
-            puedeRecuperarEstamina = false;
-        }
-    }
-
     public void Tamaño(float tamaño)
     {
         x = tamaño;
@@ -157,26 +139,6 @@ public class Player : MonoBehaviour
             }
         }
         
-        else
-        {
-            return;
-        }
-    }
-    
-    public void recuperarEstamina(float cantidad)
-    {
-        diferencia = maxEstamina - estamina;
-        if (estamina < maxEstamina)
-        {
-            if (cantidad < diferencia)
-            {
-                estamina = estamina + cantidad;
-            }
-            else
-            {
-                estamina = estamina + diferencia; 
-            }
-        }
         else
         {
             return;
