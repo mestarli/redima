@@ -122,10 +122,14 @@ public class Player : MonoBehaviour
         if (tamaño == 0.1f)
         {
             PlayerMovement.Instance._characterController.stepOffset = 0;
+            PlayerMovement.Instance.speed = 3f;
+            PlayerMovement.Instance.speedRun = 5f;
         }
         else
         {
             PlayerMovement.Instance._characterController.stepOffset = 1;
+            PlayerMovement.Instance.speed = 8f;
+            PlayerMovement.Instance.speedRun = 12f;
         }
     }
     
@@ -287,6 +291,14 @@ public class Player : MonoBehaviour
         if(hambre > 0) {
             hambre -= 1;
             countHunger.fillAmount = hambre / maxHambre;
+            PlayerMovement.Instance.speed = 8f;
+            PlayerMovement.Instance.speedRun = 12f;
+        }
+
+        if (hambre <= 0)
+        {
+            PlayerMovement.Instance.speed = 3f;
+            PlayerMovement.Instance.speedRun = 3f;
         }
     }
 }
