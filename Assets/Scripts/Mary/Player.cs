@@ -11,7 +11,6 @@ public class Player : MonoBehaviour
     public float hambre;
     private float maxHambre = 100;
     public bool puedeAlimentarse;
-    
     public bool cursorEnabled;
 
     [SerializeField] private bool isInBoat;
@@ -35,10 +34,13 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject Bag;
     [SerializeField] private GameObject AnimalesGranja;
     [SerializeField] private GameObject AnimalesAviario;
+    
+    
+    [SerializeField] private Image countHunger;
     private void Awake()
     {
         Instance = this;
-        //hambre = maxHambre;
+        hambre = maxHambre;
         posicionPlayer = gameObject.transform.position;
         posicionBarco = Boat.transform.position;
         rotationPlayer = gameObject.transform.rotation;
@@ -48,6 +50,10 @@ public class Player : MonoBehaviour
         Cursor.visible = false;
     }
 
+    private void Start()
+    {
+        InvokeRepeating("decreaseHunger", 1.0f, 1.0f);
+    }
     private void Update()
     {
         PuedeAlimentarse();
@@ -277,5 +283,10 @@ public class Player : MonoBehaviour
         cursorEnabled  = enable;
     }
     
-    
+    void decreaseHunger(){
+        if(hambre > 0) {
+            hambre -= 1;
+            countHunger.fillAmount = hambre / maxHambre;
+        }
+    }
 }
