@@ -142,8 +142,6 @@ public class PlayerMovement : MonoBehaviour
             speed = speedRun;
             //_animator.SetBool("IsRunning", isShiftKeyDown);
             _animator.SetBool("IsRunning",true);
-            AudioManager.instance.PlaySong("Zarzo_Paso1");
-           
         }
         else
         {

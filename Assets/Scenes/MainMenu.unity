@@ -499,6 +499,12 @@ MonoBehaviour:
     loop: 0
     playOnAwake: 0
     audioSource: {fileID: 0}
+  - name: Zarzo_Medida
+    audioClip: {fileID: 8300000, guid: c495a13b629bb4e4fa3df1fea5d94c14, type: 3}
+    volume: 0.2
+    loop: 0
+    playOnAwake: 0
+    audioSource: {fileID: 0}
   - name: Zarzo_Salto
     audioClip: {fileID: 8300000, guid: 1a6937f4d2bad4c43939f53eff3f7b2a, type: 3}
     volume: 1
@@ -850,7 +856,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1731,7 +1737,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
