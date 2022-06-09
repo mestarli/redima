@@ -3118,7 +3118,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -171, y: 27.666565}
+  m_AnchoredPosition: {x: -187.7, y: 27.666565}
   m_SizeDelta: {x: 15, y: 15}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &620496711
@@ -6075,7 +6075,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1302643905
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6555,7 +6555,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 3
     m_MaxSize: 300
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -8938,7 +8938,7 @@ GameObject:
   - component: {fileID: 1874639355}
   m_Layer: 5
   m_Name: ShowAction
-  m_TagString: Untagged
+  m_TagString: ShowPanelDescription
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9686,15 +9686,15 @@ RectTransform:
   m_GameObject: {fileID: 1962301624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.06876155, y: 0.06876155, z: 0.06876155}
+  m_LocalScale: {x: 0.048731998, y: 0.048731998, z: 0.048731998}
   m_Children: []
   m_Father: {fileID: 620496709}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0.6}
-  m_SizeDelta: {x: 164.61578, y: 233.78883}
+  m_AnchoredPosition: {x: 0.0861, y: 0.5827}
+  m_SizeDelta: {x: 210.5425, y: 234.4953}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1962301627
 CanvasRenderer:
@@ -19398,7 +19398,8 @@ MonoBehaviour:
   timeScale: 15
   sunTransform: {fileID: 0}
   faroTransform: {fileID: 0}
-  sunNightMat: {fileID: 0}
+  sunNightMat: {fileID: 2100000, guid: e68f77e240a7f8643b5cc4253dc37516, type: 2}
+  timeSky: 0
   isNight: 0
 --- !u!1 &7258148572379815631
 GameObject:
